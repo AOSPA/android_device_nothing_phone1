@@ -206,7 +206,15 @@ TARGET_USES_QSPM := true
 # wlan specific
 #-----------------------------------------------------------------
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
-#include device/qcom/wlan/lahaina/BoardConfigWlan.mk
+ifeq ($(TARGET_ENABLE_QMAA), true)
+ifneq ($(TARGET_ENABLE_QMAA_OVERRIDE_WLAN), true)
+include device/qcom/wlan/default/BoardConfigWlan.mk
+else
+include device/qcom/wlan/lahaina/BoardConfigWlan.mk
+endif
+else
+include device/qcom/wlan/lahaina/BoardConfigWlan.mk
+endif
 endif
 
 #################################################################################
