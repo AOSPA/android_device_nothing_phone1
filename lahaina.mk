@@ -52,12 +52,13 @@ TARGET_USES_QMAA_OVERRIDE_WFD     := false
 TARGET_USES_QMAA_OVERRIDE_GPS     := false
 TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := false
 TARGET_USES_QMAA_OVERRIDE_WLAN    := false
+TARGET_USES_QMAA_OVERRIDE_DPM  := false
+TARGET_USES_QMAA_OVERRIDE_BLUETOOTH   := false
 TARGET_USES_QMAA_OVERRIDE_FM  := false
 TARGET_USES_QMAA_OVERRIDE_CVP  := false
 TARGET_USES_QMAA_OVERRIDE_DIAG := false
 TARGET_USES_QMAA_OVERRIDE_FTM := false
 TARGET_USES_QMAA_OVERRIDE_DATA := false
-TARGET_USES_QMAA_OVERRIDE_SYNX := false
 
 
 #Full QMAA HAL List
@@ -90,7 +91,7 @@ BOARD_AVB_ENABLE := true
 BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
 TARGET_DISABLE_PERF_OPTIMIATIONS := false
-TARGET_DISABLE_DISPLAY := false
+TARGET_DISABLE_DISPLAY := true
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
@@ -137,11 +138,11 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 ###########
 # Kernel configurations
-TARGET_KERNEL_VERSION := 4.19
 #Enable llvm support for kernel
 KERNEL_LLVM_SUPPORT := true
 #Enable sd-llvm support for kernel
-KERNEL_SD_LLVM_SUPPORT := true
+KERNEL_SD_LLVM_SUPPORT := false
+
 
 ###########
 # Target configurations
