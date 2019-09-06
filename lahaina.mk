@@ -51,6 +51,13 @@ TARGET_USES_QMAA_OVERRIDE_GFX     := false
 TARGET_USES_QMAA_OVERRIDE_WFD     := false
 TARGET_USES_QMAA_OVERRIDE_GPS     := false
 TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := false
+TARGET_USES_QMAA_OVERRIDE_WLAN    := false
+TARGET_USES_QMAA_OVERRIDE_FM  := false
+TARGET_USES_QMAA_OVERRIDE_CVP  := false
+TARGET_USES_QMAA_OVERRIDE_DIAG := false
+TARGET_USES_QMAA_OVERRIDE_FTM := false
+TARGET_USES_QMAA_OVERRIDE_DATA := false
+TARGET_USES_QMAA_OVERRIDE_SYNX := false
 
 
 #Full QMAA HAL List
@@ -101,7 +108,17 @@ PRODUCT_MODEL := Kona for arm64
 #----------------------------------------------------------------------
 # wlan specific
 #----------------------------------------------------------------------
-#include device/qcom/wlan/lahaina/wlan.mk
+ifeq ($(TARGET_ENABLE_QMAA), true)
+ifneq ($(TARGET_ENABLE_QMAA_OVERRIDE_WLAN), true)
+include device/qcom/wlan/default/wlan.mk
+else
+include device/qcom/wlan/lahaina/wlan.mk
+endif
+else
+include device/qcom/wlan/lahaina/wlan.mk
+endif
+
+
 
 TARGET_USES_AOSP := false
 TARGET_USES_AOSP_FOR_AUDIO := false
