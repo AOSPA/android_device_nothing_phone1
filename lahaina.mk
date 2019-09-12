@@ -30,7 +30,9 @@ PRODUCT_BUILD_USERDATA_IMAGE := true
 TARGET_SKIP_OTA_PACKAGE := true
 
 # Enable AVB 2.0
-BOARD_AVB_ENABLE := true
+BOARD_AVB_ENABLE := false
+# temporary till AVB is not supported
+PRODUCT_SUPPORTS_VERITY := false
 
 ###########
 #QMAA flags starts
@@ -51,6 +53,7 @@ TARGET_USES_QMAA_OVERRIDE_GFX     := false
 TARGET_USES_QMAA_OVERRIDE_WFD     := false
 TARGET_USES_QMAA_OVERRIDE_GPS     := false
 TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := false
+TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE := false
 TARGET_USES_QMAA_OVERRIDE_WLAN    := false
 TARGET_USES_QMAA_OVERRIDE_DPM  := false
 TARGET_USES_QMAA_OVERRIDE_BLUETOOTH   := false
@@ -85,8 +88,6 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
-# Enable AVB 2.0
-BOARD_AVB_ENABLE := true
 
 BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
@@ -109,8 +110,8 @@ PRODUCT_MODEL := Kona for arm64
 #----------------------------------------------------------------------
 # wlan specific
 #----------------------------------------------------------------------
-ifeq ($(TARGET_ENABLE_QMAA), true)
-ifneq ($(TARGET_ENABLE_QMAA_OVERRIDE_WLAN), true)
+ifeq ($(TARGET_USES_QMAA), true)
+ifneq ($(TARGET_USES_QMAA_OVERRIDE_WLAN), true)
 include device/qcom/wlan/default/wlan.mk
 else
 include device/qcom/wlan/lahaina/wlan.mk

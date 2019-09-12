@@ -53,7 +53,8 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 1395863552
 
 TARGET_COPY_OUT_ODM := odm
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
-AB_OTA_PARTITIONS ?= boot vendor odm dtbo vbmeta
+#AB_OTA_PARTITIONS ?= boot vendor odm dtbo vbmeta
+AB_OTA_PARTITIONS ?= boot vendor odm dtbo
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
 ifeq ($(ENABLE_AB), true)
@@ -206,8 +207,8 @@ TARGET_USES_QSPM := true
 # wlan specific
 #-----------------------------------------------------------------
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
-ifeq ($(TARGET_ENABLE_QMAA), true)
-ifneq ($(TARGET_ENABLE_QMAA_OVERRIDE_WLAN), true)
+ifeq ($(TARGET_USES_QMAA), true)
+ifneq ($(TARGET_USES_QMAA_OVERRIDE_WLAN), true)
 include device/qcom/wlan/default/BoardConfigWlan.mk
 else
 include device/qcom/wlan/lahaina/BoardConfigWlan.mk
