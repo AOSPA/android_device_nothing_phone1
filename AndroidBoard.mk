@@ -79,9 +79,9 @@ $(foreach f, $(RADIO_FILES), \
 endif
 
 #----------------------------------------------------------------------
-# extra images
+# Configs common to AndroidBoard.mk for all targets
 #----------------------------------------------------------------------
-include device/qcom/common/generate_extra_images.mk
+include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
 
 #----------------------------------------------------------------------
 # wlan specific
