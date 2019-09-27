@@ -131,16 +131,16 @@ service vendor.per_mgr /vendor/bin/pm-service
     group system
     ioprio rt 4
 
-service vendor.per_proxy /vendor/bin/pm-proxy
-    class core
-    user system
-    group system
-    disabled
+#service vendor.per_proxy /vendor/bin/pm-proxy
+#    class core
+#    user system
+#    group system
+#    disabled
 
-service vendor.mdm_helper /vendor/bin/mdm_helper
-    class core
-    group system wakelock
-    disabled
+#service vendor.mdm_helper /vendor/bin/mdm_helper
+#    class core
+#    group system wakelock
+#    disabled
 
 service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
     class core

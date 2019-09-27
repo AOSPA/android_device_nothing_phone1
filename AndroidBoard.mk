@@ -19,7 +19,7 @@ ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
 include bootable/bootloader/edk2/AndroidBoot.mk
 
 $(INSTALLED_BOOTLOADER_MODULE): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
-   $(transform-prebuilt-to-target)
+#   $(transform-prebuilt-to-target)
 $(BUILT_TARGET_FILES_PACKAGE): $(INSTALLED_BOOTLOADER_MODULE)
 
 droidcore: $(INSTALLED_BOOTLOADER_MODULE)
