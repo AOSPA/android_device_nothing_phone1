@@ -52,8 +52,7 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 1395863552
 
 TARGET_COPY_OUT_ODM := odm
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
-#AB_OTA_PARTITIONS ?= boot vendor odm dtbo vbmeta
-AB_OTA_PARTITIONS ?= boot vendor odm dtbo
+AB_OTA_PARTITIONS ?= boot vendor odm dtbo vbmeta
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
 ifeq ($(ENABLE_AB), true)

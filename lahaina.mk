@@ -29,9 +29,7 @@ PRODUCT_BUILD_USERDATA_IMAGE := true
 TARGET_SKIP_OTA_PACKAGE := true
 
 # Enable AVB 2.0
-BOARD_AVB_ENABLE := false
-# temporary till AVB is not supported
-PRODUCT_SUPPORTS_VERITY := false
+BOARD_AVB_ENABLE := true
 
 ###########
 #QMAA flags starts
