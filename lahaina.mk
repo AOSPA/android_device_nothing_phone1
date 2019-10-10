@@ -1,6 +1,5 @@
 BUILD_BROKEN_DUP_RULES := true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
-export TEMPORARY_DISABLE_PATH_RESTRICTIONS
 
 ALLOW_MISSING_DEPENDENCIES=true
 
@@ -14,7 +13,7 @@ PRODUCT_BUILD_SYSTEM_IMAGE := false
 PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 PRODUCT_BUILD_VENDOR_IMAGE := true
 PRODUCT_BUILD_PRODUCT_IMAGE := false
-PRODUCT_BUILD_PRODUCT_SERVICES_IMAGE := false
+PRODUCT_BUILD_SYSTEM_EXT_IMAGE := false
 PRODUCT_BUILD_ODM_IMAGE := false
 ifeq ($(ENABLE_AB), true)
 PRODUCT_BUILD_CACHE_IMAGE := false
@@ -181,7 +180,9 @@ PRODUCT_PACKAGES += update_engine \
     update_engine_client \
     update_verifier \
     bootctrl.lahaina \
+    bootctrl.lahaina.recovery \
     android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-impl.recovery \
     android.hardware.boot@1.0-service
 
 PRODUCT_HOST_PACKAGES += \
@@ -189,12 +190,6 @@ PRODUCT_HOST_PACKAGES += \
 
 # Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-  bootctrl.lahaina \
-  librecovery_updater_msm \
-  libz \
-  libcutils
 
 PRODUCT_PACKAGES += \
   update_engine_sideload
