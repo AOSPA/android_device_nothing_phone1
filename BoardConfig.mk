@@ -226,3 +226,4 @@ endif
 #################################################################################
 
 BUILD_BROKEN_DUP_RULES := true
+include device/qcom/sepolicy/SEPolicy.mk
