@@ -41,7 +41,7 @@ TARGET_USES_QMAA := true
 #QMAA tech team flag to override global QMAA per tech team
 #true means overriding global QMAA for this tech area
 #false means using global, no override
-TARGET_USES_QMAA_OVERRIDE_DISPLAY := false
+TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
 TARGET_USES_QMAA_OVERRIDE_AUDIO   := false
 TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
 TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
@@ -91,7 +91,6 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
 TARGET_DISABLE_PERF_OPTIMIATIONS := false
-TARGET_DISABLE_DISPLAY := false
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
