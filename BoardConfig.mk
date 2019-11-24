@@ -52,7 +52,7 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 1395863552
 
 TARGET_COPY_OUT_ODM := odm
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
-AB_OTA_PARTITIONS ?= boot vendor odm dtbo vbmeta
+AB_OTA_PARTITIONS ?= boot vendor_boot vendor odm dtbo vbmeta
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
 ifeq ($(ENABLE_AB), true)
@@ -82,6 +82,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x06000000
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 0x06000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 48318382080
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -138,6 +139,28 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 #endif
 #endif
 
+ifneq (,$(findstring -gki_defconfig,$(KERNEL_DEFCONFIG)))
+$(warning #### GKI config ####)
+VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
+				rpmh-regulator.ko \
+				refgen.ko \
+				stub-regulator.ko \
+                                clk-dummy.ko \
+				clk-qcom.ko \
+				clk-rpmh.ko \
+				gcc-lahaina.ko \
+				qnoc-lahaina.ko \
+				icc-bcm-voter.ko \
+				icc-rpmh.ko \
+				pinctrl-msm.ko \
+				pinctrl-lahaina.ko \
+				phy-qcom-ufs.ko \
+				phy-qcom-ufs-qrbtc-sdm845.ko \
+				ufs-qcom.ko
+else
+$(warning #### QGKI config ####)
+endif
+
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
@@ -167,10 +190,12 @@ TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_KERNEL_APPEND_DTB := false
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
-#Enable dtb in boot image and boot image header version 2 support.
+#Enable dtb in boot image and boot image header version 3 support.
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_BOOTIMG_HEADER_VERSION := 2
-BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+BOARD_BOOT_HEADER_VERSION := 3
+BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
