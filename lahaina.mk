@@ -283,13 +283,6 @@ PRODUCT_PACKAGES += $(AUDIO_DLKM)
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
 
-# Copy the vendor modules loading scripts to /vendor/bin/vendor_modprobe.sh
-VENDOR_MODPROBE_PATH=device/qcom/kernelscripts/vendor_modules/vendor_modprobe.sh
-ifneq (, $(wildcard $(VENDOR_MODPROBE_PATH)))
-  PRODUCT_COPY_FILES += \
-    $(VENDOR_MODPROBE_PATH):$(TARGET_COPY_OUT_VENDOR)/bin/vendor_modprobe.sh
-endif
-
 # Audio configuration file
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/lahaina/lahaina.mk
 
