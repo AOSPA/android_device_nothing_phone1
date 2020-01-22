@@ -129,7 +129,14 @@ ifeq ($(TARGET_USES_QMAA_OVERRIDE_AUDIO), false)
 ifeq ($(TARGET_USES_QMAA),true)
 AUDIO_USE_STUB_HAL := true
 TARGET_USES_AOSP_FOR_AUDIO := true
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/common/default.mk
+else
+# Audio hal configuration file
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/lahaina/lahaina.mk
 endif
+else
+# Audio hal configuration file
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/lahaina/lahaina.mk
 endif
 
 TARGET_USES_QCOM_BSP := false
@@ -283,9 +290,6 @@ PRODUCT_PACKAGES += $(AUDIO_DLKM)
 # Kernel modules install path
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
-
-# Audio configuration file
--include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/lahaina/lahaina.mk
 
 ifeq ($(AUDIO_USE_STUB_HAL), true)
 PRODUCT_COPY_FILES += \
