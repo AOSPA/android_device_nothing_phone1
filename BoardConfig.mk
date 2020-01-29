@@ -156,6 +156,7 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				pinctrl-lahaina.ko \
 				phy-qcom-ufs.ko \
 				phy-qcom-ufs-qrbtc-sdm845.ko \
+				phy-qcom-ufs-qmp-v4-lahaina.ko\
 				ufs-qcom.ko
 else
 $(warning #### QGKI config ####)
