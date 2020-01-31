@@ -184,6 +184,7 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				ufs-qcom.ko \
 				qbt_handler.ko \
 				qcom_watchdog.ko \
+				qcom-pdc.ko \
 				qpnp-power-on.ko \
 				msm-poweroff.ko \
 				memory_dump_v2.ko
