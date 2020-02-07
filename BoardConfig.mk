@@ -250,4 +250,5 @@ endif
 #################################################################################
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
 include device/qcom/sepolicy/SEPolicy.mk
