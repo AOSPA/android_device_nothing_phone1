@@ -41,25 +41,25 @@ TARGET_USES_QMAA := true
 #QMAA tech team flag to override global QMAA per tech team
 #true means overriding global QMAA for this tech area
 #false means using global, no override
-TARGET_USES_QMAA_OVERRIDE_DISPLAY := false
+TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
 TARGET_USES_QMAA_OVERRIDE_AUDIO   := false
-TARGET_USES_QMAA_OVERRIDE_VIDEO   := false
+TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
 TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
 TARGET_USES_QMAA_OVERRIDE_GFX     := false
 TARGET_USES_QMAA_OVERRIDE_WFD     := false
 TARGET_USES_QMAA_OVERRIDE_GPS     := true
 TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := false
-TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE := false
+TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE := true
 TARGET_USES_QMAA_OVERRIDE_WLAN    := false
-TARGET_USES_QMAA_OVERRIDE_DPM  := false
+TARGET_USES_QMAA_OVERRIDE_DPM  := true
 TARGET_USES_QMAA_OVERRIDE_BLUETOOTH   := true
 TARGET_USES_QMAA_OVERRIDE_FM  := true
-TARGET_USES_QMAA_OVERRIDE_CVP  := false
-TARGET_USES_QMAA_OVERRIDE_DIAG := false
-TARGET_USES_QMAA_OVERRIDE_FTM := false
+TARGET_USES_QMAA_OVERRIDE_CVP  := true
+TARGET_USES_QMAA_OVERRIDE_DIAG := true
+TARGET_USES_QMAA_OVERRIDE_FTM := true
 TARGET_USES_QMAA_OVERRIDE_DATA := true
 TARGET_USES_QMAA_OVERRIDE_DATA_NET := true
-TARGET_USES_QMAA_OVERRIDE_MSM_BUS_MODULEE := false
+TARGET_USES_QMAA_OVERRIDE_MSM_BUS_MODULE := true
 TARGET_USES_QMAA_OVERRIDE_KERNEL_TESTS_INTERNAL := true
 TARGET_USES_QMAA_OVERRIDE_MSMIRQBALANCE := true
 
@@ -91,7 +91,6 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
 TARGET_DISABLE_PERF_OPTIMIATIONS := false
-TARGET_DISABLE_DISPLAY := false
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
@@ -129,7 +128,14 @@ ifeq ($(TARGET_USES_QMAA_OVERRIDE_AUDIO), false)
 ifeq ($(TARGET_USES_QMAA),true)
 AUDIO_USE_STUB_HAL := true
 TARGET_USES_AOSP_FOR_AUDIO := true
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/common/default.mk
+else
+# Audio hal configuration file
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/lahaina/lahaina.mk
 endif
+else
+# Audio hal configuration file
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/lahaina/lahaina.mk
 endif
 
 TARGET_USES_QCOM_BSP := false
@@ -283,9 +289,6 @@ PRODUCT_PACKAGES += $(AUDIO_DLKM)
 # Kernel modules install path
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
-
-# Audio configuration file
--include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/lahaina/lahaina.mk
 
 ifeq ($(AUDIO_USE_STUB_HAL), true)
 PRODUCT_COPY_FILES += \
