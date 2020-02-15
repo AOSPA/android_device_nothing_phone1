@@ -53,7 +53,7 @@ endif
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
-include device/qcom/vendor-common/MergeConfig.mk
+include device/qcom/qssi/MergeConfig.mk
 
 #----------------------------------------------------------------------
 # Radio image
