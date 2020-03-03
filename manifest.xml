@@ -735,20 +735,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-
-    <!-- Neural Network HAL -->
-    <hal format="hidl">
-        <name>android.hardware.neuralnetworks</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IDevice</name>
-            <instance>qti-default</instance>
-            <instance>qti-dsp</instance>
-            <instance>qti-gpu</instance>
-            <instance>qti-hta</instance>
-        </interface>
-    </hal>
     <!-- WifiStats HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.wifilearner</name>
