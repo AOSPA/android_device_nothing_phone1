@@ -169,8 +169,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
-$(call inherit-product, build/make/target/product/gsi_keys.mk)
-
 # Partitions - FRP
 BOARD_FRP_PARTITION_NAME := frp
 
