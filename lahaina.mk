@@ -114,6 +114,8 @@ PRODUCT_DEVICE := lahaina
 PRODUCT_BRAND := qti
 PRODUCT_MODEL := Kona for arm64
 
+PRODUCT_PACKAGES += android.hardware.configstore@1.1-service
+
 #----------------------------------------------------------------------
 # wlan specific
 #----------------------------------------------------------------------
