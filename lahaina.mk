@@ -45,12 +45,12 @@ TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
 TARGET_USES_QMAA_OVERRIDE_AUDIO   := false
 TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
 TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
-TARGET_USES_QMAA_OVERRIDE_GFX     := false
+TARGET_USES_QMAA_OVERRIDE_GFX     := true
 TARGET_USES_QMAA_OVERRIDE_WFD     := false
 TARGET_USES_QMAA_OVERRIDE_GPS     := true
-TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := false
+TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := true
 TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE := true
-TARGET_USES_QMAA_OVERRIDE_WLAN    := false
+TARGET_USES_QMAA_OVERRIDE_WLAN    := true
 TARGET_USES_QMAA_OVERRIDE_DPM  := true
 TARGET_USES_QMAA_OVERRIDE_BLUETOOTH   := true
 TARGET_USES_QMAA_OVERRIDE_FM  := true
@@ -63,6 +63,9 @@ TARGET_USES_QMAA_OVERRIDE_MSM_BUS_MODULE := true
 TARGET_USES_QMAA_OVERRIDE_KERNEL_TESTS_INTERNAL := true
 TARGET_USES_QMAA_OVERRIDE_MSMIRQBALANCE := true
 TARGET_USES_QMAA_OVERRIDE_VIBRATOR := false
+TARGET_USES_QMAA_OVERRIDE_DRM     := false
+TARGET_USES_QMAA_OVERRIDE_KMGK := true
+
 
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
@@ -70,6 +73,8 @@ QMAA_HAL_LIST := audio video camera display sensors gps
 ###########
 #QMAA flags ends
 
+#Suppot to compile recovery without msm headers
+TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
 #####Dynamic partition Handling
 ###
@@ -367,6 +372,9 @@ PRODUCT_PACKAGES += telephony-ext
 # Vendor property to enable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true
+
+PRODUCT_COPY_FILES += \
+    device/qcom/lahaina/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 ###################################################################################
 # This is the End of target.mk file.

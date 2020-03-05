@@ -296,15 +296,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@1.1::ICryptoFactory/wfdhdcp</fqname>
         <fqname>@1.1::IDrmFactory/wfdhdcp</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.sensors</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ISensors</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- SensorCal HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.sensorscalibrate</name>
@@ -588,6 +579,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IIop</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Secure image data processor HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.secureprocessor.device</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureProcessor</name>
+            <instance>qti-tee</instance>
         </interface>
     </hal>
     <!-- bluetooth -->
