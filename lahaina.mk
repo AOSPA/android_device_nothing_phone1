@@ -104,7 +104,7 @@ TARGET_DISABLE_PERF_OPTIMIATIONS := false
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 
-$(call inherit-product, device/qcom/qssi/common64.mk)
+$(call inherit-product, device/qcom/vendor-common/common64.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 ###########
