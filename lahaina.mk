@@ -37,7 +37,7 @@ BOARD_AVB_ENABLE := true
 #true means QMAA is enabled for system
 #false means QMAA is disabled for system
 
-TARGET_USES_QMAA := true
+TARGET_USES_QMAA := false
 #QMAA tech team flag to override global QMAA per tech team
 #true means overriding global QMAA for this tech area
 #false means using global, no override
