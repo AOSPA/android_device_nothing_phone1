@@ -33,7 +33,12 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 ### Dynamic partition Handling
 # Define the Dynamic Partition sizes and groups.
 ifeq ($(ENABLE_AB), true)
+    ifeq ($(ENABLE_VIRTUAL_AB), true)
+        BOARD_SUPER_PARTITION_SIZE := 6442450944
+    else
         BOARD_SUPER_PARTITION_SIZE := 12884901888
+    endif
+    BOARD_SUPER_PARTITION_SIZE := 12884901888   #Remove this line after Updating META
 else
         BOARD_SUPER_PARTITION_SIZE := 6442450944
 endif

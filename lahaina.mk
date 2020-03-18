@@ -6,6 +6,9 @@ ALLOW_MISSING_DEPENDENCIES=true
 # Default Android A/B configuration
 ENABLE_AB ?= true
 
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # For QSSI builds, we should skip building the system image. Instead we build the
 # "non-system" images (that we support).
 
@@ -209,11 +212,9 @@ ifeq ($(ENABLE_AB), true)
 PRODUCT_PACKAGES += update_engine \
     update_engine_client \
     update_verifier \
-    bootctrl.lahaina \
-    bootctrl.lahaina.recovery \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-impl.recovery \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
 
 PRODUCT_HOST_PACKAGES += \
     brillo_update_payload
@@ -267,9 +268,6 @@ PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-service_64
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/lahaina/framework_manifest.xml
 
 DEVICE_MANIFEST_FILE := device/qcom/lahaina/manifest.xml
-ifeq ($(ENABLE_AB), true)
-DEVICE_MANIFEST_FILE += device/qcom/lahaina/manifest_ab.xml
-endif
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 
 #Audio DLKM
