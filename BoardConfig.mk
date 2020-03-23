@@ -157,6 +157,10 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				phy-qcom-ufs.ko \
 				phy-qcom-ufs-qrbtc-sdm845.ko \
 				phy-qcom-ufs-qmp-v4-lahaina.ko\
+				ufshcd-crypto-qti.ko \
+				crypto-qti-common.ko \
+				crypto-qti-hwkm.ko \
+				hwkm.ko \
 				ufs-qcom.ko \
 				qbt_handler.ko
 else
