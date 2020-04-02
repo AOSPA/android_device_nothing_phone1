@@ -154,6 +154,10 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				icc-rpmh.ko \
 				pinctrl-msm.ko \
 				pinctrl-lahaina.ko \
+				_qcom_scm.ko \
+				secure_buffer.ko \
+				iommu-logger.ko \
+				qcom-arm-smmu-mod.ko \
 				phy-qcom-ufs.ko \
 				phy-qcom-ufs-qrbtc-sdm845.ko \
 				phy-qcom-ufs-qmp-v4-lahaina.ko\
