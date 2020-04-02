@@ -114,7 +114,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 PRODUCT_NAME := lahaina
 PRODUCT_DEVICE := lahaina
 PRODUCT_BRAND := qti
-PRODUCT_MODEL := Kona for arm64
+PRODUCT_MODEL := Lahaina for arm64
 
 PRODUCT_PACKAGES += android.hardware.configstore@1.1-service
 
