@@ -90,7 +90,8 @@ on late-fs
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
     # Enable WLAN cold boot calibration
-    write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
+    # Temporarily disable for initial bringup
+    # write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
 
 on early-boot
     start vendor.sensors
@@ -113,7 +114,7 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller a600000.dwc3
     #Load WLAN driver
-    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan
+    #exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
