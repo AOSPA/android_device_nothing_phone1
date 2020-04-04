@@ -157,7 +157,8 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				phy-qcom-ufs.ko \
 				phy-qcom-ufs-qrbtc-sdm845.ko \
 				phy-qcom-ufs-qmp-v4-lahaina.ko\
-				ufs-qcom.ko
+				ufs-qcom.ko \
+				qbt_handler.ko
 else
 $(warning #### QGKI config ####)
 endif
@@ -252,4 +253,13 @@ endif
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_NINJA_USES_ENV_VARS := TEMPORARY_DISABLE_PATH_RESTRICTIONS
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
+
+# KEYSTONE(If43215c7f384f24e7adeeabdbbb1790f174b2ec1,b/147756744)
+BUILD_BROKEN_NINJA_USES_ENV_VARS += SDCLANG_AE_CONFIG SDCLANG_CONFIG SDCLANG_SA_ENABLE
+
+BUILD_BROKEN_USES_BUILD_HOST_SHARED_LIBRARY := true
+BUILD_BROKEN_USES_BUILD_HOST_STATIC_LIBRARY := true
+BUILD_BROKEN_USES_BUILD_HOST_EXECUTABLE := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 include device/qcom/sepolicy/SEPolicy.mk

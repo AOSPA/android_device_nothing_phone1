@@ -53,7 +53,15 @@ endif
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
-include device/qcom/qssi/MergeConfig.mk
+include $(CLEAR_VARS)
+LOCAL_MODULE       := charger_fstab.qti
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := charger_fstab.qti
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
+include $(BUILD_PREBUILT)
+
+include device/qcom/vendor-common/MergeConfig.mk
 
 #----------------------------------------------------------------------
 # Radio image
@@ -74,5 +82,5 @@ include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
 # wlan specific
 #----------------------------------------------------------------------
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
-#include device/qcom/wlan/lahaina/AndroidBoardWlan.mk
+include device/qcom/wlan/lahaina/AndroidBoardWlan.mk
 endif

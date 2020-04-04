@@ -37,16 +37,16 @@ BOARD_AVB_ENABLE := true
 #true means QMAA is enabled for system
 #false means QMAA is disabled for system
 
-TARGET_USES_QMAA := true
+TARGET_USES_QMAA := false
 #QMAA tech team flag to override global QMAA per tech team
 #true means overriding global QMAA for this tech area
 #false means using global, no override
 TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
-TARGET_USES_QMAA_OVERRIDE_AUDIO   := false
+TARGET_USES_QMAA_OVERRIDE_AUDIO   := true
 TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
 TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
 TARGET_USES_QMAA_OVERRIDE_GFX     := true
-TARGET_USES_QMAA_OVERRIDE_WFD     := false
+TARGET_USES_QMAA_OVERRIDE_WFD     := true
 TARGET_USES_QMAA_OVERRIDE_GPS     := true
 TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := true
 TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE := true
@@ -55,6 +55,9 @@ TARGET_USES_QMAA_OVERRIDE_DPM  := true
 TARGET_USES_QMAA_OVERRIDE_BLUETOOTH   := true
 TARGET_USES_QMAA_OVERRIDE_FM  := true
 TARGET_USES_QMAA_OVERRIDE_CVP  := true
+TARGET_USES_QMAA_OVERRIDE_FASTCV  := true
+TARGET_USES_QMAA_OVERRIDE_SCVE  := true
+TARGET_USES_QMAA_OVERRIDE_OPENVX  := true
 TARGET_USES_QMAA_OVERRIDE_DIAG := true
 TARGET_USES_QMAA_OVERRIDE_FTM := true
 TARGET_USES_QMAA_OVERRIDE_DATA := true
@@ -62,10 +65,11 @@ TARGET_USES_QMAA_OVERRIDE_DATA_NET := true
 TARGET_USES_QMAA_OVERRIDE_MSM_BUS_MODULE := true
 TARGET_USES_QMAA_OVERRIDE_KERNEL_TESTS_INTERNAL := true
 TARGET_USES_QMAA_OVERRIDE_MSMIRQBALANCE := true
-TARGET_USES_QMAA_OVERRIDE_VIBRATOR := false
-TARGET_USES_QMAA_OVERRIDE_DRM     := false
+TARGET_USES_QMAA_OVERRIDE_VIBRATOR := true
+TARGET_USES_QMAA_OVERRIDE_DRM     := true
 TARGET_USES_QMAA_OVERRIDE_KMGK := true
-
+TARGET_USES_QMAA_OVERRIDE_VPP := true
+TARGET_USES_QMAA_OVERRIDE_GP := true
 
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
@@ -101,7 +105,7 @@ TARGET_DISABLE_PERF_OPTIMIATIONS := false
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 
-$(call inherit-product, device/qcom/qssi/common64.mk)
+$(call inherit-product, device/qcom/vendor-common/common64.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 ###########
@@ -110,6 +114,8 @@ PRODUCT_NAME := lahaina
 PRODUCT_DEVICE := lahaina
 PRODUCT_BRAND := qti
 PRODUCT_MODEL := Kona for arm64
+
+PRODUCT_PACKAGES += android.hardware.configstore@1.1-service
 
 #----------------------------------------------------------------------
 # wlan specific
@@ -364,6 +370,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
+#Charger
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti
 
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
