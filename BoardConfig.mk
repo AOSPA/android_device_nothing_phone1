@@ -234,6 +234,14 @@ USE_SENSOR_MULTI_HAL := true
 #flag for qspm compilation
 TARGET_USES_QSPM := true
 
+#namespace definition for librecovery_updater
+#differentiate legacy 'sg' or 'bsg' framework
+SOONG_CONFIG_NAMESPACES += ufsbsg
+
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+
+
 #-----------------------------------------------------------------
 # wlan specific
 #-----------------------------------------------------------------
