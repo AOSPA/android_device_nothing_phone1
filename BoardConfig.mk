@@ -38,7 +38,6 @@ ifeq ($(ENABLE_AB), true)
     else
         BOARD_SUPER_PARTITION_SIZE := 12884901888
     endif
-    BOARD_SUPER_PARTITION_SIZE := 12884901888   #Remove this line after Updating META
 else
         BOARD_SUPER_PARTITION_SIZE := 6442450944
 endif
