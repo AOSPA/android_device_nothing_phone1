@@ -4,6 +4,9 @@
 #
 # TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
 
+# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 
@@ -63,9 +66,17 @@ ifeq ($(ENABLE_AB), true)
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
 
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery.fstab
 else
+TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery_noSysext.fstab
+endif
+else
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery_non_AB.fstab
+else
+TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery_non_AB_noSysext.fstab
+endif
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 endif
