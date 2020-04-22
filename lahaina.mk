@@ -282,6 +282,12 @@ PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-service_64
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/lahaina/framework_manifest.xml
 
 DEVICE_MANIFEST_FILE := device/qcom/lahaina/manifest.xml
+
+# QCV allows multiple chipsets to be supported on a single vendor.
+# Add vintf device manifests for chipsets in Lahaina QCV family below.
+DEVICE_MANIFEST_SKUS := lahaina
+DEVICE_MANIFEST_LAHAINA_FILES := device/qcom/lahaina/manifest_lahaina.xml
+
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 
 #Audio DLKM
