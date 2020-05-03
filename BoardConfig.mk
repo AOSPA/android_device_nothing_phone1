@@ -177,7 +177,11 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				crypto-qti-hwkm.ko \
 				hwkm.ko \
 				ufs-qcom.ko \
-				qbt_handler.ko
+				qbt_handler.ko \
+				qcom_watchdog.ko \
+				qpnp-power-on.ko \
+				msm-poweroff.ko \
+				memory_dump_v2.ko
 else
 $(warning #### QGKI config ####)
 endif
