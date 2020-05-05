@@ -91,6 +91,9 @@ QMAA_HAL_LIST := audio video camera display sensors gps
 #Suppot to compile recovery without msm headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
+SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 #####Dynamic partition Handling
 ###
 #### Turning this flag to TRUE will enable dynamic partition/super image creation.
@@ -138,8 +141,6 @@ PRODUCT_NAME := lahaina
 PRODUCT_DEVICE := lahaina
 PRODUCT_BRAND := qti
 PRODUCT_MODEL := Lahaina for arm64
-
-PRODUCT_PACKAGES += android.hardware.configstore@1.1-service
 
 #----------------------------------------------------------------------
 # wlan specific
@@ -351,7 +352,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-BOARD_SYSTEMSDK_VERSIONS := 28
+BOARD_SYSTEMSDK_VERSIONS := 30
 BOARD_VNDK_VERSION := current
 TARGET_MOUNT_POINTS_SYMLINKS := false
 
@@ -397,6 +398,8 @@ ifeq ($(TARGET_ENABLE_VM_SUPPORT),true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/ueventd.rc
 PRODUCT_PACKAGES += vmmgr
 endif
+
+PRODUCT_PACKAGES += android.hardware.lights-service.qti
 
 ###################################################################################
 # This is the End of target.mk file.
