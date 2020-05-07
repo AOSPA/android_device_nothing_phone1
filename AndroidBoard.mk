@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 # Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
-SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE = true
 
 #----------------------------------------------------------------------
 # Host compiler configs
