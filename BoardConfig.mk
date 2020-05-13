@@ -4,6 +4,9 @@
 #
 # TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
 
+# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 
@@ -33,7 +36,11 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 ### Dynamic partition Handling
 # Define the Dynamic Partition sizes and groups.
 ifeq ($(ENABLE_AB), true)
+    ifeq ($(ENABLE_VIRTUAL_AB), true)
+        BOARD_SUPER_PARTITION_SIZE := 6442450944
+    else
         BOARD_SUPER_PARTITION_SIZE := 12884901888
+    endif
 else
         BOARD_SUPER_PARTITION_SIZE := 6442450944
 endif
@@ -45,10 +52,6 @@ BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := vendor odm
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06400000
-#temporary till overlayfs fixes are not brought in kernel
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1395863552
-
 
 TARGET_COPY_OUT_ODM := odm
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -59,9 +62,17 @@ ifeq ($(ENABLE_AB), true)
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
 
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery.fstab
 else
+TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery_noSysext.fstab
+endif
+else
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery_non_AB.fstab
+else
+TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery_non_AB_noSysext.fstab
+endif
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 endif
@@ -154,9 +165,17 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				icc-rpmh.ko \
 				pinctrl-msm.ko \
 				pinctrl-lahaina.ko \
+				_qcom_scm.ko \
+				secure_buffer.ko \
+				iommu-logger.ko \
+				qcom-arm-smmu-mod.ko \
 				phy-qcom-ufs.ko \
 				phy-qcom-ufs-qrbtc-sdm845.ko \
 				phy-qcom-ufs-qmp-v4-lahaina.ko\
+				ufshcd-crypto-qti.ko \
+				crypto-qti-common.ko \
+				crypto-qti-hwkm.ko \
+				hwkm.ko \
 				ufs-qcom.ko \
 				qbt_handler.ko
 else
@@ -205,6 +224,9 @@ TARGET_PD_SERVICE_ENABLED := true
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
+#Enable vm support
+TARGET_ENABLE_VM_SUPPORT := true
+
 ifeq ($(HOST_OS),linux)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
@@ -225,6 +247,14 @@ USE_SENSOR_MULTI_HAL := true
 
 #flag for qspm compilation
 TARGET_USES_QSPM := true
+
+#namespace definition for librecovery_updater
+#differentiate legacy 'sg' or 'bsg' framework
+SOONG_CONFIG_NAMESPACES += ufsbsg
+
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+
 
 #-----------------------------------------------------------------
 # wlan specific
