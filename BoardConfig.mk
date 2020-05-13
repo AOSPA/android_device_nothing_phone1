@@ -224,9 +224,6 @@ TARGET_PD_SERVICE_ENABLED := true
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-#Enable vm support
-TARGET_ENABLE_VM_SUPPORT := true
-
 ifeq ($(HOST_OS),linux)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
