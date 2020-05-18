@@ -161,10 +161,12 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				clk-rpmh.ko \
 				gcc-lahaina.ko \
 				qnoc-lahaina.ko \
+				qnoc-shima.ko \
 				icc-bcm-voter.ko \
 				icc-rpmh.ko \
 				pinctrl-msm.ko \
 				pinctrl-lahaina.ko \
+				pinctrl-shima.ko \
 				_qcom_scm.ko \
 				secure_buffer.ko \
 				iommu-logger.ko \
