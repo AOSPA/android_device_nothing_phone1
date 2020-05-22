@@ -9,6 +9,9 @@ ENABLE_AB ?= true
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+#Enable vm support
+TARGET_ENABLE_VM_SUPPORT := true
+
 # For QSSI builds, we should skip building the system image. Instead we build the
 # "non-system" images (that we support).
 
@@ -387,6 +390,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     device/qcom/lahaina/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
+# ODM ueventd.rc
+# - only for use with VM support right now
+ifeq ($(TARGET_ENABLE_VM_SUPPORT),true)
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/ueventd.rc
+PRODUCT_PACKAGES += vmmgr
+endif
 
 ###################################################################################
 # This is the End of target.mk file.

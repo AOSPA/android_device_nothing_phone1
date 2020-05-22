@@ -190,7 +190,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
        <name>android.hardware.keymaster</name>
        <transport>hwbinder</transport>
        <impl level="generic"></impl>
-       <version>4.0</version>
+       <version>4.1</version>
        <interface>
            <name>IKeymasterDevice</name>
            <instance>default</instance>
@@ -751,6 +751,20 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0</version>
         <interface>
             <name>IQspmhal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Trusted UI HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.trustedui</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITrustedUI</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ITrustedInput</name>
             <instance>default</instance>
         </interface>
     </hal>
