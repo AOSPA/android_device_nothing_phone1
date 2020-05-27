@@ -160,6 +160,7 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				clk-qcom.ko \
 				clk-rpmh.ko \
 				gcc-lahaina.ko \
+				gcc-shima.ko \
 				qnoc-lahaina.ko \
 				qnoc-shima.ko \
 				icc-bcm-voter.ko \
