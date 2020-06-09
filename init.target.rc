@@ -129,7 +129,7 @@ on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
 
 on charger
-    mount_all /vendor/etc/charger_fstab.qti --early
+    mount_all /vendor/etc/charger_fw_fstab.qti --early
     write /sys/kernel/boot_adsp/boot 1
     #restart charger after ADSP is out of reset
     restart charger
