@@ -754,10 +754,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>ITrustedUI</name>
             <instance>default</instance>
+            <instance>qtee-vm</instance>
         </interface>
         <interface>
             <name>ITrustedInput</name>
             <instance>default</instance>
+            <instance>qtee-vm</instance>
         </interface>
     </hal>
     <!-- BluetoothSar service-->
