@@ -7,6 +7,8 @@
 # Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
 SYSTEMEXT_SEPARATE_PARTITION_ENABLE = true
 
+BOARD_SYSTEMSDK_VERSIONS := 30
+
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 
@@ -55,7 +57,9 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06400000
 
 TARGET_COPY_OUT_ODM := odm
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
+ifeq ($(ENABLE_AB), true)
 AB_OTA_PARTITIONS ?= boot vendor_boot vendor odm dtbo vbmeta
+endif
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
 ifeq ($(ENABLE_AB), true)
@@ -77,6 +81,14 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 endif
 
+ifeq ($(BOARD_AVB_ENABLE), true)
+    BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+    BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+    BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
+    BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+endif
+
+
 BOARD_USES_METADATA_PARTITION := true
 
 #Enable compilation of oem-extensions to recovery
@@ -93,6 +105,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x06000000
+BOARD_KERNEL-GKI_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 0x06000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 48318382080
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
@@ -150,7 +163,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 #endif
 #endif
 
-ifneq (,$(findstring -gki_defconfig,$(KERNEL_DEFCONFIG)))
+
+ifeq (,$(findstring -qgki-debug_defconfig,$(KERNEL_DEFCONFIG)))
 $(warning #### GKI config ####)
 VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				rpmh-regulator.ko \
@@ -160,11 +174,14 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				clk-qcom.ko \
 				clk-rpmh.ko \
 				gcc-lahaina.ko \
+				gcc-shima.ko \
 				qnoc-lahaina.ko \
+				qnoc-shima.ko \
 				icc-bcm-voter.ko \
 				icc-rpmh.ko \
 				pinctrl-msm.ko \
 				pinctrl-lahaina.ko \
+				pinctrl-shima.ko \
 				_qcom_scm.ko \
 				secure_buffer.ko \
 				iommu-logger.ko \
@@ -179,6 +196,7 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				ufs-qcom.ko \
 				qbt_handler.ko \
 				qcom_watchdog.ko \
+				qcom-pdc.ko \
 				qpnp-power-on.ko \
 				msm-poweroff.ko \
 				memory_dump_v2.ko
@@ -190,7 +208,7 @@ BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x98c000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat loop.max_part=7
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat loop.max_part=7
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -218,8 +236,10 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 #Enable dtb in boot image and boot image header version 3 support.
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+ifeq ($(ENABLE_AB), true)
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
+endif
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 

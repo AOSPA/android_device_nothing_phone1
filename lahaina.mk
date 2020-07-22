@@ -1,8 +1,6 @@
 BUILD_BROKEN_DUP_RULES := true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
-ALLOW_MISSING_DEPENDENCIES=true
-
 # Default Android A/B configuration
 ENABLE_AB ?= true
 
@@ -11,6 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 #Enable vm support
 TARGET_ENABLE_VM_SUPPORT := true
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # For QSSI builds, we should skip building the system image. Instead we build the
 # "non-system" images (that we support).
@@ -91,6 +91,9 @@ QMAA_HAL_LIST := audio video camera display sensors gps
 #Suppot to compile recovery without msm headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
+SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 #####Dynamic partition Handling
 ###
 #### Turning this flag to TRUE will enable dynamic partition/super image creation.
@@ -108,9 +111,9 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_noSysext.qcom:$(TARGET_COPY_OUT_VENDOR
 endif
 else
 ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB_noSysext.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB_noSysext.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 endif
 endif
 BOARD_AVB_VBMETA_SYSTEM := system
@@ -130,15 +133,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 
 TARGET_DEFINES_DALVIK_HEAP := true
 $(call inherit-product, device/qcom/vendor-common/common64.mk)
-
-#Product property overrides to configure the Dalvik heap
-PRODUCT_PROPERTY_OVERRIDES  += \
-	    dalvik.vm.heapstartsize=8m \
-	    dalvik.vm.heapsize=512m \
-	    dalvik.vm.heapgrowthlimit=256m \
-	    dalvik.vm.heaptargetutilization=0.75 \
-	    dalvik.vm.heapminfree=512k \
-	    dalvik.vm.heapmaxfree=8m
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 ###########
 # Target naming
@@ -146,8 +141,6 @@ PRODUCT_NAME := lahaina
 PRODUCT_DEVICE := lahaina
 PRODUCT_BRAND := qti
 PRODUCT_MODEL := Lahaina for arm64
-
-PRODUCT_PACKAGES += android.hardware.configstore@1.1-service
 
 #----------------------------------------------------------------------
 # wlan specific
@@ -359,7 +352,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-BOARD_SYSTEMSDK_VERSIONS := 28
+BOARD_SYSTEMSDK_VERSIONS := 30
 BOARD_VNDK_VERSION := current
 TARGET_MOUNT_POINTS_SYMLINKS := false
 
@@ -386,7 +379,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
 #Charger
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
 
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
@@ -405,6 +398,8 @@ ifeq ($(TARGET_ENABLE_VM_SUPPORT),true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/ueventd.rc
 PRODUCT_PACKAGES += vmmgr
 endif
+
+PRODUCT_PACKAGES += android.hardware.lights-service.qti
 
 ###################################################################################
 # This is the End of target.mk file.
