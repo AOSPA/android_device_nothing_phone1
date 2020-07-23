@@ -220,6 +220,10 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 BOARD_FRP_PARTITION_NAME := frp
 
+
+# lights hal
+PRODUCT_PACKAGES += lights.qcom
+
 # Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
