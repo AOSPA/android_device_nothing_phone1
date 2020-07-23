@@ -234,6 +234,10 @@ PRODUCT_PACKAGES += \
   update_engine_sideload
 endif
 
+# Enable incremental fs
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=yes
+
 PRODUCT_HOST_PACKAGES += \
     configstore_xmlparser
 
