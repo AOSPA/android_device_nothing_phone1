@@ -165,6 +165,9 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				gcc-shima.ko \
 				qnoc-lahaina.ko \
 				qnoc-shima.ko \
+				cmd-db.ko \
+				qcom_rpmh.ko \
+				rpmhpd.ko \
 				icc-bcm-voter.ko \
 				icc-rpmh.ko \
 				pinctrl-msm.ko \
