@@ -195,6 +195,8 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				qcom-pdc.ko \
 				qpnp-power-on.ko \
 				msm-poweroff.ko \
+				sdhci-msm.ko \
+				cqhci.ko \
 				memory_dump_v2.ko
 else
 $(warning #### QGKI config ####)
