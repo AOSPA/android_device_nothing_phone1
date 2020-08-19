@@ -159,10 +159,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.keymaster</name>
-        <transport>hwbinder</transport>
-        <fqname>@4.1::IKeymasterDevice/default</fqname>
-        <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
+       <name>android.hardware.keymaster</name>
+       <transport>hwbinder</transport>
+       <impl level="generic"></impl>
+       <version>4.1</version>
+       <interface>
+           <name>IKeymasterDevice</name>
+           <instance>default</instance>
+       </interface>
     </hal>
     <hal format="hidl">
        <name>android.hardware.gatekeeper</name>
