@@ -36,9 +36,6 @@ TARGET_SKIP_OTA_PACKAGE := true
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
 
-# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
-SYSTEMEXT_SEPARATE_PARTITION_ENABLE = true
-
 ###########
 #QMAA flags starts
 ###########
@@ -104,17 +101,9 @@ PRODUCT_PACKAGES += fastbootd
 PRODUCT_PACKAGES += android.hardware.fastboot@1.0-impl-mock
 
 ifeq ($(ENABLE_AB),true)
-ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_noSysext.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-endif
-else
-ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB_noSysext.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-endif
 endif
 BOARD_AVB_VBMETA_SYSTEM := system
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
@@ -220,6 +209,10 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 BOARD_FRP_PARTITION_NAME := frp
 
+
+# lights hal
+PRODUCT_PACKAGES += lights.qcom
+
 # Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
@@ -245,6 +238,10 @@ PRODUCT_PACKAGES += \
   update_engine_sideload
 endif
 
+# Enable incremental fs
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=yes
+
 PRODUCT_HOST_PACKAGES += \
     configstore_xmlparser
 
@@ -256,10 +253,6 @@ PRODUCT_PACKAGES += libqrtr
 # diag-router
 TARGET_HAS_DIAG_ROUTER := true
 
-# Context hub HAL
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl.generic \
-    android.hardware.contexthub@1.0-service
 
 # f2fs utilities
 PRODUCT_PACKAGES += \
