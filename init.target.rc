@@ -141,7 +141,7 @@ on charger
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
-service vendor.lowi /vendor/bin/sscrpcd
+service vendor.lowi /vendor/bin/lowirpcd
    class core
    user system
    group system wakelock
