@@ -78,6 +78,7 @@ TARGET_USES_QMAA_OVERRIDE_KMGK := true
 TARGET_USES_QMAA_OVERRIDE_VPP := true
 TARGET_USES_QMAA_OVERRIDE_GP := true
 TARGET_USES_QMAA_OVERRIDE_SPCOM_UTEST := true
+TARGET_USES_QMAA_OVERRIDE_PERF := true
 
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
@@ -115,7 +116,6 @@ $(call inherit-product, build/make/target/product/gsi_keys.mk)
 
 BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
-TARGET_DISABLE_PERF_OPTIMIATIONS := false
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
@@ -151,6 +151,21 @@ else
 include device/qcom/wlan/lahaina/wlan.mk
 endif
 
+
+#----------------------------------------------------------------------
+# perf specific
+#----------------------------------------------------------------------
+ifeq ($(TARGET_USES_QMAA), true)
+    ifneq ($(TARGET_USES_QMAA_OVERRIDE_PERF), true)
+        TARGET_DISABLE_PERF_OPTIMIZATIONS := true
+    else
+        TARGET_DISABLE_PERF_OPTIMIZATIONS := false
+    endif
+else
+    TARGET_DISABLE_PERF_OPTIMIZATIONS := false
+endif
+
+# /* Disable perf opts */
 
 #----------------------------------------------------------------------
 # audio specific
