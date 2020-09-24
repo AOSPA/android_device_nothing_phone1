@@ -111,6 +111,10 @@ on boot
     chmod 0660 /dev/cpuset/camera-daemon/tasks
     chown system /sys/devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_enable
     chmod 0660 /sys/devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_enable
+    chown system /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
+    chmod 0660 /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
+    chown system /sys/devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_enable
+    chmod 0660 /sys/devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_enable
     #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
