@@ -78,6 +78,7 @@ TARGET_USES_QMAA_OVERRIDE_KMGK := true
 TARGET_USES_QMAA_OVERRIDE_VPP := true
 TARGET_USES_QMAA_OVERRIDE_GP := true
 TARGET_USES_QMAA_OVERRIDE_SPCOM_UTEST := true
+TARGET_USES_QMAA_OVERRIDE_PERF := true
 
 #Full QMAA HAL List
 QMAA_HAL_LIST := audio video camera display sensors gps
@@ -115,7 +116,6 @@ $(call inherit-product, build/make/target/product/gsi_keys.mk)
 
 BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
-TARGET_DISABLE_PERF_OPTIMIATIONS := false
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
@@ -153,6 +153,21 @@ endif
 
 
 #----------------------------------------------------------------------
+# perf specific
+#----------------------------------------------------------------------
+ifeq ($(TARGET_USES_QMAA), true)
+    ifneq ($(TARGET_USES_QMAA_OVERRIDE_PERF), true)
+        TARGET_DISABLE_PERF_OPTIMIZATIONS := true
+    else
+        TARGET_DISABLE_PERF_OPTIMIZATIONS := false
+    endif
+else
+    TARGET_DISABLE_PERF_OPTIMIZATIONS := false
+endif
+
+# /* Disable perf opts */
+
+#----------------------------------------------------------------------
 # audio specific
 #----------------------------------------------------------------------
 TARGET_USES_AOSP := false
@@ -175,10 +190,6 @@ TARGET_USES_QCOM_BSP := false
 
 # RRO configuration
 TARGET_USES_RRO := true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
-
 
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
@@ -379,7 +390,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
 #Charger
+ifeq ($(ENABLE_AB),true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
+else
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab_non_AB.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
+endif
 
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
