@@ -88,6 +88,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>vppService</instance>
         </interface>
     </hal>
+    <!-- QConfig HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qconfig</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQConfig</name>
+            <instance>default</instance>
+        </interface>>
+    </hal>
     <!-- DSP Service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.dsp</name>
@@ -405,7 +415,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
-        <version>2.3</version>
+        <version>2.4</version>
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
@@ -795,16 +805,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IEmbms</name>
             <instance>embmsslServer0</instance>
-        </interface>
-    </hal>
-    <!-- Memory PASR HAL -->
-    <hal format="hidl">
-        <name>vendor.qti.memory.pasrmanager</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPasrManager</name>
-            <instance>pasrhal</instance>
         </interface>
     </hal>
 </manifest>
