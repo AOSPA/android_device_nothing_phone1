@@ -299,6 +299,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/lahaina/framework_manifest.xml
 
 # QCV allows multiple chipsets to be supported on a single vendor.
 # Add vintf device manifests for chipsets in Lahaina QCV family below.
+TARGET_USES_QCV := true
 DEVICE_MANIFEST_SKUS := lahaina shima
 DEVICE_MANIFEST_LAHAINA_FILES := device/qcom/lahaina/manifest_lahaina.xml
 DEVICE_MANIFEST_SHIMA_FILES := device/qcom/lahaina/manifest_shima.xml
