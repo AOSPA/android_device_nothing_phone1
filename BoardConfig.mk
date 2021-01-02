@@ -152,6 +152,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 #endif
 
 
+ifeq "$(KERNEL_DEFCONFIG)" "vendor/$(TARGET_BOARD_PLATFORM)-qgki_defconfig"
+BOARD_KERNEL_BINARIES := kernel kernel-gki
+endif
+
 ifeq (,$(findstring -qgki-debug_defconfig,$(KERNEL_DEFCONFIG)))
 $(warning #### GKI config ####)
 VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
