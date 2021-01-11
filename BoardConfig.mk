@@ -167,9 +167,11 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				clk-rpmh.ko \
 				gcc-lahaina.ko \
 				gcc-shima.ko \
+				gcc-yupik.ko \
 				qnoc-qos.ko \
 				qnoc-lahaina.ko \
 				qnoc-shima.ko \
+				qnoc-yupik.ko \
 				cmd-db.ko \
 				qcom_rpmh.ko \
 				rpmhpd.ko \
@@ -178,6 +180,7 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				pinctrl-msm.ko \
 				pinctrl-lahaina.ko \
 				pinctrl-shima.ko \
+				pinctrl-yupik.ko \
 				_qcom_scm.ko \
 				secure_buffer.ko \
 				iommu-logger.ko \
