@@ -208,3 +208,15 @@ service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    group system wifi inet sdcard_rw media_rw diag
    oneshot
 
+#fan-controller
+service fan_control_turn_on /vendor/bin/fan_control 1
+    class late_start
+    user root
+    disabled
+    oneshot
+
+service fan_control_turn_off /vendor/bin/fan_control 0
+    class late_start
+    user root
+    disabled
+    oneshot
