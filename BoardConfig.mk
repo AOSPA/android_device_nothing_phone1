@@ -167,9 +167,11 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				clk-rpmh.ko \
 				gcc-lahaina.ko \
 				gcc-shima.ko \
+				gcc-yupik.ko \
 				qnoc-qos.ko \
 				qnoc-lahaina.ko \
 				qnoc-shima.ko \
+				qnoc-yupik.ko \
 				cmd-db.ko \
 				qcom_rpmh.ko \
 				rpmhpd.ko \
@@ -178,6 +180,7 @@ VENDOR_RAMDISK_KERNEL_MODULES := proxy-consumer.ko \
 				pinctrl-msm.ko \
 				pinctrl-lahaina.ko \
 				pinctrl-shima.ko \
+				pinctrl-yupik.ko \
 				_qcom_scm.ko \
 				secure_buffer.ko \
 				iommu-logger.ko \
@@ -208,7 +211,7 @@ BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat loop.max_part=7
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
