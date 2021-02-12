@@ -139,8 +139,8 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
     setprop vendor.usb.controller a600000.dwc3
     #Load WLAN driver
-    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan
-    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/5.4-gki qca_cld3_wlan
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan qca_cld3_qca6390
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/5.4-gki qca_cld3_wlan qca_cld3_qca6390
     #Allow access to memory hotplug device attributes
     chown system system /sys/kernel/mem-offline/anon_migrate
 
