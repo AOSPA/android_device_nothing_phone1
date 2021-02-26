@@ -208,6 +208,12 @@ else
 $(warning #### QGKI config ####)
 endif
 
+# Append the list of .ko that needs to be included as a part of vendor-ramdisk
+# only in QGKI variants, but not in GKI.
+ifneq "$(KERNEL_DEFCONFIG)" "vendor/$(TARGET_BOARD_PLATFORM)-gki_defconfig"
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(KERNEL_MODULES_OUT)/msm_drm.ko
+endif
+
 BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
