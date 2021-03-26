@@ -208,16 +208,10 @@ else
 $(warning #### QGKI config ####)
 endif
 
+# Append the list of .ko that needs to be included as a part of vendor-ramdisk
+# only in QGKI variants, but not in GKI.
 ifneq "$(KERNEL_DEFCONFIG)" "vendor/$(TARGET_BOARD_PLATFORM)-gki_defconfig"
-# List of all the modules that needs to be packaged into vendor-ramdisk
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(KERNEL_MODULES_OUT)/msm_drm.ko \
-                                       $(KERNEL_MODULES_OUT)/qcom_edac.ko
-
-# List of the modules that needs to be loaded in normal mode
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(KERNEL_MODULES_OUT)/qcom_edac.ko
-
-# List of the modules that needs to be loaded only in recovery mode (can contain the modules that load in normal mode)
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(KERNEL_MODULES_OUT)/msm_drm.ko
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(KERNEL_MODULES_OUT)/msm_drm.ko
 endif
 
 BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
