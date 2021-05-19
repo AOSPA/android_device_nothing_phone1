@@ -133,6 +133,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.beluga.s=0x900 \
     ro.vendor.beluga.t=0x240
 
+# qteeconnector settings
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qteeconnector.retrying_interval=30 \
+    persist.vendor.qteeconnector.retrying_timeout=2000
+
 ###########
 # Target naming
 PRODUCT_NAME := lahaina
