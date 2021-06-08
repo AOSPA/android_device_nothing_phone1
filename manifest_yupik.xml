@@ -780,4 +780,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>embmsslServer0</instance>
         </interface>
     </hal>
+    <!-- QESDK HAL service -->
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.qesdhal</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IQesdhal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
