@@ -12,6 +12,9 @@ TARGET_ENABLE_VM_SUPPORT := true
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+BOARD_SHIPPING_API_LEVEL := 30
+BOARD_API_LEVEL := 30
+
 # For QSSI builds, we should skip building the system image. Instead we build the
 # "non-system" images (that we support).
 
@@ -266,6 +269,9 @@ endif
 # Enable incremental fs
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=yes
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=QTI
 
 PRODUCT_HOST_PACKAGES += \
     configstore_xmlparser
