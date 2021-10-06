@@ -203,6 +203,12 @@ TARGET_USES_RRO := true
 
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
+## QESDK Manager Soong config
+SOONG_CONFIG_NAMESPACES += qesdkmanager
+SOONG_CONFIG_qesdkmanager += target
+SOONG_CONFIG_qesdkmanager_target := lahaina
+## qesdk manager end
+
 ###########
 # Kernel configurations
 #Enable llvm support for kernel
