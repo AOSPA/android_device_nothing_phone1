@@ -85,7 +85,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.nothing \
-    android.hardware.biometrics.fingerprint@2.3.vendor
+    android.hardware.biometrics.fingerprint@2.3.vendor \
+    libudfpshandler
 
 TARGET_USES_FOD_ZPOS := true
 
