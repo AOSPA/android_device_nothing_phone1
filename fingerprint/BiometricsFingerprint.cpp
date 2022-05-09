@@ -23,8 +23,16 @@
 #include <hardware/fingerprint.h>
 #include "BiometricsFingerprint.h"
 
+#include <thread>
+
 #include <inttypes.h>
 #include <unistd.h>
+
+#include <fcntl.h>
+#include <poll.h>
+#include <sys/stat.h>
+
+#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui"
 
 namespace android {
 namespace hardware {
@@ -32,6 +40,25 @@ namespace biometrics {
 namespace fingerprint {
 namespace V2_3 {
 namespace implementation {
+
+static bool readBool(int fd) {
+    char c;
+    int rc;
+
+    rc = lseek(fd, 0, SEEK_SET);
+    if (rc) {
+        ALOGE("failed to seek fd, err: %d", rc);
+        return false;
+    }
+
+    rc = read(fd, &c, sizeof(char));
+    if (rc != 1) {
+        ALOGE("failed to read bool from fd, err: %d", rc);
+        return false;
+    }
+
+    return c != '0';
+}
 
 // Supported fingerprint HAL version
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
@@ -46,8 +73,33 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     mDevice = openHal();
     if (!mDevice) {
         ALOGE("Can't open HAL module");
+        return;
     }
     goodixExtCmd = reinterpret_cast<int32_t(*)(int64_t, int32_t, int32_t)>(mDevice->reserved[0]);
+
+    std::thread([this]() {
+        int fd = open(FOD_UI_PATH, O_RDONLY);
+        if (fd < 0) {
+            ALOGE("failed to open fd, err: %d", fd);
+            return;
+        }
+
+        struct pollfd fodUiPoll = {
+            .fd = fd,
+            .events = POLLERR | POLLPRI,
+            .revents = 0,
+        };
+
+        while (true) {
+            int rc = poll(&fodUiPoll, 1, -1);
+            if (rc < 0) {
+                ALOGE("failed to poll fd, err: %d", rc);
+                continue;
+            }
+
+            goodixExtCmd(0, readBool(fd) ? 1 : 0, 0);
+        }
+    }).detach();
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -71,14 +123,10 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    goodixExtCmd(0, 1, 0);
-
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    goodixExtCmd(0, 0, 0);
-
     return Void();
 }
 
