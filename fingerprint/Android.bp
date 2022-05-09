@@ -22,3 +22,14 @@ cc_binary {
         "android.hardware.biometrics.fingerprint@2.3",
     ],
 }
+
+cc_library_static {
+    name: "libudfps_extension.phone1",
+    srcs: ["UdfpsExtension.cpp"],
+    include_dirs: [
+        "frameworks/native/services/surfaceflinger/CompositionEngine/include"
+    ],
+    header_libs: [
+        "generated_kernel_headers",
+    ],
+}
