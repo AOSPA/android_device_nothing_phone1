@@ -106,7 +106,6 @@ Return<RequestStatus> BiometricsFingerprint::ErrorFilter(int32_t error) {
 // HIDL-compliant FingerprintError.
 FingerprintError BiometricsFingerprint::VendorErrorFilter(int32_t error,
             int32_t* vendorCode) {
-    *vendorCode = 0;
     switch(error) {
         case FINGERPRINT_ERROR_HW_UNAVAILABLE:
             return FingerprintError::ERROR_HW_UNAVAILABLE;
@@ -137,7 +136,6 @@ FingerprintError BiometricsFingerprint::VendorErrorFilter(int32_t error,
 // to HIDL-compliant FingerprintAcquiredInfo.
 FingerprintAcquiredInfo BiometricsFingerprint::VendorAcquiredFilter(
         int32_t info, int32_t* vendorCode) {
-    *vendorCode = 0;
     switch(info) {
         case FINGERPRINT_ACQUIRED_GOOD:
             return FingerprintAcquiredInfo::ACQUIRED_GOOD;
@@ -179,12 +177,14 @@ Return<uint64_t> BiometricsFingerprint::preEnroll()  {
 
 Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat,
         uint32_t gid, uint32_t timeoutSec) {
+
     const hw_auth_token_t* authToken =
         reinterpret_cast<const hw_auth_token_t*>(hat.data());
     return ErrorFilter(mDevice->enroll(mDevice, authToken, gid, timeoutSec));
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
+    getInstance()->onFingerUp();
     return ErrorFilter(mDevice->post_enroll(mDevice));
 }
 
@@ -193,6 +193,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    getInstance()->onFingerUp();
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
@@ -343,8 +344,8 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                         msg->data.authenticated.finger.gid,
                         token).isOk()) {
                     ALOGE("failed to invoke fingerprint onAuthenticated callback");
-                    getInstance()->onFingerUp();
                 }
+                getInstance()->onFingerUp();
             } else {
                 // Not a recognized fingerprint
                 if (!thisPtr->mClientCallback->onAuthenticated(devId,
