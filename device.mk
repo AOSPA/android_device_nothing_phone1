@@ -130,6 +130,10 @@ DEVICE_MANIFEST_FILE += \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/phone1_vendor_framework_compatibility_matrix.xml
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
