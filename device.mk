@@ -239,10 +239,6 @@ PRODUCT_COPY_FILES += \
 #Charger
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
 
-PRODUCT_BOOT_JARS += tcmiface
-PRODUCT_BOOT_JARS += telephony-ext
-PRODUCT_PACKAGES += telephony-ext
-
 PRODUCT_ENABLE_QESDK := true
 
 # Vendor property to enable advanced network scanning
