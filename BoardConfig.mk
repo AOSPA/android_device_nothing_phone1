@@ -148,7 +148,6 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(KERNEL_MODULES_OUT)/msm_drm.ko
 endif
 
 BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
-TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1
@@ -188,7 +187,6 @@ TARGET_PER_MGR_ENABLED := true
 
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := true
-
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
