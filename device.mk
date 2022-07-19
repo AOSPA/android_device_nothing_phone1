@@ -168,14 +168,6 @@ SOONG_CONFIG_qesdkmanager_target := lahaina
 ## qesdk manager end
 
 ###########
-# Kernel configurations
-#Enable llvm support for kernel
-KERNEL_LLVM_SUPPORT := true
-#Enable sd-llvm support for kernel
-KERNEL_SD_LLVM_SUPPORT := false
-
-
-###########
 # Target configurations
 
 QCOM_BOARD_PLATFORMS += lahaina
