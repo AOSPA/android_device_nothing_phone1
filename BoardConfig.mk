@@ -261,21 +261,6 @@ SOONG_CONFIG_NAMESPACES += perf
 SOONG_CONFIG_perf += ioctl
 SOONG_CONFIG_perf_ioctl := true
 
-#-----------------------------------------------------------------
-# wlan specific
-#-----------------------------------------------------------------
-ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
-ifeq ($(TARGET_USES_QMAA), true)
-ifneq ($(TARGET_USES_QMAA_OVERRIDE_WLAN), true)
-include device/qcom/wlan/default/BoardConfigWlan.mk
-else
-include device/qcom/wlan/lahaina/BoardConfigWlan.mk
-endif
-else
-include device/qcom/wlan/lahaina/BoardConfigWlan.mk
-endif
-endif
-
 #################################################################################
 # This is the End of BoardConfig.mk file.
 # Now, Pickup other split Board.mk files:

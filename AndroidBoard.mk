@@ -55,10 +55,3 @@ RADIO_FILES := $(notdir $(wildcard $(radio_dir)/*))
 $(foreach f, $(RADIO_FILES), \
     $(call add-radio-file,radio/$(f)))
 endif
-
-#----------------------------------------------------------------------
-# wlan specific
-#----------------------------------------------------------------------
-ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
-include device/qcom/wlan/lahaina/AndroidBoardWlan.mk
-endif
