@@ -239,7 +239,4 @@ TARGET_COMMON_QTI_COMPONENTS := all
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true
 
-PRODUCT_COPY_FILES += \
-    device/nothing/phone1/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
 PRODUCT_PACKAGES += android.hardware.lights-service.qti
