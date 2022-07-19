@@ -20,14 +20,6 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := fstab.emmc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES := emmc/fstab.qcom
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := charger_fw_fstab.qti
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC

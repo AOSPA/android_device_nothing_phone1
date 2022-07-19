@@ -50,7 +50,6 @@ PRODUCT_PACKAGES += fastbootd
 PRODUCT_PACKAGES += android.hardware.fastboot@1.0-impl-mock
 
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/default/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/emmc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.emmc
 
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
