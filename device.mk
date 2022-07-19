@@ -270,8 +270,6 @@ PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-impl
 # Enable binderized camera HAL
 PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-service_64
 
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/nothing/phone1/framework_manifest.xml
-
 # QCV allows multiple chipsets to be supported on a single vendor.
 # Add vintf device manifests for chipsets in Lahaina QCV family below.
 TARGET_USES_QCV := true
