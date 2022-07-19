@@ -1,15 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
 #----------------------------------------------------------------------
-# Host compiler configs
-#----------------------------------------------------------------------
-TARGET_HOST_COMPILER_PREFIX_OVERRIDE := prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/bin/x86_64-linux-
-TARGET_HOST_CC_OVERRIDE := $(TARGET_HOST_COMPILER_PREFIX_OVERRIDE)gcc
-TARGET_HOST_CXX_OVERRIDE := $(TARGET_HOST_COMPILER_PREFIX_OVERRIDE)g++
-TARGET_HOST_AR_OVERRIDE := $(TARGET_HOST_COMPILER_PREFIX_OVERRIDE)ar
-TARGET_HOST_LD_OVERRIDE := $(TARGET_HOST_COMPILER_PREFIX_OVERRIDE)ld
-
-#----------------------------------------------------------------------
 # Copy additional target-specific files
 #----------------------------------------------------------------------
 include $(CLEAR_VARS)
