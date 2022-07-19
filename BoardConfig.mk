@@ -74,55 +74,6 @@ BOARD_DTBOIMG_PARTITION_SIZE := 0x1800000
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
-#BOARD_VENDOR_KERNEL_MODULES := \
-#    $(KERNEL_MODULES_OUT)/audio_apr.ko \
-#    $(KERNEL_MODULES_OUT)/audio_q6_pdr.ko \
-#    $(KERNEL_MODULES_OUT)/audio_q6_notifier.ko \
-#    $(KERNEL_MODULES_OUT)/audio_adsp_loader.ko \
-#    $(KERNEL_MODULES_OUT)/audio_q6.ko \
-#    $(KERNEL_MODULES_OUT)/audio_usf.ko \
-#    $(KERNEL_MODULES_OUT)/audio_pinctrl_wcd.ko \
-#    $(KERNEL_MODULES_OUT)/audio_pinctrl_lpi.ko \
-#    $(KERNEL_MODULES_OUT)/audio_swr.ko \
-#    $(KERNEL_MODULES_OUT)/audio_wcd_core.ko \
-#    $(KERNEL_MODULES_OUT)/audio_swr_ctrl.ko \
-#    $(KERNEL_MODULES_OUT)/audio_wsa881x.ko \
-#    $(KERNEL_MODULES_OUT)/audio_platform.ko \
-#    $(KERNEL_MODULES_OUT)/audio_hdmi.ko \
-#    $(KERNEL_MODULES_OUT)/audio_stub.ko \
-#    $(KERNEL_MODULES_OUT)/audio_wcd9xxx.ko \
-#    $(KERNEL_MODULES_OUT)/audio_mbhc.ko \
-#    $(KERNEL_MODULES_OUT)/audio_wcd938x.ko \
-#    $(KERNEL_MODULES_OUT)/audio_wcd938x_slave.ko \
-#    $(KERNEL_MODULES_OUT)/audio_bolero_cdc.ko \
-#    $(KERNEL_MODULES_OUT)/audio_wsa_macro.ko \
-#    $(KERNEL_MODULES_OUT)/audio_va_macro.ko \
-#    $(KERNEL_MODULES_OUT)/audio_rx_macro.ko \
-#    $(KERNEL_MODULES_OUT)/audio_tx_macro.ko \
-#    $(KERNEL_MODULES_OUT)/audio_native.ko \
-#    $(KERNEL_MODULES_OUT)/audio_machine_lahaina.ko \
-#    $(KERNEL_MODULES_OUT)/audio_snd_event.ko \
-#    $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko \
-#    $(KERNEL_MODULES_OUT)/wil6210.ko \
-#    $(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko \
-#    $(KERNEL_MODULES_OUT)/br_netfilter.ko \
-#    $(KERNEL_MODULES_OUT)/gspca_main.ko \
-#    $(KERNEL_MODULES_OUT)/lcd.ko \
-#    $(KERNEL_MODULES_OUT)/llcc_perfmon.ko \
-
-# check for for userdebug and eng build variants and install the appropriate modules
-#ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-#ifeq (,$(findstring perf_defconfig, $(KERNEL_DEFCONFIG)))
-#BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/atomic64_test.ko
-#BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/lkdtm.ko
-#BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/locktorture.ko
-#BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/rcutorture.ko
-#BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/test_user_copy.ko
-#BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/torture.ko
-#endif
-#endif
-
-
 ifeq "$(KERNEL_DEFCONFIG)" "vendor/$(TARGET_BOARD_PLATFORM)-qgki_defconfig"
 BOARD_KERNEL_BINARIES := kernel kernel-gki
 endif
