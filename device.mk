@@ -2,7 +2,6 @@ TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 
 BUILD_BROKEN_DUP_RULES := true
-TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
 # Default Android A/B configuration
 ENABLE_AB ?= true
