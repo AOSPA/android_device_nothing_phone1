@@ -201,15 +201,6 @@ SOONG_CONFIG_NAMESPACES += perf
 SOONG_CONFIG_perf += ioctl
 SOONG_CONFIG_perf_ioctl := true
 
-#################################################################################
-# This is the End of BoardConfig.mk file.
-# Now, Pickup other split Board.mk files:
-#################################################################################
-# TODO: Relocate the system Board.mk files pickup into qssi lunch, once it is up.
--include $(sort $(wildcard vendor/qcom/defs/board-defs/system/*.mk))
--include $(sort $(wildcard vendor/qcom/defs/board-defs/vendor/*.mk))
-#################################################################################
-
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_NINJA_USES_ENV_VARS := TEMPORARY_DISABLE_PATH_RESTRICTIONS
 BUILD_BROKEN_NINJA_USES_ENV_VARS += RTIC_MPGEN
