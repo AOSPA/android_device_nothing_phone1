@@ -120,9 +120,6 @@ BOARD_FRP_PARTITION_NAME := frp
 # lights hal
 PRODUCT_PACKAGES += lights.qcom
 
-# Android EGL implementation
-PRODUCT_PACKAGES += libGLES_android
-
 PRODUCT_PACKAGES += fs_config_files
 PRODUCT_PACKAGES += gpio-keys.kl
 
