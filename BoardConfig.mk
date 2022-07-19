@@ -31,19 +31,9 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 
 ### Dynamic partition Handling
 # Define the Dynamic Partition sizes and groups.
-ifeq ($(ENABLE_AB), true)
-    ifeq ($(ENABLE_VIRTUAL_AB), true)
-        BOARD_SUPER_PARTITION_SIZE := 6442450944
-    else
-        BOARD_SUPER_PARTITION_SIZE := 12884901888
-    endif
-else
-        BOARD_SUPER_PARTITION_SIZE := 6442450944
-endif
-ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
-    # Enable DTBO for recovery image
-    BOARD_INCLUDE_RECOVERY_DTBO := true
-endif
+BOARD_SUPER_PARTITION_SIZE := 6442450944
+# Enable DTBO for recovery image
+BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := vendor odm
@@ -51,36 +41,20 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06400000
 
 TARGET_COPY_OUT_ODM := odm
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
-ifeq ($(ENABLE_AB), true)
 AB_OTA_PARTITIONS ?= boot vendor_boot vendor odm dtbo vbmeta
-endif
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
-ifeq ($(ENABLE_AB), true)
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
 TARGET_RECOVERY_FSTAB := device/nothing/phone1/recovery.fstab
-else
-TARGET_RECOVERY_FSTAB := device/nothing/phone1/recovery_non_AB.fstab
-BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-endif
 
-ifeq ($(BOARD_AVB_ENABLE), true)
-    BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
-    BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
-    BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
-    BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
-endif
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 
 BOARD_USES_METADATA_PARTITION := true
-
-#Enable compilation of oem-extensions to recovery
-#These need to be explicitly
-ifneq ($(AB_OTA_UPDATER),true)
-    TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
-endif
 
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
@@ -243,10 +217,8 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 #Enable dtb in boot image and boot image header version 3 support.
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-ifeq ($(ENABLE_AB), true)
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
-endif
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 

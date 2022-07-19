@@ -44,11 +44,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.default
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-ifeq ($(ENABLE_AB), true)
-  LOCAL_SRC_FILES := default/fstab.qcom
-else
-  LOCAL_SRC_FILES := default/fstab_non_AB.qcom
-endif
+LOCAL_SRC_FILES := default/fstab.qcom
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
@@ -56,11 +52,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.emmc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-ifeq ($(ENABLE_AB), true)
-   LOCAL_SRC_FILES := emmc/fstab.qcom
-else
-   LOCAL_SRC_FILES := emmc/fstab_non_AB.qcom
-endif
+LOCAL_SRC_FILES := emmc/fstab.qcom
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
@@ -68,11 +60,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := charger_fw_fstab.qti
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-ifeq ($(ENABLE_AB), true)
-    LOCAL_SRC_FILES    := charger_fw_fstab.qti
-else
-    LOCAL_SRC_FILES    := charger_fw_fstab_non_AB.qti
-endif
+LOCAL_SRC_FILES    := charger_fw_fstab.qti
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
