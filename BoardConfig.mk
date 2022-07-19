@@ -46,7 +46,7 @@ BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
-TARGET_RECOVERY_FSTAB := device/nothing/phone1/default/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/nothing/phone1/init/fstab.qcom
 
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
