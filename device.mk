@@ -233,6 +233,9 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDO
 
 PRODUCT_ENABLE_QESDK := true
 
+# QTI Components
+TARGET_COMMON_QTI_COMPONENTS := all
+
 # Vendor property to enable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true
