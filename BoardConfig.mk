@@ -59,9 +59,9 @@ BOARD_EXT4_SHARE_DUP_BLOCKS := true
 ifeq ($(ENABLE_AB), true)
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
-TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/nothing/phone1/recovery.fstab
 else
-TARGET_RECOVERY_FSTAB := device/qcom/lahaina/recovery_non_AB.fstab
+TARGET_RECOVERY_FSTAB := device/nothing/phone1/recovery_non_AB.fstab
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 endif
