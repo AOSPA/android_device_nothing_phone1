@@ -10,11 +10,6 @@ TARGET_HOST_AR_OVERRIDE := $(TARGET_HOST_COMPILER_PREFIX_OVERRIDE)ar
 TARGET_HOST_LD_OVERRIDE := $(TARGET_HOST_COMPILER_PREFIX_OVERRIDE)ld
 
 #----------------------------------------------------------------------
-# Compile Linux Kernel
-#----------------------------------------------------------------------
-include device/qcom/kernelscripts/kernel_definitions.mk
-
-#----------------------------------------------------------------------
 # Copy additional target-specific files
 #----------------------------------------------------------------------
 include $(CLEAR_VARS)
