@@ -38,56 +38,6 @@ TARGET_SKIP_OTA_PACKAGE := true
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
 
-###########
-#QMAA flags starts
-###########
-#QMAA global flag for modular architecture
-#true means QMAA is enabled for system
-#false means QMAA is disabled for system
-
-TARGET_USES_QMAA := false
-#QMAA tech team flag to override global QMAA per tech team
-#true means overriding global QMAA for this tech area
-#false means using global, no override
-TARGET_USES_QMAA_OVERRIDE_RPMB	:= true
-TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
-TARGET_USES_QMAA_OVERRIDE_AUDIO   := true
-TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
-TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
-TARGET_USES_QMAA_OVERRIDE_GFX     := true
-TARGET_USES_QMAA_OVERRIDE_WFD     := true
-TARGET_USES_QMAA_OVERRIDE_GPS     := true
-TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := true
-TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE := true
-TARGET_USES_QMAA_OVERRIDE_WLAN    := true
-TARGET_USES_QMAA_OVERRIDE_DPM  := true
-TARGET_USES_QMAA_OVERRIDE_BLUETOOTH   := true
-TARGET_USES_QMAA_OVERRIDE_FM  := true
-TARGET_USES_QMAA_OVERRIDE_CVP  := true
-TARGET_USES_QMAA_OVERRIDE_FASTCV  := true
-TARGET_USES_QMAA_OVERRIDE_SCVE  := true
-TARGET_USES_QMAA_OVERRIDE_OPENVX  := true
-TARGET_USES_QMAA_OVERRIDE_DIAG := true
-TARGET_USES_QMAA_OVERRIDE_FTM := true
-TARGET_USES_QMAA_OVERRIDE_DATA := true
-TARGET_USES_QMAA_OVERRIDE_DATA_NET := true
-TARGET_USES_QMAA_OVERRIDE_MSM_BUS_MODULE := true
-TARGET_USES_QMAA_OVERRIDE_KERNEL_TESTS_INTERNAL := true
-TARGET_USES_QMAA_OVERRIDE_MSMIRQBALANCE := true
-TARGET_USES_QMAA_OVERRIDE_VIBRATOR := true
-TARGET_USES_QMAA_OVERRIDE_DRM     := true
-TARGET_USES_QMAA_OVERRIDE_KMGK := true
-TARGET_USES_QMAA_OVERRIDE_VPP := true
-TARGET_USES_QMAA_OVERRIDE_GP := true
-TARGET_USES_QMAA_OVERRIDE_SPCOM_UTEST := true
-TARGET_USES_QMAA_OVERRIDE_PERF := true
-
-#Full QMAA HAL List
-QMAA_HAL_LIST := audio video camera display sensors gps
-
-###########
-#QMAA flags ends
-
 #Suppot to compile recovery without msm headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
@@ -138,22 +88,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ###########
 
-#----------------------------------------------------------------------
-# perf specific
-#----------------------------------------------------------------------
-ifeq ($(TARGET_USES_QMAA), true)
-    ifneq ($(TARGET_USES_QMAA_OVERRIDE_PERF), true)
-        TARGET_DISABLE_PERF_OPTIMIZATIONS := true
-    else
-        TARGET_DISABLE_PERF_OPTIMIZATIONS := false
-    endif
-else
-    TARGET_DISABLE_PERF_OPTIMIZATIONS := false
-endif
-
-# /* Disable perf opts */
-
-
 TARGET_USES_QCOM_BSP := false
 
 # RRO configuration
@@ -173,17 +107,6 @@ SOONG_CONFIG_qesdkmanager_target := lahaina
 QCOM_BOARD_PLATFORMS += lahaina
 
 TARGET_USES_QSSI := true
-
-###QMAA Indicator Start###
-
-#Full QMAA HAL List
-QMAA_HAL_LIST :=
-
-#Indicator for each enabled QMAA HAL for this target. Each tech team locally verified their QMAA HAL and ensure code is updated/merged, then add their HAL module name to QMAA_ENABLED_HAL_MODULES as an QMAA enabling completion indicator
-QMAA_ENABLED_HAL_MODULES :=
-QMAA_ENABLED_HAL_MODULES += sensors
-
-###QMAA Indicator End###
 
 #Default vendor image configuration
 ENABLE_VENDOR_IMAGE := true
