@@ -24,8 +24,6 @@ TARGET_NO_KERNEL := false
 
 -include $(QCPATH)/common/lahaina/BoardConfigVendor.mk
 
-USE_OPENGL_RENDERER := true
-
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
 
