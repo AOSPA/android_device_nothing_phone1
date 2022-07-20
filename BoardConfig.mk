@@ -107,9 +107,6 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := false
 
-# Enable sensor multi HAL
-USE_SENSOR_MULTI_HAL := true
-
 #namespace definition for librecovery_updater
 #differentiate legacy 'sg' or 'bsg' framework
 SOONG_CONFIG_NAMESPACES += ufsbsg
