@@ -52,18 +52,6 @@ BOARD_HAVE_QCOM_FM := false
 TARGET_DEFINES_DALVIK_HEAP := true
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# beluga settings
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.beluga.p=0x3 \
-    ro.vendor.beluga.c=0x4800 \
-    ro.vendor.beluga.s=0x900 \
-    ro.vendor.beluga.t=0x240
-
-# qteeconnector settings
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qteeconnector.retrying_interval=30 \
-    persist.vendor.qteeconnector.retrying_timeout=2000
-
 ###########
 
 TARGET_USES_QCOM_BSP := false
@@ -106,13 +94,6 @@ PRODUCT_HOST_PACKAGES += \
 
 PRODUCT_PACKAGES += \
   update_engine_sideload
-
-# Enable incremental fs
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.incremental.enable=yes
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.soc.manufacturer=QTI
 
 # QRTR related packages
 PRODUCT_PACKAGES += qrtr-ns
@@ -183,13 +164,6 @@ TARGET_MOUNT_POINTS_SYMLINKS := false
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
 
-# system prop for enabling QFS (QTI Fingerprint Solution)
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qfp=true
-#target specific runtime prop for qspm
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qspm.enable=true
-
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
@@ -201,9 +175,5 @@ PRODUCT_ENABLE_QESDK := true
 
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
-
-# Vendor property to enable advanced network scanning
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.radio.enableadvancedscan=true
 
 PRODUCT_PACKAGES += android.hardware.lights-service.qti
