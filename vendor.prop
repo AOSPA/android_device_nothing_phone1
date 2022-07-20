@@ -3,12 +3,6 @@ ro.incremental.enable=yes
 
 ro.soc.manufacturer=QTI
 
-# beluga settings
-ro.vendor.beluga.p=0x3
-ro.vendor.beluga.c=0x4800
-ro.vendor.beluga.s=0x900
-ro.vendor.beluga.t=0x240
-
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
