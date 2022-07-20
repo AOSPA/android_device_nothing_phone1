@@ -9,6 +9,3 @@ persist.vendor.qteeconnector.retrying_timeout=2000
 
 #target specific runtime prop for qspm
 ro.vendor.qspm.enable=true
-	
-# Vendor property to enable advanced network scanning
-persist.vendor.radio.enableadvancedscan=true
