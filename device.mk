@@ -119,9 +119,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=QTI
 
-PRODUCT_HOST_PACKAGES += \
-    configstore_xmlparser
-
 # QRTR related packages
 PRODUCT_PACKAGES += qrtr-ns
 PRODUCT_PACKAGES += qrtr-lookup
