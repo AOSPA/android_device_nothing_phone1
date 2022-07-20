@@ -77,11 +77,6 @@ SOONG_CONFIG_qesdkmanager += target
 SOONG_CONFIG_qesdkmanager_target := lahaina
 ## qesdk manager end
 
-###########
-# Target configurations
-
-QCOM_BOARD_PLATFORMS += lahaina
-
 TARGET_USES_QSSI := true
 
 #Default vendor image configuration
