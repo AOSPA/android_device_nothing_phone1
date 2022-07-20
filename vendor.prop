@@ -6,6 +6,3 @@ ro.soc.manufacturer=QTI
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
-
-#target specific runtime prop for qspm
-ro.vendor.qspm.enable=true
