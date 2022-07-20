@@ -197,9 +197,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #target specific runtime prop for qspm
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qspm.enable=true
-#ANT+ stack
-PRODUCT_PACKAGES += \
-    libvolumelistener
 
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
