@@ -7,9 +7,6 @@ ro.soc.manufacturer=QTI
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
 
-# system prop for enabling QFS (QTI Fingerprint Solution)
-persist.vendor.qfp=true
-
 #target specific runtime prop for qspm
 ro.vendor.qspm.enable=true
 	
