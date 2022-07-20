@@ -18,8 +18,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
--include $(QCPATH)/common/lahaina/BoardConfigVendor.mk
-
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
 
@@ -110,20 +108,11 @@ TARGET_NO_RECOVERY := true
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-#Enable PD locater/notifier
-TARGET_PD_SERVICE_ENABLED := true
-
-#Enable peripheral manager
-TARGET_PER_MGR_ENABLED := true
-
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := false
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
-
-#flag for qspm compilation
-TARGET_USES_QSPM := true
 
 #namespace definition for librecovery_updater
 #differentiate legacy 'sg' or 'bsg' framework
