@@ -95,8 +95,6 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
-TARGET_NO_RPC := true
-
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 #Enable dtb in boot image and boot image header version 3 support.
