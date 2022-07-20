@@ -113,8 +113,3 @@ SOONG_CONFIG_NAMESPACES += ufsbsg
 
 SOONG_CONFIG_ufsbsg += ufsframework
 SOONG_CONFIG_ufsbsg_ufsframework := bsg
-
-#namespace definition for perf
-SOONG_CONFIG_NAMESPACES += perf
-SOONG_CONFIG_perf += ioctl
-SOONG_CONFIG_perf_ioctl := true
