@@ -167,7 +167,9 @@ PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-impl
 # Enable binderized camera HAL
 PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-service_64
 
-DEVICE_MANIFEST_FILE := device/nothing/phone1/manifest_yupik.xml
+DEVICE_MANIFEST_FILE += \
+    device/nothing/phone1/manifest_yupik.xml \
+    device/nothing/phone1/manifest_phone1.xml
 
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 
