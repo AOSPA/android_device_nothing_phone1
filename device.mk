@@ -2,6 +2,7 @@ TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Default Android A/B configuration
 ENABLE_AB ?= true
@@ -177,3 +178,6 @@ PRODUCT_ENABLE_QESDK := true
 TARGET_COMMON_QTI_COMPONENTS := all
 
 PRODUCT_PACKAGES += android.hardware.lights-service.qti
+
+# Proprietary Vendor
+$(call inherit-product, vendor/nothing/phone1/phone1-vendor.mk)
