@@ -134,8 +134,6 @@ PRODUCT_COPY_FILES += \
 #Charger
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
 
-PRODUCT_ENABLE_QESDK := true
-
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
 
