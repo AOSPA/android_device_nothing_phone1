@@ -89,9 +89,6 @@ PRODUCT_PACKAGES += qrtr-ns
 PRODUCT_PACKAGES += qrtr-lookup
 PRODUCT_PACKAGES += libqrtr
 
-# diag-router
-TARGET_HAS_DIAG_ROUTER := true
-
 # f2fs utilities
 PRODUCT_PACKAGES += \
     sg_write_buffer \
