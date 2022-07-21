@@ -132,7 +132,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-TARGET_MOUNT_POINTS_SYMLINKS := false
 
 # Proprietary Vendor
 $(call inherit-product, vendor/nothing/phone1/phone1-vendor.mk)
