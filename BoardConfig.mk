@@ -60,6 +60,7 @@ BOARD_KERNEL_CMDLINE := \
     ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE    := 4096
+KERNEL_DEFCONFIG := vendor/lahaina_QGKI.config
 
 # Partitions - A/B
 AB_OTA_PARTITIONS := boot dtbo odm product system system_ext vendor vendor_boot vbmeta vbmeta_system
