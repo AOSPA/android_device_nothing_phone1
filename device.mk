@@ -47,9 +47,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
 
-# Charger
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -69,6 +66,12 @@ BOARD_HAVE_QCOM_FM := false
 
 # Generic Kernel Headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
+
+# Init
+PRODUCT_PACKAGES += \
+    charger_fw_fstab.qti \
+    fstab.default \
+    init.target.rc
 
 # Kernel Modules
 KERNEL_MODULES_INSTALL := dlkm
@@ -98,7 +101,7 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 $(call inherit-product, build/make/target/product/gsi_keys.mk)
 
