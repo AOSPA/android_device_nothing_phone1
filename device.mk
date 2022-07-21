@@ -89,12 +89,6 @@ PRODUCT_PACKAGES += qrtr-ns
 PRODUCT_PACKAGES += qrtr-lookup
 PRODUCT_PACKAGES += libqrtr
 
-# f2fs utilities
-PRODUCT_PACKAGES += \
-    sg_write_buffer \
-    f2fs_io \
-    check_f2fs
-
 # Userdata checkpoint
 PRODUCT_PACKAGES += \
     checkpoint_gc
