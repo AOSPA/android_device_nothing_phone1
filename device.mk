@@ -77,10 +77,6 @@ PRODUCT_PACKAGES += \
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
 
-# Key Layout
-PRODUCT_PACKAGES += \
-    gpio-keys.kl
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti \
