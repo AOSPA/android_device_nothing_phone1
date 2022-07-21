@@ -48,12 +48,6 @@ TARGET_USES_QCOM_BSP := false
 # RRO configuration
 TARGET_USES_RRO := true
 
-## QESDK Manager Soong config
-SOONG_CONFIG_NAMESPACES += qesdkmanager
-SOONG_CONFIG_qesdkmanager += target
-SOONG_CONFIG_qesdkmanager_target := lahaina
-## qesdk manager end
-
 TARGET_USES_QSSI := true
 
 #Default vendor image configuration
