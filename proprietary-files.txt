@@ -201,7 +201,6 @@ vendor/etc/Diag_charge.cfg
 vendor/etc/Diag_gnss.cfg
 vendor/etc/Diag_noise.cfg
 vendor/etc/Diag_sensor.cfg
-vendor/etc/NOTICE.xml.gz
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/acdbdata/CDP/CDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/CDP/CDP_General_cal.acdb
