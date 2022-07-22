@@ -9,9 +9,6 @@ ENABLE_AB ?= true
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-#Enable vm support
-TARGET_ENABLE_VM_SUPPORT := true
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 BOARD_SHIPPING_API_LEVEL := 30
@@ -246,12 +243,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     device/nothing/phone1/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
-# ODM ueventd.rc
-# - only for use with VM support right now
-ifeq ($(TARGET_ENABLE_VM_SUPPORT),true)
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/ueventd.rc
-PRODUCT_PACKAGES += vmmgr vmmgr.rc vmmgr.conf
-endif
 
 PRODUCT_PACKAGES += android.hardware.lights-service.qti
