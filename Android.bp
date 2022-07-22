@@ -1,0 +1,52 @@
+soong_namespace {
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vppservice_interface",
+    interfaces: [
+        "vendor.qti.hardware.vpp@2.0::IHidlVppService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_dpmQmi_interface",
+    interfaces: [
+        "com.qualcomm.qti.dpm.api@1.0::IdpmQmi",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_DspSerivce_interface",
+    interfaces: [
+        "vendor.qti.hardware.dsp@1.0::IDspService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_Factory_interface",
+    interfaces: [
+        "vendor.qti.hardware.factory@1.0::IFactory",
+        "vendor.qti.hardware.factory@1.1::IFactory",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_Limits_interface",
+    interfaces: [
+        "vendor.qti.hardware.limits@1.0::ILimits",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_QConfig_interface",
+    interfaces: [
+        "vendor.qti.hardware.qconfig@1.0::IQConfig",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sigma_miracast_interface",
+    interfaces: [
+        "vendor.qti.hardware.sigma_miracast@1.0::Isigma_miracast",
+    ],
+}
