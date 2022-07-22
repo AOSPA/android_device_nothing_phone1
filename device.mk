@@ -36,10 +36,6 @@ TARGET_BOOTLOADER_BOARD_NAME := lahaina
 # AVB
 BOARD_AVB_ENABLE := true
 
-# Build
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
