@@ -112,7 +112,12 @@ DEVICE_MANIFEST_FILE += \
     device/nothing/phone1/manifest_yupik.xml \
     device/nothing/phone1/manifest_phone1.xml
 
-DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
+DEVICE_MATRIX_FILE += \
+    device/qcom/common/compatibility_matrix.xml
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/nothing/phone1/phone1_vendor_framework_compatibility_matrix.xml \
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
