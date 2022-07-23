@@ -749,17 +749,6 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/etc/seccomp_policy/wfdhdcphalservice.policy
 vendor/etc/seccomp_policy/wfdvndservice.policy
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy
-vendor/etc/selinux/plat_pub_versioned.cil
-vendor/etc/selinux/plat_sepolicy_vers.txt
-vendor/etc/selinux/selinux_denial_metadata
-vendor/etc/selinux/vendor_file_contexts
-vendor/etc/selinux/vendor_hwservice_contexts
-vendor/etc/selinux/vendor_mac_permissions.xml
-vendor/etc/selinux/vendor_property_contexts
-vendor/etc/selinux/vendor_seapp_contexts
-vendor/etc/selinux/vendor_sepolicy.cil
-vendor/etc/selinux/vendor_service_contexts
-vendor/etc/selinux/vndservice_contexts
 vendor/etc/sensors/config/cedros_ak991x_0.json
 vendor/etc/sensors/config/cedros_bu52053nvx_0.json
 vendor/etc/sensors/config/cedros_default_sensors.json
