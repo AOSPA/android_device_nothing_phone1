@@ -186,8 +186,6 @@ vendor/bin/wigignpt
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
-vendor/build.prop
-vendor/default.prop
 vendor/etc/Diag.cfg
 vendor/etc/Diag_audio.cfg
 vendor/etc/Diag_bt.cfg
