@@ -67,6 +67,45 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE    := 4096
 KERNEL_DEFCONFIG := phone1_defconfig
 
+# Kernel Modules
+KERNEL_TECHPACK_OUT += $(OUT_DIR)/target/product/$(PRODUCT_DEVICE)/obj/kernel/msm-$(TARGET_KERNEL_VERSION)/techpack
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(KERNEL_TECHPACK_OUT)/display/msm/msm_drm.ko \
+    $(KERNEL_TECHPACK_OUT)/camera/drivers/camera.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/dsp/codecs/native_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/dsp/q6_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/dsp/adsp_loader_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/dsp/q6_notifier_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/dsp/q6_pdr_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/ipc/apr_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/soc/pinctrl_wcd_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/soc/snd_event_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/soc/pinctrl_lpi_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/soc/swr_ctrl_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/soc/swr_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/machine_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/bolero/va_macro_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/bolero/tx_macro_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/bolero/bolero_cdc_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/bolero/wsa_macro_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/bolero/rx_macro_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/tfa98xx/tfa98xx_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/mbhc_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/wcd937x/wcd937x_slave_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/wcd937x/wcd937x_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/wcd9xxx_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/stub_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/wcd938x/wcd938x_slave_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/wcd938x/wcd938x_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/swr_dmic_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/swr_haptics_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/wsa883x/wsa883x_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/wcd_core_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/codecs/hdmi_dlkm.ko \
+    $(KERNEL_TECHPACK_OUT)/audio/asoc/platform_dlkm.ko
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(KERNEL_TECHPACK_OUT)/display/msm/msm_drm.ko
+
 # Partitions - A/B
 AB_OTA_PARTITIONS := boot dtbo odm product system system_ext vendor vendor_boot vbmeta vbmeta_system
 AB_OTA_UPDATER := true
