@@ -73,7 +73,7 @@ AB_OTA_UPDATER := true
 
 # Partitions - Dynamic
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := vendor odm
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := product system system_ext odm vendor
 
 # Partitions - Filesystems
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
