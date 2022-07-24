@@ -95,7 +95,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.default \
-    init.target.rc
+    init.target.rc \
+    ueventd.nothing.rc
 
 # Keymaster
 PRODUCT_PACKAGES += \

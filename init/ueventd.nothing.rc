@@ -1,0 +1,12 @@
+#
+# Copyright (C) 2022 Paranoid Android
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+firmware_directories /mnt/vendor/persist/
+
+# LEDs
+/dev/aw210xx_nf          0444    system    system
+
+# NFC
+/dev/st21nfc              0660   nfc        nfc
