@@ -120,6 +120,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     device/nothing/phone1/phone1_vendor_framework_compatibility_matrix.xml \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
+# Namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
