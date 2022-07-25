@@ -1,11 +1,16 @@
 # Enable incremental fs
 ro.incremental.enable=yes
 
-ro.soc.manufacturer=QTI
+# Crypto
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
 
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
+
+# SOC manufacturer
+ro.soc.manufacturer=QTI
 
 # SPU
 vendor.gatekeeper.disable_spu=true
