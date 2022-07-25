@@ -33,6 +33,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 
+# Authsecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0.vendor
+
 # AVB
 BOARD_AVB_ENABLE := true
 
