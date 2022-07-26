@@ -543,6 +543,7 @@ vendor/lib64/com.qti.feature2.statsregeneration.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/com.qti.settings.kamorta.so
+vendor/lib64/com.qti.settings.kodiak.so
 vendor/lib64/com.qti.settings.mannar.so
 vendor/lib64/com.qti.settings.sdm865.so
 vendor/lib64/com.qti.settings.sm8350.so
