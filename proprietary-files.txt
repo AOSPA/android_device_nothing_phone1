@@ -524,6 +524,7 @@ vendor/lib64/com.qti.feature2.fusion.so
 vendor/lib64/com.qti.feature2.generic.so
 vendor/lib64/com.qti.feature2.gs.cedros.so
 vendor/lib64/com.qti.feature2.gs.kamorta.so
+vendor/lib64/com.qti.feature2.gs.kodiak.so
 vendor/lib64/com.qti.feature2.gs.mannar.so
 vendor/lib64/com.qti.feature2.gs.sdm865.so
 vendor/lib64/com.qti.feature2.gs.sm8350.so
