@@ -148,8 +148,10 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FrameworksResTarget \
     Phone1Frameworks \
-    Phone1SystemUIAOSPA
+    Phone1SystemUIAOSPA \
+    WifiResTarget
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
