@@ -19,6 +19,11 @@ ro.crypto.volume.metadata.method=dm-default-key
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
 
+# Sensors
+persist.vendor.sensors.sync_request=true
+persist.vendor.sensors.allow_non_default_discovery=true
+persist.vendor.sensors.on_change_sample_period=true
+
 # SOC manufacturer
 ro.soc.manufacturer=QTI
 
