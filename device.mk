@@ -126,7 +126,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    Phone1Frameworks
+    Phone1Frameworks \
+    Phone1SystemUIAOSPA
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
