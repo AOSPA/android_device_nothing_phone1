@@ -150,6 +150,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResTarget \
     Phone1Frameworks \
+    Phone1SystemUI \
     Phone1SystemUIAOSPA \
     WifiResTarget
 
