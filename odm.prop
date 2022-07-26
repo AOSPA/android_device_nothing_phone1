@@ -1,0 +1,8 @@
+# Audio
+persist.vendor.audio.bcl.enabled=false
+persist.vendor.audio.speaker.prot.enable=false
+persist.vendor.audio.spv4.enable=false
+persist.vendor.audio.vbat.enabled=false
+vendor.audio.feature.dynamic_ecns.enable=false
+vendor.audio.feature.spkr_prot.enable=false
+vendor.audio.feature.vbat.enable=false
