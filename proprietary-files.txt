@@ -1269,7 +1269,6 @@ vendor/etc/sensors/proto/sns_pedometer.proto
 vendor/etc/sensors/proto/sns_pedometer_wrist.proto
 vendor/etc/sensors/proto/sns_physical_sensor_test.proto
 vendor/etc/sensors/proto/sns_pocket.proto
-vendor/etc/sensors/proto/sns_pocket.proto
 vendor/etc/sensors/proto/sns_pose_6dof.proto
 vendor/etc/sensors/proto/sns_ppg.proto
 vendor/etc/sensors/proto/sns_pressure.proto
