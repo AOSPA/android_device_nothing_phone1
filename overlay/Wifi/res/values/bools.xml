@@ -5,10 +5,8 @@
     <bool name="config_wifi6ghzSupport">true</bool>
     <bool name="config_wifiEnablePartialInitialScan">true</bool>
     <bool name="config_wifiSoftap6ghzSupported">true</bool>
-    <bool name="config_wifiSoftapHeMuBeamformerSupported">false</bool>
     <bool name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
     <bool name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
-    <bool name="config_wifiSoftapHeTwtSupported">false</bool>
     <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
     <bool name="config_wifi_framework_enable_quick_connect">true</bool>
 </resources>

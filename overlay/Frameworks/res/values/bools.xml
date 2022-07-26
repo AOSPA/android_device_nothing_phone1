@@ -2,6 +2,5 @@
 <resources>
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
-    <bool name="config_showNavigationBar">true</bool>
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 </resources>
