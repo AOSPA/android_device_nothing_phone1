@@ -1185,7 +1185,6 @@ vendor/etc/sensors/config/lahaina_v2_fcal_ak991x_0.json
 vendor/etc/sensors/config/lahaina_vertigo_ak991x_0.json
 vendor/etc/sensors/config/lahaina_vertigo_lsm6dst_0.json
 vendor/etc/sensors/config/lahaina_vertigo_lsm6dst_1.json
-vendor/etc/sensors/config/lahaina_sx932x_0.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_amd_sw_disabled.json
 vendor/etc/sensors/config/sns_amd_sw_enabled.json
