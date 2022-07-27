@@ -6,3 +6,6 @@ persist.vendor.audio.vbat.enabled=false
 vendor.audio.feature.dynamic_ecns.enable=false
 vendor.audio.feature.spkr_prot.enable=false
 vendor.audio.feature.vbat.enable=false
+
+# Display
+persist.sys.sf.color_mode=0

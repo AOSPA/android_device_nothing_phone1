@@ -1,0 +1,5 @@
+# Display
+ro.sf.lcd_density=420
+
+# Thermal
+persist.vendor.thermal.config=/vendor/etc/thermal-engine.conf
