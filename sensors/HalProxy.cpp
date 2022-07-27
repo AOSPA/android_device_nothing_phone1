@@ -82,7 +82,7 @@ int64_t msFromNs(int64_t nanos) {
 }
 
 bool patchPhone1PickupSensor(V2_1::SensorInfo& sensor) {
-    if (sensor.typeAsString != "android.sensor.screen_upward") {
+    if (sensor.typeAsString != "android.sensor.wrist_tilt_gesture") {
         return true;
     }
 
