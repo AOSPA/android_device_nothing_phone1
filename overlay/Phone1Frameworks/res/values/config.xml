@@ -48,4 +48,10 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">M 0.0,0.0 h 187.83 v 135.65 h -187.83 Z @left</string>
 
+    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+    <integer-array name="config_availableColorModes">
+        <item>260</item>
+        <item>0</item>
+    </integer-array>
+
 </resources>
