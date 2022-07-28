@@ -148,7 +148,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResTarget \
     Phone1Frameworks \
     Phone1Settings \
     Phone1SystemUI \
