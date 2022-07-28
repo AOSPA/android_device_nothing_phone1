@@ -937,8 +937,25 @@ vendor/lib64/libqconfigclient.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # NFC
+vendor/bin/hw/android.hardware.nfc@1.2-service
+vendor/etc/init/android.hardware.nfc@1.2-service.rc
+vendor/etc/init/init.Spacewar.nfc.rc
+vendor/etc/init/init.Spacewar.se.rc
+vendor/etc/libese-nxp.conf
+vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
+vendor/etc/permissions/com.nxp.nfc.xml
+vendor/libnfc-nxp_RF.conf
+vendor/lib64/ese_client.so
+vendor/lib64/ese_spi_nxp.so
+vendor/lib64/hal_libnfc.so
+vendor/lib64/libchrome.so
 vendor/lib64/libpn557_fw.so
+vendor/lib64/nfc_nci_nxp.so
+vendor/lib64/vendor.nxp.eventprocessor@1.0.so
+vendor/lib64/vendor.nxp.nxpese@1.0.so
+vendor/lib64/vendor.nxp.nxpnfc@2.0.so
+vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
