@@ -403,6 +403,7 @@ vendor/firmware/evass.mdt
 # Camera
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/vidhance_calibration
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/CAMERA_ICP_170.elf
 vendor/lib/rfsa/adsp/bm2n06.bin
