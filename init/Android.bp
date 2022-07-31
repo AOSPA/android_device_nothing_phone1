@@ -25,12 +25,18 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.phone1.display.rc",
+    src: "init.phone1.display.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.target.rc",
     src: "init.target.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
-
 
 prebuilt_etc {
     name: "ueventd.nothing.rc",

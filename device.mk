@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.default \
+    init.phone1.display.rc \
     init.target.rc \
     ueventd.nothing.rc
 
