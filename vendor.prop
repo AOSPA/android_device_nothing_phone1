@@ -17,6 +17,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 
 # Display
 ro.surface_flinger.refresh_rate_switching=true
+ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # qteeconnector settings
