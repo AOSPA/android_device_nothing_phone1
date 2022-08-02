@@ -23,6 +23,9 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 # Fingerprint
 ro.fingerprints.lock=0
 
+# Hardware ID
+persist.vendor.fastrpc.hwid_version=PVT
+
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
