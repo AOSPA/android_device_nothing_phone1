@@ -20,6 +20,9 @@ ro.surface_flinger.refresh_rate_switching=true
 ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
+# Fingerprint
+ro.fingerprints.lock=0
+
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000

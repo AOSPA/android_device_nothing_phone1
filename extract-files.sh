@@ -54,6 +54,14 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib64/libgf_hal.so)
+            sed -i "s/ro.boot.flash.locked/ro.fingerprints.lock/g" "${2}"
+            ;;
+     esac
+}
+
 # Initialize the helper.
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
