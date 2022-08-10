@@ -184,6 +184,10 @@ $(call inherit-product, build/make/target/product/gsi_keys.mk)
 # Partitions - FRP
 BOARD_FRP_PARTITION_NAME := frp
 
+# Perf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # QRTR
 PRODUCT_PACKAGES += \
     qrtr-ns \
