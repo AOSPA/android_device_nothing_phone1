@@ -184,9 +184,6 @@ $(call inherit-product, build/make/target/product/gsi_keys.mk)
 # Partitions - FRP
 BOARD_FRP_PARTITION_NAME := frp
 
-# Partitions - Vendor
-ENABLE_VENDOR_IMAGE := true
-
 # QRTR
 PRODUCT_PACKAGES += \
     qrtr-ns \
