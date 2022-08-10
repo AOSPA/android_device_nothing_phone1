@@ -44,6 +44,9 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
+# Fingerprint
+TARGET_SURFACEFLINGER_UDFPS_LIB := //device/nothing/phone1:libudfps_extension.phone1
+
 # GPS
 LOC_HIDL_VERSION = 4.0
 
