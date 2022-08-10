@@ -17,6 +17,7 @@
 #ifndef ANDROID_HARDWARE_BIOMETRICS_FINGERPRINT_V2_3_BIOMETRICSFINGERPRINT_H
 #define ANDROID_HARDWARE_BIOMETRICS_FINGERPRINT_V2_3_BIOMETRICSFINGERPRINT_H
 
+#include <cstdint>
 #include <log/log.h>
 #include <android/log.h>
 #include <hardware/hardware.h>
@@ -77,6 +78,7 @@ private:
     std::mutex mClientCallbackMutex;
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
     fingerprint_device_t *mDevice;
+    int32_t(*goodixExtCmd)(int64_t, int32_t, int32_t);
 };
 
 }  // namespace implementation
