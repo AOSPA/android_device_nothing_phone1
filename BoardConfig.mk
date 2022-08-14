@@ -1,9 +1,3 @@
-# config.mk
-#
-# Product-specific compile-time definitions.
-#
-# TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
