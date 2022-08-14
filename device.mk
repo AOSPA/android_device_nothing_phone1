@@ -193,12 +193,6 @@ BOARD_FRP_PARTITION_NAME := frp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# QRTR
-PRODUCT_PACKAGES += \
-    qrtr-ns \
-    qrtr-lookup \
-    libqrtr
-
 # QSSI
 TARGET_USES_QSSI := true
 
