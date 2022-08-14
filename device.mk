@@ -240,10 +240,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
-# Vendor Service Manager
-PRODUCT_PACKAGES += \
-    vndservicemanager
-
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
