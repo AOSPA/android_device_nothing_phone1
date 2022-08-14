@@ -118,6 +118,7 @@ vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt
 vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt
 vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt
 vendor/firmware/tfa98xx.cnt
+vendor/lib/hw/audio.primary.lahaina.so
 vendor/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
@@ -145,6 +146,7 @@ vendor/lib/libOmxMpeghDecSw.so
 vendor/lib/libOmxMpeghEncSw.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
+vendor/lib/liba2dpoffload.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -174,9 +176,11 @@ vendor/lib/liblvacfs_wrapper.so
 vendor/lib/libmulawdec.so
 vendor/lib/libqtigef.so
 vendor/lib/libsmwrapper.so
+vendor/lib/libssrec.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
+vendor/lib64/hw/audio.primary.lahaina.so
 vendor/lib64/hw/sound_trigger.primary.lahaina.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
@@ -199,6 +203,7 @@ vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxMpeghEncSw.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxWmaDec.so
+vendor/lib64/liba2dpoffload.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -221,6 +226,7 @@ vendor/lib64/lib_lvacfs.so
 vendor/lib64/liblvacfs_wrapper.so
 vendor/lib64/libmulawdec.so
 vendor/lib64/libqtigef.so
+vendor/lib64/libssrec.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
