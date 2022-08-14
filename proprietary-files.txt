@@ -29,14 +29,6 @@ vendor/firmware/a660_zap.mdt
 
 # Audio
 vendor/bin/climax
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
@@ -45,14 +37,6 @@ vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_workspaceFile.qwsp
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_General_cal.acdb
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Global_cal.acdb
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_Headset_cal.acdb
@@ -909,22 +893,15 @@ vendor/lib64/libmmosal.so
 # Media
 vendor/bin/hw/qconfigservice
 vendor/etc/init/qconfig.rc
-vendor/etc/media_lahaina/video_system_specs.json
 vendor/etc/media_yupik_v0/video_system_specs.json
 vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/media/video_system_specs.json
-vendor/etc/media_codecs_lahaina_vendor.xml
-vendor/etc/media_codecs_lahaina.xml
 vendor/etc/media_codecs_yupik_v0.xml
 vendor/etc/media_codecs_yupik_v1.xml
-vendor/etc/media_codecs_performance_lahaina_vendor.xml
-vendor/etc/media_codecs_performance_lahaina.xml
 vendor/etc/media_codecs_performance_yupik_v0.xml
 vendor/etc/media_codecs_performance_yupik_v1.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs.xml
-vendor/etc/media_profiles_lahaina_vendor.xml
-vendor/etc/media_profiles_lahaina.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/media_profiles_yupik_v0.xml
