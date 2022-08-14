@@ -28,6 +28,9 @@ vendor/firmware/a660_zap.elf
 vendor/firmware/a660_zap.mdt
 
 # Audio
+system/etc/permissions/se.dirac.acs.xml
+system/priv-app/DiracAudioControlService/DiracAudioControlService.apk
+system/priv-app/NothingDiracService/NothingDiracService.apk
 vendor/bin/climax
 vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
