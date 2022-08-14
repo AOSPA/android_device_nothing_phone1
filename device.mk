@@ -191,9 +191,6 @@ BOARD_FRP_PARTITION_NAME := frp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# QSSI
-TARGET_USES_QSSI := true
-
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
