@@ -16,13 +16,15 @@
 -->
 <resources>
 
-    <!-- Whether or not the device is capable of multiple levels of vibration intensity.
-         Note that this is different from whether it can control the vibration amplitude as some
-         devices will be able to vary their amplitude but do not possess enough dynamic range to
-         have distinct intensity levels -->
+    <!-- Display settings screen, Color mode options. Must be the same length and order as
+         config_color_mode_options_values below. Only the values that also appear in
+         frameworks/base/core/res/res/values/config.xml's config_availableColorModes are shown. -->
     <string-array name="config_color_mode_options_strings">
         <item>Alive</item>
-        <item>Standard</item>
+        <item>Natural</item>
+        <item>Boosted</item>
+        <item>Saturated</item>
+        <item>Adaptive</item>
     </string-array>
 
     <!-- Display settings screen, Color mode options. Must be the same length and order as
@@ -31,6 +33,9 @@
     <integer-array name="config_color_mode_options_values">
         <item>260</item>
         <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </integer-array>
 
     <!-- Whether to show Smooth Display feature in Settings Options -->
