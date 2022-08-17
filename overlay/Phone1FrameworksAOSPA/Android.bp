@@ -15,5 +15,5 @@
 runtime_resource_overlay {
     name: "Phone1FrameworksAOSPA",
     sdk_version: "current",
-    device_specific: true,
+    system_ext_specific: true,
 }
