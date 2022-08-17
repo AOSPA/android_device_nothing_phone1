@@ -1018,6 +1018,14 @@ vendor/lib64/libmmosal.so
 # Media - BSP
 vendor/bin/hw/qconfigservice
 vendor/etc/init/qconfig.rc
+vendor/lib/libqc2vppfilter.so
+vendor/lib/libqconfigclient.so
+vendor/lib/vendor.qti.hardware.qconfig@1.0.so
+vendor/lib64/libqc2vppfilter.so
+vendor/lib64/libqconfigclient.so
+vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
+
+# Media - Stock
 vendor/etc/media_yupik_v0/video_system_specs.json
 vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/media/video_system_specs.json
@@ -1032,12 +1040,6 @@ vendor/etc/media_profiles_vendor.xml
 vendor/etc/media_profiles_yupik_v0.xml
 vendor/etc/media_profiles_yupik_v1.xml
 vendor/etc/media_profiles.xml
-vendor/lib/libqc2vppfilter.so
-vendor/lib/libqconfigclient.so
-vendor/lib/vendor.qti.hardware.qconfig@1.0.so
-vendor/lib64/libqc2vppfilter.so
-vendor/lib64/libqconfigclient.so
-vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # NFC - Stock
 vendor/bin/hw/android.hardware.nfc@1.2-service
