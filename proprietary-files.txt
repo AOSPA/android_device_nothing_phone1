@@ -374,9 +374,9 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # CNE - BSP
--vendor/app/CACertService/CACertService.apk
--vendor/app/CneApp/CneApp.apk
--vendor/app/IWlanService/IWlanService.apk
+vendor/app/CACertService/CACertService.apk
+vendor/app/CneApp/CneApp.apk
+vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
 vendor/bin/modemManager
 vendor/bin/mutualex
@@ -729,7 +729,7 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Connection Security - BSP
--vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk
+vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk
 vendor/bin/ssgqmigd
 vendor/bin/ssgtzd
 vendor/etc/init/ssgtzd.rc
@@ -798,7 +798,7 @@ vendor/firmware/yupik_ipa_fws.mdt
 # Diag - BSP
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
--vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
@@ -877,7 +877,7 @@ vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/etc/apdr.conf
 vendor/etc/cacert_location.pem
 vendor/etc/izat.conf
@@ -924,10 +924,10 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # Hotword - Stock
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
--system_ext/framework/com.android.hotwordenrollment.common.util.jar
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS - BSP
 vendor/bin/ims_rtp_daemon
@@ -1043,7 +1043,7 @@ vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so
 # Neural Networks - Stock
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/lib/rfsa/adsp/libQnnHtpAltPrepSkel.so
 vendor/lib64/libQnnHtpAltPrepStub.so
 vendor/lib64/unnhal-acc-common.so
@@ -1517,13 +1517,13 @@ vendor/etc/thermal.mid.level3.conf
 vendor/etc/thermal.mid.level4.conf
 vendor/etc/thermal.sgame.conf
 vendor/etc/thermal.super.conf
--vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
 
 # Time Services - BSP
--vendor/app/TimeService/TimeService.apk
+vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
@@ -1665,6 +1665,6 @@ vendor/firmware/wlanmdsp.otaupdate
 # Widevine - Stock
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
