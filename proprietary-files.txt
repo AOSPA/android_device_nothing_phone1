@@ -799,7 +799,7 @@ vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
-# Display
+# Display - BSP
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/feature_enabler_client
 vendor/bin/ppd
@@ -811,7 +811,6 @@ vendor/etc/display/DPU7__.xml
 vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/etc/qdcm_calib_data_rm692e5_amoled_fhd+_120hz_cmd_mode_dsi_visionox_panel.xml
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
@@ -837,6 +836,9 @@ vendor/lib64/vendor.display.color@1.3.so
 vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
+
+# Display - Stock
+vendor/etc/qdcm_calib_data_rm692e5_amoled_fhd+_120hz_cmd_mode_dsi_visionox_panel.xml
 
 # FASTCV
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
