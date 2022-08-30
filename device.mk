@@ -159,6 +159,10 @@ PRODUCT_PACKAGES += \
     Phone1SystemUIAOSPA \
     WifiResTarget
 
+# Paranoid Doze
+PRODUCT_PACKAGES += \
+    ParanoidGlyph
+
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
