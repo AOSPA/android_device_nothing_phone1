@@ -801,7 +801,6 @@ vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display - BSP
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/feature_enabler_client
 vendor/bin/ppd
 vendor/bin/qdcmss
@@ -812,15 +811,10 @@ vendor/etc/display/DPU7__.xml
 vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/hw/android.hardware.graphics.mapper@3.0-impl-qti-display.so
-vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpps.so
-vendor/lib64/libgralloc.qti.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libqdcm-mode-parser.so
