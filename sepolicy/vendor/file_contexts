@@ -1,2 +1,6 @@
+# Fingerprint
+/data/vendor/goodix/gf_data(/.*)?               u:object_r:fingerprint_vendor_data_file:s0
+/dev/goodix_fp                                  u:object_r:fingerprint_device:s0
+
 # NFC
 /dev/pn553                                     u:object_r:nfc_device:s0
