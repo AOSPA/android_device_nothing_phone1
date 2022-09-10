@@ -111,6 +111,10 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 TARGET_RECOVERY_FSTAB := device/nothing/phone1/init/fstab.default
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    device/nothing/phone1/sepolicy/vendor
+
 # UFS
 #namespace definition for librecovery_updater
 #differentiate legacy 'sg' or 'bsg' framework
