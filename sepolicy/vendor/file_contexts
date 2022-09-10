@@ -1,0 +1,2 @@
+# NFC
+/dev/pn553                                     u:object_r:nfc_device:s0
