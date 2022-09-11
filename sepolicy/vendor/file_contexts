@@ -4,3 +4,6 @@
 
 # NFC
 /dev/pn553                                     u:object_r:nfc_device:s0
+
+# Vibrator
+/dev/aw8697_haptic                              u:object_r:input_device:s0
