@@ -1,0 +1,2 @@
+# Display
+allow platform_app vendor_sysfs_graphics:file w_file_perms;
