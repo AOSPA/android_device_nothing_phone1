@@ -536,6 +536,7 @@ vendor/lib64/camera/components/com.arcsoft.node.picauto.so
 vendor/lib64/camera/components/com.arcsoft.node.realtimebokeh.so
 vendor/lib64/camera/components/com.arcsoft.node.singlebokeh.so
 vendor/lib64/camera/components/com.arcsoft.node.videosn.so
+vendor/lib64/camera/components/com.nothing.node.motion.so
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
@@ -692,6 +693,7 @@ vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
+vendor/lib64/libmorpho_MotionSensor.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libofflinedump.so
