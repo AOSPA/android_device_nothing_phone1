@@ -45,6 +45,7 @@
         <boolean name="vilte_data_is_metered_bool" value="false" />
         <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
         <boolean name="allow_hold_call_during_emergency_bool" value="false" />
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="001" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
