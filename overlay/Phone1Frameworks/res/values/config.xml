@@ -86,7 +86,7 @@
 
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+    <bool name="config_dozeAlwaysOnEnabled">true</bool>
 
     <!-- Idle current for bluetooth controller. 0 by default-->
     <integer name="config_bluetooth_idle_cur_ma">6</integer>
