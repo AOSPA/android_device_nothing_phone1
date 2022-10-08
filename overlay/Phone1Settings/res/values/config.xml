@@ -33,4 +33,7 @@
         <item>0</item>
     </integer-array>
 
+    <!-- Whether to show Smooth Display feature in Settings Options -->
+    <bool name="config_show_smooth_display">true</bool>
+
 </resources>

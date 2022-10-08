@@ -15,6 +15,10 @@ ro.incremental.enable=yes
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
+# Display
+ro.surface_flinger.refresh_rate_switching=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
