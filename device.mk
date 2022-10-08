@@ -54,11 +54,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Camera
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
+    frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
+
 PRODUCT_PACKAGES += \
-    camera.device@3.2-impl \
-    camera.device@1.0-impl \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
+    android.hardware.camera.provider@2.4-service_64 \
+    libcamera2ndk_vendor \
+    libstdc++.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -78,6 +85,9 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3.so.vendor
 
 # FM
 BOARD_HAVE_QCOM_FM := false
@@ -177,8 +187,7 @@ TARGET_USES_RRO := true
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_11/android.hardware.sensor.barometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_9/android.hardware.sensor.barometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
@@ -186,12 +195,25 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal \
+    android.hardware.sensors@2.0-ScopedWakelock \
+    libsensorndkbridge
+
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
+# System Helper
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelper@1.0.vendor
 
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
