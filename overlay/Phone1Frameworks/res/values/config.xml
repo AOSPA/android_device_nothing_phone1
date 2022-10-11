@@ -175,4 +175,7 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
+    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">co.aospa.sensor.udfps</string>
+
 </resources>

@@ -208,7 +208,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.phone1-multihal \
     android.hardware.sensors@2.0-ScopedWakelock \
-    libsensorndkbridge
+    libsensorndkbridge \
+    sensors.nothing
 
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
