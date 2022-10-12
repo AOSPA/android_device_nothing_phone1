@@ -17,6 +17,6 @@
 -->
 <resources>
     <!-- Landscape, just use the regular values -->
-    <dimen name="status_bar_padding_start">0dp</dimen>
+    <dimen name="status_bar_padding_start">8dp</dimen>
 
 </resources>
