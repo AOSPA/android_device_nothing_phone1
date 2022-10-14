@@ -109,11 +109,6 @@ PRODUCT_PACKAGES += \
    android.hardware.keymaster@4.1 \
    android.hardware.keymaster@4.1.vendor
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.lights-service.qti \
-    lights.qcom
-
 # Manifests
 DEVICE_MANIFEST_FILE += \
     device/nothing/phone1/manifest_yupik.xml \
