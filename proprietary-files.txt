@@ -373,7 +373,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# CNE - Stock
+# CNE - BSP
 -vendor/app/CACertService/CACertService.apk
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/IWlanService/IWlanService.apk
@@ -735,13 +735,13 @@ vendor/bin/ssgtzd
 vendor/etc/init/ssgtzd.rc
 vendor/lib64/libminksocket.so
 
-# DPM - Stock
+# DPM - BSP
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# Data - Stock
+# Data - BSP
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/embmsslServer
@@ -927,7 +927,7 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# IMS - Stock
+# IMS - BSP
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
 vendor/etc/init/dataadpl.rc
@@ -982,10 +982,10 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libspcom.so
 
-# Latency - Stock
+# Latency - BSP
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 
-# MDM - Stock
+# MDM - BSP
 vendor/bin/ks
 
 # MMI - BSP
@@ -1048,12 +1048,12 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-gpu.so
 vendor/lib64/unnhal-acc-htp.so
 
-# PD - Stock
+# PD - BSP
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 
-# Peripheral Manager - Stock
+# Peripheral Manager - BSP
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
@@ -1074,7 +1074,7 @@ vendor/etc/init/init.qti.qcv.rc
 vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/libsoc_helper.so
 
-# QMI - Stock
+# QMI - BSP
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
@@ -1119,7 +1119,7 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
-# QCRIL - Stock
+# QCRIL - BSP
 vendor/bin/hw/qcrilNrd
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
@@ -1222,7 +1222,7 @@ vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# RemoteFS - Stock
+# RemoteFS - BSP
 vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
@@ -1485,11 +1485,11 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# TFTP - Stock
+# TFTP - BSP
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
-# TLOC - Stock
+# TLOC - BSP
 vendor/bin/tloc_daemon
 vendor/etc/init/tloc_daemon.rc
 
