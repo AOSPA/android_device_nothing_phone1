@@ -101,6 +101,8 @@ PRODUCT_PACKAGES += \
     fstab.default \
     init.phone1.display.rc \
     init.phone1.perf.rc \
+    init.qti.media.rc \
+    init.qti.media.sh \
     init.target.rc \
     ueventd.nothing.rc
 
