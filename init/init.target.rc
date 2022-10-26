@@ -230,8 +230,6 @@ on boot
     chown system system /sys/kernel/mem-offline/anon_migrate
 	chown system system /proc/modem_restart
     chown system system /proc/stat
-    #start ft-diag
-    start ft_diag
 
 #add by zh for ABR-3187
 on property:persist.sys.runin.reboot=false
@@ -360,40 +358,4 @@ on property:sys.ship_mode.enable=0
 
 on property:sys.ship_mode.enable=1
    write /sys/class/qcom-battery/ship_mode_en 1
-# @}
-
-# leiwang add for ft_diag @{
-service ft_diag /vendor/bin/ft_diag
-   class main
-   user root
-   group system
-# @}
-
-# leiwang add for A+G sensor calibration @{
-service vendor.ssc_drva_test.accel /vendor/bin/ssc_drva_test -sensor=accel -factory_test=2 -duration=3
-   class core
-   user system
-   group system
-   disabled
-   oneshot
-
-service vendor.ssc_drva_test.gyro /vendor/bin/ssc_drva_test -sensor=gyro -factory_test=2 -duration=3
-   class core
-   user system
-   group system
-   disabled
-   oneshot
-
-on property:sys.ssc_drva_test.accel=start
-   start vendor.ssc_drva_test.accel
-
-on property:sys.ssc_drva_test.accel=stop
-   stop vendor.ssc_drva_test.accel
-
-
-on property:sys.ssc_drva_test.gyro=start
-   start vendor.ssc_drva_test.gyro
-
-on property:sys.ssc_drva_test.gyro=stop
-   stop vendor.ssc_drva_test.gyro
 # @}
