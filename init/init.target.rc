@@ -84,6 +84,7 @@ on fs
     chmod 666 /dev/goodix_fp
     chown system system /dev/goodix_fp
     chown system system /sys/class/backlight/panel0-backlight/hbm_mode
+    chmod 666 /sys/class/backlight/panel0-backlight/hbm_mode
     #chmod tfa climax
     chmod 666 /sys/bus/i2c/devices/1-0034/reg
     chmod 666 /sys/bus/i2c/devices/1-0034/rw
@@ -173,9 +174,10 @@ on boot
     chmod 0666 /sys/class/drm/sde-conn-1-DSI-1/hbm_mode
     # add for cit to read panel_id
     chown system system /sys/class/drm/sde-conn-1-DSI-1/panel_id
-    chmod 0600 /sys/class/drm/sde-conn-1-DSI-1/panel_id
+    chmod 0666 /sys/class/drm/sde-conn-1-DSI-1/panel_id
     # add for cit to write leds
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/all_leds_effect
+    chmod 0666 /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/all_leds_effect
     #add for TP to write mode
     chown system system /sys/bus/spi/devices/spi0.0/fts_edge_mode
     chown system system /sys/bus/spi/devices/spi0.0/fts_gesture_mode
@@ -193,8 +195,11 @@ on boot
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/rear_cam_led_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/front_cam_led_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/horse_race_leds_br
+    chmod 0666 /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/horse_race_leds_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/round_leds_br
+    chmod 0666 /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/round_leds_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/single_led_br
+    chmod 0666 /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/single_led_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/round_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/horse_race_leds
     #add for hal write lednode
@@ -332,8 +337,11 @@ on property:service.bootanim.exit=1
 on property:service.bootanim.exit=1
     # add for cit to write wireless_boost_en
     chown system system /sys/class/qcom-battery/wireless_boost_en
+    chmod 0666 /sys/class/qcom-battery/wireless_boost_en
     # add for cit to write wls_st38_reg
     chown system system /sys/class/qcom-battery/wls_st38_reg
+    chmod 0666 /sys/class/qcom-battery/wls_st38_reg
+    chmod 0666 /sys/class/qcom-battery/wls_reverse_status
     # add for runin to write charger
     chown system system /sys/class/qcom-battery/usb_charger_en
     # add for slowcharge need to write charger
