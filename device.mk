@@ -156,6 +156,7 @@ PRODUCT_PACKAGES += \
     Phone1Frameworks \
     Phone1FrameworksAOSPA \
     Phone1Settings \
+    Phone1SettingsAOSPA \
     Phone1SystemUI \
     Phone1SystemUIAOSPA \
     WifiResTarget
