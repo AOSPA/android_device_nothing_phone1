@@ -33,6 +33,74 @@
          Must be in the range specified by minimum and maximum. -->
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.4409672831</item>
 
+    <!-- Array of output values for LCD backlight corresponding to the lux values
+         in the config_autoBrightnessLevels array.  This array should have size one greater
+         than the size of the config_autoBrightnessLevels array.
+         The brightness values must be between 0 and 255 and be non-decreasing.
+         This must be overridden in platform specific overlays -->
+<integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>28</item>
+        <item>28</item>
+        <item>120</item>
+        <item>250</item>
+        <item>250</item>
+        <item>300</item>
+        <item>325</item>
+        <item>500</item>
+        <item>637</item>
+        <item>869</item>
+        <item>908</item>
+        <item>1050</item>
+        <item>1300</item>
+        <item>1400</item>
+        <item>1660</item>
+        <item>1800</item>
+        <item>2000</item>
+        <item>2047</item>
+        <item>4095</item>
+    </integer-array>
+
+    <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
+         The N entries of this array define N + 1 control points as follows:
+         (1-based arrays)
+
+         Point 1:            (0, value[1]):             lux <= 0
+         Point 2:     (level[1], value[2]):  0        < lux <= level[1]
+         Point 3:     (level[2], value[3]):  level[2] < lux <= level[3]
+         ...
+         Point N+1: (level[N], value[N+1]):  level[N] < lux
+
+         The control points must be strictly increasing.  Each control point
+         corresponds to an entry in the brightness backlight values arrays.
+         For example, if lux == level[1] (first element of the levels array)
+         then the brightness will be determined by value[2] (second element
+         of the brightness values array).
+
+         Spline interpolation is used to determine the auto-brightness
+         backlight values for lux levels between these control points.
+
+         Must be overridden in platform specific overlays -->
+    <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>6</item>
+        <item>18</item>
+        <item>32</item>
+        <item>56</item>
+        <item>114</item>
+        <item>223</item>
+        <item>455</item>
+        <item>665</item>
+        <item>873</item>
+        <item>1320</item>
+        <item>1515</item>
+        <item>1750</item>
+        <item>2060</item>
+        <item>3020</item>
+        <item>5020</item>
+        <item>8000</item>
+        <item>65535</item>
+    </integer-array>
+
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
 
