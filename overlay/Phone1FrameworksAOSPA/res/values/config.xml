@@ -16,25 +16,6 @@
 -->
 <resources>
 
-    <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
-    <integer name="config_singleTapKeyCode">250</integer>
-
-    <!-- Default settings for gestures:
-             0 - Disabled
-             1 - Wake
-             2 - Pulse
-             3 - Flashlight
-             4 - Airplane
-             5 - Play/Pause
-             6 - Next
-             7 - Previous
-             8 - Camera
-             9 - Dialer -->
-    <integer name="config_singleTapDefault">1</integer>
-
-    <!-- Whether to intercept inputs on screen off. -->
-    <bool name="config_enableKeyHandler">true</bool>
-
     <!-- Fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Nothing/SpacewarEEA/Spacewar:12/SKQ1.211230.001/1663076289:user/release-keys</string>
 
