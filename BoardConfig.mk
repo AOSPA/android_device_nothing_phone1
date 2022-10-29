@@ -28,7 +28,7 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Board Info
-TARGET_BOARD_INFO_FILE := device/nothing/phone1/board-info.txt
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Boot
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -48,7 +48,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //device/nothing/phone1:libudfps_extension.phone1
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.phone1
 
 # GPS
 LOC_HIDL_VERSION = 4.0
@@ -118,11 +118,11 @@ ADD_RADIO_FILES := false
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
-TARGET_RECOVERY_FSTAB := device/nothing/phone1/init/fstab.default
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/nothing/phone1/sepolicy/vendor
+    $(DEVICE_PATH)/sepolicy/vendor
 
 # UFS
 #namespace definition for librecovery_updater
