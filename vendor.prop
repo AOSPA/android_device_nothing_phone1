@@ -11,9 +11,6 @@ persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 # Enable incremental fs
 ro.incremental.enable=yes
 
-# Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.nothing.ois.cal,com.nothing.camera
-
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key

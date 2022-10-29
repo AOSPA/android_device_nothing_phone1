@@ -241,3 +241,4 @@ PRODUCT_COPY_FILES += \
 
 # Proprietary Vendor
 $(call inherit-product, vendor/nothing/phone1/phone1-vendor.mk)
+$(call inherit-product, vendor/nothing/camera/camera-vendor.mk)
