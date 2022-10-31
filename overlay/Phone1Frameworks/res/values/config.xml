@@ -230,6 +230,9 @@
          config_defaultPeakRefreshRate will act as the default frame rate. -->
     <integer name="config_defaultRefreshRate">0</integer>
 
+    <!-- Default refresh rate while the device has high brightness mode enabled for HDR. -->
+    <integer name="config_defaultRefreshRateInHbmHdr">60</integer>
+
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
