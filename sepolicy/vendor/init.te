@@ -1,0 +1,2 @@
+# Fingerprint
+set_prop(init, vendor_fingerprint_prop)

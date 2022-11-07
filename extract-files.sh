@@ -60,7 +60,7 @@ function blob_fixup() {
             patchelf --replace-needed "android.hardware.vibrator-V1-ndk_platform.so" "android.hardware.vibrator-V1-ndk.so" "${2}"
             ;;
         vendor/lib64/libgf_hal.so)
-            sed -i "s/ro.boot.flash.locked/persist.sys.gf_flash/g" "${2}"
+            sed -i "s/ro.boot.flash.locked/vendor.goodix.locked/g" "${2}"
             ;;
      esac
 }
