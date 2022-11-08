@@ -1,0 +1,2 @@
+# Allow Dirac App to read Dirac properties
+get_prop(platform_app, vendor_audio_prop)
