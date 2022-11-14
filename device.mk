@@ -242,10 +242,6 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
-# Whitelist
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/phone1_whitelist.xml:system/etc/sysconfig/phone1_whitelist.xml
-
 # WLAN
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
