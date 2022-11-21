@@ -9,4 +9,3 @@ vendor.audio.feature.vbat.enable=false
 
 # Display
 persist.sys.sf.color_mode=0
-vendor.display.enable_async_powermode=1
