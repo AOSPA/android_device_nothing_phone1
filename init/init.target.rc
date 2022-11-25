@@ -69,6 +69,13 @@ on init
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
 
+    # Begin, added by zhiming.guan for ABR-14096
+    chown root system /sys/class/thermal/thermal_zone94/mode
+    chown root system /sys/class/thermal/thermal_zone95/mode
+    chmod 0664 /sys/class/thermal/thermal_zone94/mode
+    chmod 0664 /sys/class/thermal/thermal_zone95/mode
+    # End
+
 on early-fs
     start vold
 
