@@ -363,6 +363,9 @@
     <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
     <string name="config_dozeUdfpsLongPressSensorType" translatable="false">co.aospa.sensor.udfps</string>
 
+    <!-- Type of the tap sensor. Empty if tap is not supported. -->
+    <string name="config_dozeTapSensorType" translatable="false">co.aospa.sensor.single_tap</string>
+
     <!-- If an any motion sensor is not available, prefer the wrist tilt detector over the
      SMD. -->
     <bool name="config_autoPowerModePreferWristTilt">true</bool>
