@@ -1,3 +1,6 @@
+# Camera
+/(vendor|system/vendor)/lib64/libmfec\.so                                                         u:object_r:same_process_hal_file:s0
+
 # Fingerprint
 /data/vendor/goodix(/.*)?                                                                         u:object_r:fingerprint_vendor_data_file:s0
 /dev/goodix_fp                                                                                    u:object_r:fingerprint_device:s0
