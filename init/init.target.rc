@@ -69,12 +69,17 @@ on init
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
 
+    # Property used for sku specific sysconfig and permissions
+    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
     # Begin, added by zhiming.guan for ABR-14096
     chown root system /sys/class/thermal/thermal_zone94/mode
     chown root system /sys/class/thermal/thermal_zone95/mode
     chmod 0664 /sys/class/thermal/thermal_zone94/mode
     chmod 0664 /sys/class/thermal/thermal_zone95/mode
     # End
+
+    # Allow GOTA targeting full OTA per SKU
+    setprop ro.oem.key1 ${ro.boot.hardware.sku}
 
 on early-fs
     start vold
@@ -91,7 +96,6 @@ on fs
     chmod 666 /dev/goodix_fp
     chown system system /dev/goodix_fp
     chown system system /sys/class/backlight/panel0-backlight/hbm_mode
-    chmod 666 /sys/class/backlight/panel0-backlight/hbm_mode
     #chmod tfa climax
     chmod 666 /sys/bus/i2c/devices/1-0034/reg
     chmod 666 /sys/bus/i2c/devices/1-0034/rw
@@ -143,6 +147,7 @@ on post-fs-data
 
 on early-boot
     start vendor.sensors
+    verity_update_state
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
@@ -172,22 +177,21 @@ on boot
     chmod 0660 /sys/devices/platform/soc/a94000.i2c/i2c-2/2-0062/trusted_touch_event
     chown system /sys/devices/system/cpu/hyp_core_ctl/enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/hcc_min_freq
-    # add for MZ to write sa_dump
-    chown system system /sys/dump_node
-    chown system system /sys/dump_node/sa_dump
-    chmod 0660 /sys/dump_node/sa_dump
     # add for MZ to write hbm_mode
     chown system system /sys/class/drm/sde-conn-1-DSI-1/hbm_mode
     chmod 0666 /sys/class/drm/sde-conn-1-DSI-1/hbm_mode
     # add for cit to read panel_id
     chown system system /sys/class/drm/sde-conn-1-DSI-1/panel_id
-    chmod 0666 /sys/class/drm/sde-conn-1-DSI-1/panel_id
+    chmod 0600 /sys/class/drm/sde-conn-1-DSI-1/panel_id
     # add for cit to write leds
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/all_leds_effect
     chmod 0666 /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/all_leds_effect
     #add for TP to write mode
     chown system system /sys/bus/spi/devices/spi0.0/fts_edge_mode
     chown system system /sys/bus/spi/devices/spi0.0/fts_gesture_mode
+    # mickey.chin@SystemUI:AOD, 2022/11/10, NOS-611, ABR13T-361
+    # add for systemui to write gesture mode
+    chmod 0666 /sys/bus/spi/devices/spi0.0/fts_gesture_mode
     # add for cit to write wireless_boost_en
     #chown system system /sys/class/qcom-battery/wireless_boost_en
     # add for cit to write wls_st38_reg
@@ -226,6 +230,24 @@ on boot
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/exclamation_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/setting_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/setting_br
+
+    #add by Dylan for TFT-404
+    chmod 0660 /sys/devices/platform/soc/c440000.qcom,spmi/driver/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/force_key_warm_reset
+    chown system system /sys/devices/platform/soc/c440000.qcom,spmi/driver/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/force_key_warm_reset
+
+    #add by raybin for TFT-666
+    chown system system /proc/noth_logger/alarm
+    chown system system /proc/noth_logger/standby
+    chmod 0220 /proc/noth_logger/alarm
+    chmod 0220 /proc/noth_logger/standby
+
+    #add by Dylan for TFT-428
+    write /proc/sys/kernel/hung_task_timeout_secs 180
+    write /proc/sys/kernel/hung_task_warnings 10
+    write /proc/sys/kernel/hung_task_check_count 32768
+    write /proc/sys/kernel/hung_task_panic 1
+    write /proc/sys/kernel/hung_task_check_interval_secs 0
+    write /proc/sys/kernel/hung_task_selective_monitoring 0
     #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
@@ -237,10 +259,24 @@ on boot
     chown system system /sys/kernel/mem-offline/anon_migrate
 	chown system system /proc/modem_restart
     chown system system /proc/stat
+    #start ft-diag
+    start ft_diag
 
-#add by zh for ABR-3187
-on property:persist.sys.runin.reboot=false
-   write /sys/class/qcom-battery/usb_charger_en 0
+
+#add by Dylan for TFT-404
+on property:persist.vendor.stability.force_key_warm_reset=1
+    write /sys/devices/platform/soc/c440000.qcom,spmi/driver/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/force_key_warm_reset 1
+
+on property:persist.vendor.stability.force_key_warm_reset=0
+    write /sys/devices/platform/soc/c440000.qcom,spmi/driver/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/force_key_warm_reset 0
+
+#add by Dylan for TFT-456
+on property:sys.system_server.start_count=1
+    write /sys/devices/virtual/NT/NT_reserve_kernel_log/boot_stage_systemserver 1
+
+#add by Dylan for TFT-428
+on property:persist.service.ageTest_running.upload.enable=*
+    write /proc/sys/kernel/hung_task_timeout_secs 120
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
@@ -355,8 +391,8 @@ on property:service.bootanim.exit=1
     chown system system /sys/class/qcom-battery/charge_pump_enable
     # add for ABR-2547
     chown system system /sys/class/qcom-battery/charge_power
-    # add for ABR-12041
-    write /sys/class/qcom-battery/slowcharge_en 0
+    # add for TFT-449
+    chown system system /sys/class/qcom-battery/wls_st38_en
 #@}
 
 # funk.tan for ship_mode @{
@@ -365,4 +401,47 @@ on property:sys.ship_mode.enable=0
 
 on property:sys.ship_mode.enable=1
    write /sys/class/qcom-battery/ship_mode_en 1
+# @}
+
+# change by nick for charge @{
+on property:sys.boot_completed=1 && property:persist.sys.runin.charging=false
+    write /sys/class/qcom-battery/usb_charger_en 0
+on property:sys.boot_completed=1 && property:persist.sys.runin.charging=true
+    write /sys/class/qcom-battery/usb_charger_en 1
+# @}
+
+# leiwang add for ft_diag @{
+service ft_diag /vendor/bin/ft_diag
+   class main
+   user root
+   group system
+# @}
+
+# leiwang add for A+G sensor calibration @{
+service vendor.ssc_drva_test.accel /vendor/bin/ssc_drva_test -sensor=accel -factory_test=2 -duration=3
+   class core
+   user system
+   group system
+   disabled
+   oneshot
+
+service vendor.ssc_drva_test.gyro /vendor/bin/ssc_drva_test -sensor=gyro -factory_test=2 -duration=3
+   class core
+   user system
+   group system
+   disabled
+   oneshot
+
+on property:sys.ssc_drva_test.accel=start
+   start vendor.ssc_drva_test.accel
+
+on property:sys.ssc_drva_test.accel=stop
+   stop vendor.ssc_drva_test.accel
+
+
+on property:sys.ssc_drva_test.gyro=start
+   start vendor.ssc_drva_test.gyro
+
+on property:sys.ssc_drva_test.gyro=stop
+   stop vendor.ssc_drva_test.gyro
 # @}

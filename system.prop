@@ -1,18 +1,5 @@
-# Audio
-ro.vendor.dirac.acs.controller=gef
-ro.vendor.dirac.gef.mode=global
-ro.vendor.dirac.config=512
-ro.vendor.dirac.poolsize=3
-ro.vendor.dirac.acs.storeSettings=1
-ro.vendor.dirac.acs.ignore_error=1
-
 # Bluetooth
-persist.bluetooth.sar_in=0x26-0x26-0x26
-persist.bluetooth.sar_none_in=0x2c-0x2c-0x2c
 persist.vendor.bluetooth.modem_nv_support=true
-
-# Display
-persist.sys.sf.native_mode=260
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true

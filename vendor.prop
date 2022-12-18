@@ -1,4 +1,15 @@
+# Audio
+ro.audio.monitorRotation=true
+ro.vendor.dirac.acs.controller=gef
+ro.vendor.dirac.gef.mode=global
+ro.vendor.dirac.config=512
+ro.vendor.dirac.poolsize=3
+ro.vendor.dirac.acs.storeSettings=1
+ro.vendor.dirac.acs.ignore_error=1
+
 # Bluetooth
+persist.vendor.bluetooth.sar_in=0x26-0x26-0x26
+persist.vendor.bluetooth.sar_none_in=0x2c-0x2c-0x2c
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
@@ -17,6 +28,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 
 # Display
 debug.sf.disable_backpressure=1
+persist.sys.sf.native_mode=260
 ro.surface_flinger.set_idle_timer_ms=4000
 ro.surface_flinger.set_touch_timer_ms=4000
 ro.surface_flinger.set_display_power_timer_ms=1000
