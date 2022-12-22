@@ -261,7 +261,7 @@ UdfpsSensor::UdfpsSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
         ALOGE("failed to open wait pipe: %d", rc);
     }
 
-    mPollFd = open("/sys/devices/platform/soc/a94000.spi/spi_master/spi0/spi0.0/fts_gesture_fod_pressed", O_RDONLY);
+    mPollFd = open("/sys/class/spi_master/spi0/spi0.0/fts_gesture_fod_pressed", O_RDONLY);
     if (mPollFd < 0) {
         ALOGE("failed to open poll fd: %d", mPollFd);
     }
