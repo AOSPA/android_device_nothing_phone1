@@ -120,8 +120,8 @@ TARGET_NO_RECOVERY := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 
 # SELinux
-BOARD_VENDOR_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # UFS
 #namespace definition for librecovery_updater
