@@ -1,2 +1,5 @@
 # Allow Dirac App to read Dirac properties
 get_prop(platform_app, vendor_audio_prop)
+
+# Allow Nothing Camera to read audio properties
+get_prop(platform_app, audio_config_prop)
