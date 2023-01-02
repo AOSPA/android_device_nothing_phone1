@@ -37,6 +37,9 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 # DRM
 drm.service.enabled=true
 
+# Factory Reset Protection
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
 # Fingerprint
 vendor.goodix.locked=0
 
