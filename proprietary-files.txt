@@ -1036,6 +1036,7 @@ vendor/etc/qcril_database/upgrade/config/8.0_config.sql|7a014d466527ed6a995b2f05
 vendor/etc/qcril_database/upgrade/config/9.0_config.sql|c77e1b6a83ca5c49851b8b689a72234ac304c3c4
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql|57648c9bff6cc9dea5b52743ecae4a422e60e456
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql|49550e60cd2a4da0d758e4e4aeac922b4044169a
+vendor/etc/qcril_database/upgrade/config/12.0_config.sql|73b00e34327121fe4a63a68f39eae39a8a9b92da
 vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql|cabe1d62718776a589417bed6cab712e6339fed1
 vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql|5fabd6cd9c33ccb8180a04a448749a4e597f5747
 vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql|bbfb27fa7d2a3ed4093f9282750f3299d98eb4ad
@@ -1048,6 +1049,7 @@ vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql|73e725eb9
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql|d349a4a526211739b521fb163f75ad9feda6b31d
 vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql|67c33072ee04f3c6b21881146f117f5abd4b29a6
 vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql|d1b89301899dbba4ca6837a3e1d9024ca69872d2
+vendor/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql|6ba02bb415b2cc29b140c8646a80b4150047283a
 vendor/etc/qcril_database/qcrilNr.db|45dd68cc35ee7c27968d5d450e426c473c204999
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy|59bf2408eede6b1ff5da4b1b5e1ac66f93d7060c
 vendor/lib64/deviceInfoServiceModuleNr.so|7949df449d8cc0867eafdd035baffc8e51e9d437
