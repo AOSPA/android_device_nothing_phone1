@@ -50,26 +50,26 @@
       array. The brightness values must be non-negative and non-decreasing. This must be
       overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-      <item>5.139055</item>       <!--  0 - 1 -->
-      <item>9.962018965</item>    <!--  1 - 2 -->
-      <item>18.34822964</item>    <!--  2 - 3 -->
-      <item>21.55068128</item>    <!--  3 - 4 -->
-      <item>24.0167788</item>     <!--  4 - 8 -->
-      <item>30.62162162</item>    <!--  8 - 12 -->
-      <item>35.09486396</item>    <!--  12 - 20 -->
-      <item>41.2249643</item>     <!--  20 - 33 -->
-      <item>47.6760716</item>     <!--  33 - 55 -->
-      <item>55.73002427</item>    <!--  55 - 90 -->
-      <item>66.24126116</item>    <!--  90 - 148 -->
-      <item>79.67614115</item>    <!--  148 - 245 -->
-      <item>98.04727274</item>    <!--  245 - 403 -->
-      <item>125.1221991</item>    <!--  403 - 665 -->
-      <item>161.6875093</item>    <!--  665 - 1097 -->
-      <item>208.4885553</item>    <!--  1097 - 1808 -->
-      <item>264.8221315</item>    <!--  1808 - 2981 -->
-      <item>327.8974352</item>    <!--  2981 - 5000 -->
-      <item>401.1676739</item>    <!--  5000 - 10000 -->
-      <item>600.0</item>          <!--  10000+ -->
+      <item>6</item>              <!--  0 - 1 -->
+      <item>11</item>             <!--  1 - 2 -->
+      <item>20</item>             <!--  2 - 3 -->
+      <item>23</item>             <!--  3 - 4 -->
+      <item>26</item>             <!--  4 - 8 -->
+      <item>33</item>             <!--  8 - 12 -->
+      <item>39</item>             <!--  12 - 20 -->
+      <item>45</item>             <!--  20 - 33 -->
+      <item>52</item>             <!--  33 - 55 -->
+      <item>61</item>             <!--  55 - 90 -->
+      <item>73</item>             <!--  90 - 148 -->
+      <item>88</item>             <!--  148 - 245 -->
+      <item>108</item>            <!--  245 - 403 -->
+      <item>138</item>            <!--  403 - 665 -->
+      <item>177</item>            <!--  665 - 1097 -->
+      <item>288</item>            <!--  1097 - 1808 -->
+      <item>292</item>            <!--  1808 - 2981 -->
+      <item>350</item>            <!--  2981 - 5000 -->
+      <item>441</item>            <!--  5000 - 10000 -->
+      <item>582.36131</item>      <!--  10000+ -->
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
