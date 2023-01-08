@@ -14,6 +14,5 @@
 
 runtime_resource_overlay {
     name: "Phone1CarrierConfig",
-    sdk_version: "current",
     device_specific: true,
 }
