@@ -46,6 +46,12 @@ vendor.goodix.locked=0
 # Hardware ID
 persist.vendor.fastrpc.hwid_version=PVT
 
+# Nothing Features
+ro.vendor.nothing.feature.base=0x1fff
+ro.vendor.nothing.feature.diff.device.Spacewar=0x0
+ro.vendor.nothing.feature.diff.product.Spacewar=0x0
+ro.vendor.nothing.feature.diff.product.SpacewarEEA=0x0
+
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
