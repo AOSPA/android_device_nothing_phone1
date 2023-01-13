@@ -28,9 +28,12 @@ vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Audio
+system/etc/permissions/com.dirac.acs.xml
 system/etc/permissions/se.dirac.acs.xml
 system/priv-app/DiracAudioControlService/DiracAudioControlService.apk
+system/priv-app/DiracAudioControlService_DMP/DiracAudioControlService_DMP.apk
 system/priv-app/NothingDiracService/NothingDiracService.apk
+system/priv-app/NothingDiracService_DMP/NothingDiracService_DMP.apk
 system_ext/etc/hdr_config/ans_off/ans_config.txt
 system_ext/etc/hdr_config/ans_on/ans_config.txt
 system_ext/etc/hdr_config/main_inv_ls/RPP_BiquadHPF_config.txt
@@ -997,6 +1000,10 @@ vendor/lib64/vendor.nxp.nxpese@1.0.so|377794879982c08701ef50f565a9da29b8a6d240
 vendor/lib64/vendor.nxp.nxpnfc@2.0.so|8d13837cdefef875e9c04764ea1af7b876306735
 vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so|1b9f025fd0e0267a2c560dc6828f78a87b60ee10
 
+# NTF (not sure what this stands for)
+vendor/bin/ntf-service
+vendor/etc/init/init.ntf.rc
+
 # PD
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
@@ -1536,8 +1543,11 @@ system/etc/richtapresources/common_notification1.he
 system/etc/richtapresources/common_notification2.he
 system/etc/richtapresources/common_ringtone1.he
 system/etc/richtapresources/common_ringtone2.he
+system/etc/richtapresources/cough.he
 system/etc/richtapresources/frogs.he
+system/etc/richtapresources/fox.he
 system/etc/richtapresources/gamma.he
+system/etc/richtapresources/gargle.he
 system/etc/richtapresources/guiro.he
 system/etc/richtapresources/incoming.he
 system/etc/richtapresources/isolator.he
@@ -1546,11 +1556,18 @@ system/etc/richtapresources/munge.he
 system/etc/richtapresources/nope.he
 system/etc/richtapresources/nothing.he
 system/etc/richtapresources/oi!.he
+system/etc/richtapresources/pep.he
 system/etc/richtapresources/prong.he
 system/etc/richtapresources/ramble.he
+system/etc/richtapresources/simmer.he
+system/etc/richtapresources/skim.he
 system/etc/richtapresources/squiggle.he
 system/etc/richtapresources/transmission.he
 system/etc/richtapresources/volley.he
+system/etc/richtapresources/why.he
+system/etc/richtapresources/woo.he
+system/etc/richtapresources/yeh.he
+system/etc/richtapresources/zip.he
 
 # VPP
 vendor/bin/vppservice

@@ -1,5 +1,11 @@
 # Bluetooth
 persist.vendor.bluetooth.modem_nv_support=true
 
+# Nothing Features
+ro.build.nothing.feature.base=0x1fff
+ro.build.nothing.feature.diff.device.Spacewar=0x0
+ro.build.nothing.feature.diff.product.Spacewar=0x0
+ro.build.nothing.feature.diff.product.SpacewarEEA=0x0
+
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
