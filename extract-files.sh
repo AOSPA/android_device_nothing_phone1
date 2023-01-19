@@ -62,6 +62,9 @@ function blob_fixup() {
         vendor/lib64/libgf_hal.so)
             sed -i "s/ro.boot.flash.locked/vendor.goodix.locked/g" "${2}"
             ;;
+        vendor/lib64/hw/com.qti.chi.override.so)
+            grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed libcamera_metadata_shim.so "${2}"
+            ;;
      esac
 }
 
