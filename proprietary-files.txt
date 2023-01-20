@@ -390,10 +390,8 @@ system/lib64/libarcsoft_singlecam_bokeh.so
 system/lib64/libmpbase.so
 system_ext/lib/libcamxextension_algo.so
 system_ext/lib/libencoderjpeg_jni.so
-system_ext/lib/libofflineproc_jni.so
 system_ext/lib64/libcamxextension_algo.so
 system_ext/lib64/libencoderjpeg_jni.so
-system_ext/lib64/libofflineproc_jni.so
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/vidhance_calibration
 vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
