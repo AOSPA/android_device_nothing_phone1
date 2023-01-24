@@ -178,6 +178,11 @@ PRODUCT_COPY_FILES += $(DEVICE_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.aospa.powershare-service
+
+
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
