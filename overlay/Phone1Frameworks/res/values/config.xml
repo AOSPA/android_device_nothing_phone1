@@ -38,6 +38,9 @@
          The user is forbidden from setting the brightness above this level. -->
     <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
 
+    <!-- Screen brightness when dozing. -->
+    <integer name="config_screenBrightnessDoze">255</integer>
+
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
       The N entries of this array define N  1 zones as follows:
          Zone 0:        0 <= LUX < array[0]
