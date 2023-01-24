@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
     Phone1SystemUIAOSPA \
     WifiResTarget
 
-# Paranoid Doze
+# Paranoid Glyph
 PRODUCT_PACKAGES += \
     ParanoidGlyph
 
