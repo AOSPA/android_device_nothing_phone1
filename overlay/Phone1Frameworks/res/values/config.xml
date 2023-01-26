@@ -84,24 +84,24 @@
       overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
       <item>6</item>              <!--  0 - 1 -->
-      <item>11</item>             <!--  1 - 2 -->
-      <item>20</item>             <!--  2 - 3 -->
-      <item>23</item>             <!--  3 - 4 -->
-      <item>26</item>             <!--  4 - 8 -->
-      <item>33</item>             <!--  8 - 12 -->
-      <item>39</item>             <!--  12 - 20 -->
-      <item>45</item>             <!--  20 - 33 -->
-      <item>52</item>             <!--  33 - 55 -->
-      <item>61</item>             <!--  55 - 90 -->
-      <item>73</item>             <!--  90 - 148 -->
-      <item>88</item>             <!--  148 - 245 -->
-      <item>108</item>            <!--  245 - 403 -->
-      <item>138</item>            <!--  403 - 665 -->
-      <item>177</item>            <!--  665 - 1097 -->
-      <item>288</item>            <!--  1097 - 1808 -->
-      <item>292</item>            <!--  1808 - 2981 -->
-      <item>350</item>            <!--  2981 - 5000 -->
-      <item>441</item>            <!--  5000 - 10000 -->
+      <item>12</item>             <!--  1 - 2 -->
+      <item>22</item>             <!--  2 - 3 -->
+      <item>26</item>             <!--  3 - 4 -->
+      <item>29</item>             <!--  4 - 8 -->
+      <item>37</item>             <!--  8 - 12 -->
+      <item>42</item>             <!--  12 - 20 -->
+      <item>50</item>             <!--  20 - 33 -->
+      <item>58</item>             <!--  33 - 55 -->
+      <item>67</item>             <!--  55 - 90 -->
+      <item>80</item>             <!--  90 - 148 -->
+      <item>96</item>             <!--  148 - 245 -->
+      <item>119</item>            <!--  245 - 403 -->
+      <item>151</item>            <!--  403 - 665 -->
+      <item>196</item>            <!--  665 - 1097 -->
+      <item>252</item>            <!--  1097 - 1808 -->
+      <item>320</item>            <!--  1808 - 2981 -->
+      <item>397</item>            <!--  2981 - 5000 -->
+      <item>485</item>            <!--  5000 - 10000 -->
       <item>582.36131</item>      <!--  10000+ -->
     </array>
 
