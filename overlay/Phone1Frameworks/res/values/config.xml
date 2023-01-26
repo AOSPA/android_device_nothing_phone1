@@ -83,25 +83,25 @@
       array. The brightness values must be non-negative and non-decreasing. This must be
       overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-      <item>6</item>              <!--  0 - 1 -->
-      <item>11</item>             <!--  1 - 2 -->
-      <item>20</item>             <!--  2 - 3 -->
-      <item>23</item>             <!--  3 - 4 -->
-      <item>26</item>             <!--  4 - 8 -->
-      <item>33</item>             <!--  8 - 12 -->
-      <item>39</item>             <!--  12 - 20 -->
-      <item>45</item>             <!--  20 - 33 -->
-      <item>52</item>             <!--  33 - 55 -->
-      <item>61</item>             <!--  55 - 90 -->
-      <item>73</item>             <!--  90 - 148 -->
-      <item>88</item>             <!--  148 - 245 -->
-      <item>108</item>            <!--  245 - 403 -->
-      <item>138</item>            <!--  403 - 665 -->
-      <item>177</item>            <!--  665 - 1097 -->
-      <item>288</item>            <!--  1097 - 1808 -->
-      <item>292</item>            <!--  1808 - 2981 -->
-      <item>350</item>            <!--  2981 - 5000 -->
-      <item>441</item>            <!--  5000 - 10000 -->
+      <item>7</item>              <!--  0 - 1 -->
+      <item>14</item>             <!--  1 - 2 -->
+      <item>26</item>             <!--  2 - 3 -->
+      <item>30</item>             <!--  3 - 4 -->
+      <item>34</item>             <!--  4 - 8 -->
+      <item>43</item>             <!--  8 - 12 -->
+      <item>49</item>             <!--  12 - 20 -->
+      <item>58</item>             <!--  20 - 33 -->
+      <item>67</item>             <!--  33 - 55 -->
+      <item>78</item>             <!--  55 - 90 -->
+      <item>93</item>             <!--  90 - 148 -->
+      <item>112</item>            <!--  148 - 245 -->
+      <item>137</item>            <!--  245 - 403 -->
+      <item>175</item>            <!--  403 - 665 -->
+      <item>226</item>            <!--  665 - 1097 -->
+      <item>292</item>            <!--  1097 - 1808 -->
+      <item>371</item>            <!--  1808 - 2981 -->
+      <item>459</item>            <!--  2981 - 5000 -->
+      <item>500</item>            <!--  5000 - 10000 -->
       <item>582.36131</item>      <!--  10000+ -->
     </array>
 
