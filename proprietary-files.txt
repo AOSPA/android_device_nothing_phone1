@@ -944,6 +944,10 @@ vendor/lib64/libspcom.so
 # Latency - BSP (LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0)
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|1b41d7f8ee7d0ddb91ced16410e625b2afde28e1
 
+# Lights
+vendor/bin/hw/android.hardware.lights-service.qti
+vendor/lib64/hw/lights.qcom.so
+
 # MDM
 vendor/bin/ks
 
