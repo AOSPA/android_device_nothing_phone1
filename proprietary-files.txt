@@ -1414,7 +1414,6 @@ vendor/etc/sensors/sns_reg_config
 vendor/etc/vintf/manifest/vendor.noth.hardware.sensor.sensor_extension@1.0-service.xml
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib64/hw/vendor.noth.hardware.security.cryptoeng@1.0-impl.so
 vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib64/libsensor_extension.so
