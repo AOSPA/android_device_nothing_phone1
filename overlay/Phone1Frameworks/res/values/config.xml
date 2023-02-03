@@ -19,7 +19,7 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.1</item>
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">1.0</item>
 
     <!-- Default screen brightness setting set.
          -2 is invalid so setting will resort to int value specified above.
@@ -37,9 +37,6 @@
          Set this to 1.0 for maximum brightness range.
          The user is forbidden from setting the brightness above this level. -->
     <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
-
-    <!-- Screen brightness when dozing. -->
-    <integer name="config_screenBrightnessDoze">255</integer>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
       The N entries of this array define N  1 zones as follows:
