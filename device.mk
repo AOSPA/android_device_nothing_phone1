@@ -189,6 +189,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     perf \
     telephony \
     usb \
+    vibrator \
     wfd \
     wlan
 
@@ -224,13 +225,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # System Helper
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0.vendor
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk.vendor
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:vendor/etc/excluded-input-devices.xml
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
