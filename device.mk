@@ -121,9 +121,6 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/manifest_yupik.xml \
     $(DEVICE_PATH)/manifest_phone1.xml
 
-DEVICE_MATRIX_FILE += \
-    device/qcom/common/compatibility_matrix.xml
-
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/phone1_vendor_framework_compatibility_matrix.xml
 
