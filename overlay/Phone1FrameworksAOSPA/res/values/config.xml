@@ -19,4 +19,7 @@
     <!-- Fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Nothing/SpacewarEEA/Spacewar:12/SKQ1.211230.001/1663076289:user/release-keys</string>
 
+    <!-- Whether to use Richtap vibration -->
+    <bool name="config_usesRichtapVibration">true</bool>
+
 </resources>
