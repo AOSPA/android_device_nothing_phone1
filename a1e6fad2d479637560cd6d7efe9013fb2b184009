@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fc31bb6_b29f1b1c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-02-16T11:33:56Z",
+      "side": 1,
+      "message": "not everything has been moved to https://github.com/AOSPA/android_device_qcom_common/commit/6e32a4d4ddb50f4195cdf578e56d57d193eaa4f5",
+      "revId": "a1e6fad2d479637560cd6d7efe9013fb2b184009",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
