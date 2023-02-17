@@ -57,7 +57,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/bin/hw/vendor.qti.hardware.vibrator.service | vendor/lib64/vendor.qti.hardware.vibrator.impl.so)
-            patchelf --replace-needed "android.hardware.vibrator-V1-ndk_platform.so" "android.hardware.vibrator-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.vibrator-V1-ndk_platform.so" "android.hardware.vibrator-V1-ndk.so" "${2}"
             ;;
         vendor/lib64/libgf_hal.so)
             sed -i "s/ro.boot.flash.locked/vendor.goodix.locked/g" "${2}"
