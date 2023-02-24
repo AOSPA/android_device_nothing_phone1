@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f255ff18_cd3fe55f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-02-24T17:25:18Z",
+      "side": 1,
+      "message": "we should label /mnt/vendor/persist/color",
+      "revId": "b1b4339ce58a9b4b49923fb59b5788f7149116ce",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
