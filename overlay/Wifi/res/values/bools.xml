@@ -4,7 +4,6 @@
     <bool name="config_vendor_softap_ocv_supported">true</bool>
     <bool name="config_wifi6ghzSupport">true</bool>
     <bool name="config_wifiEnablePartialInitialScan">true</bool>
-    <bool name="config_wifiSoftap6ghzSupported">true</bool>
     <bool name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
     <bool name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
     <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
