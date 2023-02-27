@@ -81,25 +81,6 @@ int64_t msFromNs(int64_t nanos) {
     return nanos / nanosecondsInAMillsecond;
 }
 
-bool patchPhone1PickupSensor(V2_1::SensorInfo& sensor) {
-    if (sensor.typeAsString != "android.sensor.wrist_tilt_gesture") {
-        return true;
-    }
-
-    /*
-     * Implement only the wake-up version of this sensor.
-     */
-    if (!(sensor.flags & V1_0::SensorFlagBits::WAKE_UP)) {
-        return false;
-    }
-
-    sensor.type = V2_1::SensorType::PICK_UP_GESTURE;
-    sensor.typeAsString = SENSOR_STRING_TYPE_PICK_UP_GESTURE;
-    sensor.maxRange = 1;
-
-    return true;
-}
-
 HalProxy::HalProxy() {
     const char* kMultiHalConfigFile = "/vendor/etc/sensors/hals.conf";
     initializeSubHalListFromConfigFile(kMultiHalConfigFile);
@@ -510,9 +491,12 @@ void HalProxy::initializeSensorList() {
                     ALOGV("Loaded sensor: %s", sensor.name.c_str());
                     sensor.sensorHandle = setSubHalIndex(sensor.sensorHandle, subHalIndex);
                     setDirectChannelFlags(&sensor, mSubHalList[subHalIndex]);
-                    bool keep = patchPhone1PickupSensor(sensor);
-                    if (!keep) {
-                        continue;
+
+                    // Standardize Phone 1 pickup sensor
+                    if (sensor.typeAsString == "android.sensor.wrist_tilt_gesture") {
+                        sensor.type = V2_1::SensorType::PICK_UP_GESTURE;
+                        sensor.typeAsString = SENSOR_STRING_TYPE_PICK_UP_GESTURE;
+                        ALOGV("Patched spacewar pickup sensor");
                     }
 
                     mSensors[sensor.sensorHandle] = sensor;
