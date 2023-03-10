@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8482dcc2_d58342c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-03-10T17:16:13Z",
+      "side": 1,
+      "message": "but the charger blobs in component are from kona bsp..",
+      "revId": "7efce004fe98e80bed7f68da833beeae5e37d94b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
