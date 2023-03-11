@@ -106,7 +106,7 @@
     config_screenBrightnessBacklight. --> 
     <integer-array name="config_screenBrightnessBacklight">
         <item>1</item>
-        <item>3515</item>
+        <item>255</item>
     </integer-array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
