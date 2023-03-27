@@ -2,13 +2,6 @@ soong_namespace {
 }
 
 prebuilt_hidl_interfaces {
-    name: "hidl_vppservice_interface",
-    interfaces: [
-        "vendor.qti.hardware.vpp@2.0::IHidlVppService",
-    ],
-}
-
-prebuilt_hidl_interfaces {
     name: "hidl_dpmQmi_interface",
     interfaces: [
         "com.qualcomm.qti.dpm.api@1.0::IdpmQmi",
