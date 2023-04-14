@@ -1,6 +1,9 @@
 # Bluetooth
 persist.vendor.bluetooth.modem_nv_support=true
 
+# Display
+persist.sys.brightness.low.gamma=true
+
 # Nothing Features
 ro.build.nothing.feature.base=0x1fff
 ro.build.nothing.feature.diff.device.Spacewar=0x0
