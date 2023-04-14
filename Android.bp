@@ -31,13 +31,6 @@ prebuilt_hidl_interfaces {
 }
 
 prebuilt_hidl_interfaces {
-    name: "hidl_QConfig_interface",
-    interfaces: [
-        "vendor.qti.hardware.qconfig@1.0::IQConfig",
-    ],
-}
-
-prebuilt_hidl_interfaces {
     name: "hidl_sigma_miracast_interface",
     interfaces: [
         "vendor.qti.hardware.sigma_miracast@1.0::Isigma_miracast",
