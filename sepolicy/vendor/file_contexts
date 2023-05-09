@@ -17,4 +17,5 @@
 /(vendor|system/vendor)/bin/hw/android.hardware.sensors@[0-9].[0-9]-service.phone1-multihal       u:object_r:hal_sensors_default_exec:s0
 
 # Vibrator
-/dev/aw8697_haptic                                                                                u:object_r:input_device:s0
+/dev/aw8697_haptic                                                                                u:object_r:aac_richtap_dev_device:s0
+/(vendor|system/vendor)/bin/hw/vendor\.aac\.hardware\.richtap\.vibrator-service\.aac              u:object_r:hal_vibrator_default_exec:s0
