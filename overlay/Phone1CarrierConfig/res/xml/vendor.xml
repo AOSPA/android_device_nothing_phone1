@@ -1546,6 +1546,7 @@
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="allow_hold_call_during_emergency_bool" value="false" />
         <boolean name="vonr_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="1" />
     </carrier_config>
     <carrier_config mcc="460" mnc="04">
         <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
@@ -1580,6 +1581,7 @@
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="disable_filter_out_conference_host" value="true" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="1" />
     </carrier_config>
     <carrier_config mcc="460" mnc="06">
         <boolean name="notify_video_call_failed" value="true" />
@@ -1833,6 +1835,7 @@
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="allow_hold_call_during_emergency_bool" value="false" />
         <boolean name="vonr_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="1" />
     </carrier_config>
     <carrier_config mcc="460" mnc="12">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1866,6 +1869,7 @@
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="allow_hold_call_during_emergency_bool" value="false" />
+        <int name="carrier_default_wfc_ims_mode_int" value="1" />
     </carrier_config>
     <carrier_config mcc="460" mnc="15">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1933,6 +1937,44 @@
         <boolean name="vonr_setting_visibility_bool" value="false" />
         <boolean name="hide_enhanced_4g_lte_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="460" mnc="30">
+        <boolean name="notify_video_call_failed" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="config_spn_override_enabled" value="true" />
+        <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
+        <string-array name="apn_hide_rule_strings_array" num="2">
+            <item value="type" />
+            <item value="supl,ims" />
+        </string-array>
+        <map name="apn_default_values_strings_array">
+            <string name="protocol">IPV4V6</string>
+            <string name="roaming_protocol">IPV4V6</string>
+        </map>
+        <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
+        <boolean name="config_hide_vt_callforward_option" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
+        <boolean name="carrier_name_override_bool" value="true" />
+        <string name="carrier_name_string">China Unicom</string>
+        <boolean name="config_update_service_status" value="false" />
+        <boolean name="config_update_volte_icon" value="true" />
+        <boolean name="check_mobile_data_for_cf" value="true" />
+        <boolean name="vilte_data_is_metered_bool" value="false" />
+        <boolean name="config_enable_video_crbt" value="true" />
+        <boolean name="config_disable_clir_over_ut" value="true" />
+        <boolean name="hide_enabled_5g_bool" value="false" />
+        <boolean name="call_barring_visibility_bool" value="false" />
+        <boolean name="allow_add_call_during_video_call" value="false" />
+        <boolean name="allow_hold_video_call_bool" value="false" />
+        <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <int-array name="carrier_nr_availabilities_int_array" num="1">
+            <item value="1" />
+        </int-array>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
+        <boolean name="vonr_enabled_bool" value="true" />
+    </carrier_config>
     <carrier_config mcc="310" mnc="00">
         <boolean name="rtt_auto_upgrade_bool" value="true" />
         <boolean name="rtt_supported_bool" value="true" />
@@ -1973,6 +2015,7 @@
         <boolean name="rtt_downgrade_supported_bool" value="true" />
         <boolean name="rtt_auto_upgrade_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="070">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1988,6 +2031,7 @@
         <boolean name="rtt_auto_upgrade_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="080">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2003,13 +2047,7 @@
         <boolean name="rtt_auto_upgrade_bool" value="true" />
         <boolean name="allow_merging_rtt_calls_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
-    </carrier_config>
-    <carrier_config mcc="310" mnc="030">
-        <boolean name="carrier_volte_available_bool" value="true" />
-        <boolean name="carrier_vt_available_bool" value="true" />
-        <boolean name="carrier_wfc_ims_available_bool" value="true" />
-        <boolean name="config_enable_display_14digit_imei" value="true" />
-        <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="150">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2025,6 +2063,7 @@
         <boolean name="allow_merging_rtt_calls_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="170">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2039,6 +2078,7 @@
         <boolean name="allow_merging_rtt_calls_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="280">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2053,6 +2093,7 @@
         <boolean name="allow_merging_rtt_calls_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="require_apn_filtering_with_radio_capability_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="380">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2067,6 +2108,7 @@
         <boolean name="allow_merging_rtt_calls_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="410">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2084,6 +2126,7 @@
         <string name="carrier_name_string" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
         <boolean name="require_apn_filtering_with_radio_capability_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="560">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2098,6 +2141,7 @@
         <boolean name="allow_merging_rtt_calls_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="680">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -2113,6 +2157,7 @@
         <boolean name="allow_merging_rtt_calls_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="950">
         <boolean name="require_apn_filtering_with_radio_capability_bool" value="true" />
@@ -2130,6 +2175,7 @@
             <item value="*82" />
         </string-array>
         <boolean name="carrier_supports_caller_id_vertical_service_codes_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="260">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
@@ -2270,6 +2316,7 @@
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
         <boolean name="require_apn_filtering_with_radio_capability_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="311" mnc="480">
         <boolean name="support_video_conference_call_bool" value="false" />
@@ -2318,6 +2365,11 @@
         <int name="default_rtt_mode_int" value="1" />
     </carrier_config>
     <carrier_config device="parrot" mcc="311" mnc="480">
+        <boolean name="show_rtt_visibility_setting_bool" value="true" />
+        <boolean name="ignore_rtt_mode_setting_bool" value="true" />
+        <int name="default_rtt_mode_int" value="1" />
+    </carrier_config>
+    <carrier_config device="bengal_515" mcc="311" mnc="480">
         <boolean name="show_rtt_visibility_setting_bool" value="true" />
         <boolean name="ignore_rtt_mode_setting_bool" value="true" />
         <int name="default_rtt_mode_int" value="1" />

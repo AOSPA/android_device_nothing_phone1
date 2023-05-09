@@ -202,8 +202,6 @@ on boot
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/glo_current
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/rear_cam_led_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/front_cam_led_br
-    chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/vline_leds_br
-    chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/dot_led_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/horse_race_leds_br
     chmod 0666 /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/horse_race_leds_br
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/round_leds_br
@@ -276,6 +274,13 @@ on property:sys.system_server.start_count=1
 #add by Dylan for TFT-428
 on property:persist.service.ageTest_running.upload.enable=*
     write /proc/sys/kernel/hung_task_timeout_secs 120
+
+#add by Dylan for TFT-1024
+on property:persist.sys.mglru_enable=true
+    write /sys/kernel/mm/lru_gen/enabled 1
+
+on property:persist.sys.mglru_enable=false
+    write /sys/kernel/mm/lru_gen/enabled n
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
@@ -386,6 +391,8 @@ on property:service.bootanim.exit=1
     chown system system /sys/class/qcom-battery/usb_charger_en
     # add for slowcharge need to write charger
     chown system system /sys/class/qcom-battery/slowcharge_en
+    # add for wls charge online config
+    chown system system /sys/class/qcom-battery/wls_online_param
     # add for slowcharge need to write charger
     chown system system /sys/class/qcom-battery/charge_pump_enable
     # add for ABR-2547
@@ -444,3 +451,14 @@ on property:sys.ssc_drva_test.gyro=start
 on property:sys.ssc_drva_test.gyro=stop
    stop vendor.ssc_drva_test.gyro
 # @}
+
+on property:sys.touch.edge_mode.enable=*
+    write sys/class/spi_master/spi0/spi0.0/fts_edge_mode ${sys.touch.edge_mode.enable}
+on property:sys.touch.single_en.enable=1
+    write sys/bus/spi/devices/spi0.0/fts_gesture_mode 1
+on property:sys.touch.single_en.enable=0
+    write sys/bus/spi/devices/spi0.0/fts_gesture_mode 2
+on property:sys.touch.fod_en.enable=1
+    write sys/bus/spi/devices/spi0.0/fts_gesture_mode 3
+on property:sys.touch.fod_en.enable=0
+    write sys/bus/spi/devices/spi0.0/fts_gesture_mode 4
