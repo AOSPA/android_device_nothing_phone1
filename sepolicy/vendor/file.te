@@ -1,2 +1,5 @@
 # Fingerprint
 type fingerprint_device, dev_type;
+
+# Vibrator
+type aac_richtap_dev_device, dev_type;
