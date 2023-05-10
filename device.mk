@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
 # AVB
 BOARD_AVB_ENABLE := true
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/mixer_paths_yupikqrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik/mixer_paths_yupikqrd.xml
+
 # Camera
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.system_ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries.txt \
