@@ -16,6 +16,24 @@
       "message": "same existing in vendor also useless \n\nhttps://github.com/AOSPA/android_device_nothing_phone1/blob/topaz/vendor.prop#L49",
       "revId": "3b017df01613d0b7be7090f4bf46f6932cfac243",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f43749d_4a4117a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-10T16:10:00Z",
+      "side": 1,
+      "message": "it\u0027s used by nt-service, which we are including.  I cannot make heads or tails of what that does, even with Ghidra.  In theory, it could be setting telephony or camera features on specific variants or carriers maybe?",
+      "parentUuid": "b4ee0764_d9d174ba",
+      "revId": "3b017df01613d0b7be7090f4bf46f6932cfac243",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
