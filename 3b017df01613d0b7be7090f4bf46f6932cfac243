@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4ee0764_d9d174ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000876
+      },
+      "writtenOn": "2023-05-10T13:18:30Z",
+      "side": 1,
+      "message": "same existing in vendor also useless \n\nhttps://github.com/AOSPA/android_device_nothing_phone1/blob/topaz/vendor.prop#L49",
+      "revId": "3b017df01613d0b7be7090f4bf46f6932cfac243",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
