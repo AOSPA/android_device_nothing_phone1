@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- The server that hosts the update files -->
+    <string name="system_update_server_url" translatable="false">"https://raw.githubusercontent.com/gotenksIN/ota/master/"</string>
+
+</resources>
