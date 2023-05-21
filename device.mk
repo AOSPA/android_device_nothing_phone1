@@ -25,6 +25,15 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
+# Updater
+PRODUCT_PACKAGES += \
+    ParanoidHub \
+    ParanoidHubOverlay
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+    dalvik.vm.image-dex2oat-threads=8
+
 # API
 BOARD_SHIPPING_API_LEVEL := 30
 BOARD_API_LEVEL := 30
