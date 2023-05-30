@@ -69,6 +69,24 @@
       "parentUuid": "0bb6a10e_d043881b",
       "revId": "e6c1e2c09f1d8638e443c4caec3a28473f2eb704",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4cae521_42fed5ad",
+        "filename": "overlay/Phone1CarrierConfig/res/xml/vendor.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2590,
+      "author": {
+        "id": 1000055
+      },
+      "writtenOn": "2023-05-30T07:18:17Z",
+      "side": 1,
+      "message": "Oh, that\u0027s new for me.",
+      "parentUuid": "5b42eb3b_11c4e790",
+      "revId": "e6c1e2c09f1d8638e443c4caec3a28473f2eb704",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
