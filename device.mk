@@ -99,11 +99,6 @@ PRODUCT_PACKAGES += \
 # Generic Kernel Headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
-    android.hardware.health@2.1-service
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
@@ -194,6 +189,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     audio \
     av \
     bt \
+    charging \
     display \
     gps \
     init \
