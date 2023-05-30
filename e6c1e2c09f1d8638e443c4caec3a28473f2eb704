@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac431a9b_d4d8e73f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-05-30T06:40:31Z",
+      "side": 1,
+      "message": "will be split into seperate commits once I confirm Jio5G works again alongside other features",
+      "revId": "e6c1e2c09f1d8638e443c4caec3a28473f2eb704",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "446b37c2_cd9eed0d",
@@ -32,6 +49,24 @@
       "side": 1,
       "message": "Look at the typo too 😊",
       "parentUuid": "446b37c2_cd9eed0d",
+      "revId": "e6c1e2c09f1d8638e443c4caec3a28473f2eb704",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b42eb3b_11c4e790",
+        "filename": "overlay/Phone1CarrierConfig/res/xml/vendor.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2590,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-05-30T06:40:31Z",
+      "side": 1,
+      "message": "ViLTE is intentional, it\u0027s for carrier video calling",
+      "parentUuid": "0bb6a10e_d043881b",
       "revId": "e6c1e2c09f1d8638e443c4caec3a28473f2eb704",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
