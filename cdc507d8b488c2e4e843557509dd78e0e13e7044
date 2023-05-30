@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6bfb6fe_25e6a4e7",
+        "filename": "overlay/ParanoidHubOverlay/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000055
+      },
+      "writtenOn": "2023-05-30T06:33:21Z",
+      "side": 1,
+      "message": "This is enabled for everyone",
+      "revId": "cdc507d8b488c2e4e843557509dd78e0e13e7044",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
