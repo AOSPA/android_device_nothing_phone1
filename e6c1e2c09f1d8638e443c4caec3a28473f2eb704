@@ -16,6 +16,24 @@
       "message": "we can default this to true",
       "revId": "e6c1e2c09f1d8638e443c4caec3a28473f2eb704",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0bb6a10e_d043881b",
+        "filename": "overlay/Phone1CarrierConfig/res/xml/vendor.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2590,
+      "author": {
+        "id": 1000055
+      },
+      "writtenOn": "2023-05-30T06:31:30Z",
+      "side": 1,
+      "message": "Look at the typo too 😊",
+      "parentUuid": "446b37c2_cd9eed0d",
+      "revId": "e6c1e2c09f1d8638e443c4caec3a28473f2eb704",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
