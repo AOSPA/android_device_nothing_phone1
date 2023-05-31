@@ -8,3 +8,4 @@ genfscon sysfs /devices/platform/soc/a94000.spi/spi_master/spi0/spi0.0/fts_gestu
 
 # PowerShare
 genfscon sysfs /class/qcom-battery/wireless_boost_en                                                    u:object_r:sysfs_powershare:s0
+genfscon sysfs /class/qcom-battery/wls_reverse_status                                                   u:object_r:sysfs_powershare:s0
