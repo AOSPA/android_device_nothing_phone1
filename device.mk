@@ -4,14 +4,15 @@ DEVICE_PATH := device/nothing/phone1
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_client \
-    update_verifier \
     android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service \
     checkpoint_gc \
-    otapreopt_script
+    otapreopt_script \
+    update_engine \
+    update_engine_client \
+    update_engine_sideload \
+    update_verifier
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
