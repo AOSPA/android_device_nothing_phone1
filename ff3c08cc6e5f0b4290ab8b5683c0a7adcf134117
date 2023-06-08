@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36b737f6_ba3c239c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-06-08T13:47:03Z",
+      "side": 1,
+      "message": "Apparently it now has new ims rules, just like in the last tag of 9.15, maybe this will help\n\nhttps://github.com/AOSPA/android_device_qcom_common/blob/topaz/vendor/telephony/qti-telephony.mk#L54\n\nhttps://github.com/AOSPA/android_device_xiaomi_sm6225-common/commit/4935cf635ef794e0457131bff3087468a6f6e5ad",
+      "revId": "ff3c08cc6e5f0b4290ab8b5683c0a7adcf134117",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
