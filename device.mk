@@ -169,7 +169,7 @@ PRODUCT_PACKAGES += \
 
 # Paranoid Glyph
 PRODUCT_PACKAGES += \
-    ParanoidGlyph
+    ParanoidGlyphPhone1
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
