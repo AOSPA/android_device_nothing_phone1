@@ -1,6 +1,3 @@
-# Display
-ro.sf.lcd_density=420
-
 # Camera
 ro.camerax.extensions.enabled=true
 
