@@ -34,6 +34,24 @@
       "parentUuid": "36b737f6_ba3c239c",
       "revId": "ff3c08cc6e5f0b4290ab8b5683c0a7adcf134117",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc1661c8_78066e2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-06-11T03:50:44Z",
+      "side": 1,
+      "message": "ims factory 2.2 and qtiradio 2.7 is present now",
+      "parentUuid": "5601d830_4575ddce",
+      "revId": "ff3c08cc6e5f0b4290ab8b5683c0a7adcf134117",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
