@@ -52,6 +52,24 @@
       "parentUuid": "5601d830_4575ddce",
       "revId": "ff3c08cc6e5f0b4290ab8b5683c0a7adcf134117",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1773f72_b156c2c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-11T04:11:16Z",
+      "side": 1,
+      "message": "yeah but nothing new is enabled by qcom for it",
+      "parentUuid": "dc1661c8_78066e2f",
+      "revId": "ff3c08cc6e5f0b4290ab8b5683c0a7adcf134117",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
