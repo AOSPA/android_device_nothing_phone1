@@ -16,6 +16,24 @@
       "message": "screenshot https://imgur.com/a/vmC7d0B",
       "revId": "818ba952a0016b556d7f36a23b6e447ac2950537",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6cea2ded_1c44a214",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-12T18:55:37Z",
+      "side": 1,
+      "message": "left seems better, I assume that\u0027s the before shot?  Right seems like excessive padding.",
+      "parentUuid": "950ffae3_50ee565a",
+      "revId": "818ba952a0016b556d7f36a23b6e447ac2950537",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
