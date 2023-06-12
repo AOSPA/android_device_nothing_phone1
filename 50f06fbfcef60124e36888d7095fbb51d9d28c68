@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af10d150_3883c737",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-06-12T19:32:43Z",
+      "side": 1,
+      "message": "Lets wait for Phone (2) to actually come out",
+      "revId": "50f06fbfcef60124e36888d7095fbb51d9d28c68",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
