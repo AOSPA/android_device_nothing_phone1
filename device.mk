@@ -63,10 +63,6 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Display
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sf.use_latest_hwc_vsync_period=0
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
