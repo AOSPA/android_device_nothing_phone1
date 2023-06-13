@@ -33,6 +33,41 @@
       "message": "we don\u0027t use this with qssi qti bt",
       "revId": "a1a3527389b2ce8da292d1451814951456f133ce",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6c2b920_1b73aabe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-13T07:21:27Z",
+      "side": 1,
+      "message": "27935: phone1: uprev qti bluetooth_audio to 2.1 | https://gerrit.aospa.co/c/AOSPA/android_device_nothing_phone1/+/27935 brought us LC3 support",
+      "parentUuid": "a96f2842_9a0a564a",
+      "revId": "a1a3527389b2ce8da292d1451814951456f133ce",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8894e612_76666003",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-13T07:21:27Z",
+      "side": 1,
+      "message": "27935: phone1: uprev qti bluetooth_audio to 2.1 | https://gerrit.aospa.co/c/AOSPA/android_device_nothing_phone1/+/27935",
+      "revId": "a1a3527389b2ce8da292d1451814951456f133ce",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
