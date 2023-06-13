@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "109d29dc_8cabc15b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-13T08:47:06Z",
+      "side": 1,
+      "message": "needed for upcoming paranoidglyph changes",
+      "revId": "b207e143410b8388f0a6fe3a0cd0e685175800d0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
