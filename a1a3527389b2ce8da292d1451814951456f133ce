@@ -16,6 +16,23 @@
       "message": "why?",
       "revId": "a1a3527389b2ce8da292d1451814951456f133ce",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a96f2842_9a0a564a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-13T01:54:06Z",
+      "side": 1,
+      "message": "we don\u0027t use this with qssi qti bt",
+      "revId": "a1a3527389b2ce8da292d1451814951456f133ce",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
