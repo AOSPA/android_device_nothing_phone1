@@ -68,6 +68,24 @@
       "message": "27935: phone1: uprev qti bluetooth_audio to 2.1 | https://gerrit.aospa.co/c/AOSPA/android_device_nothing_phone1/+/27935",
       "revId": "a1a3527389b2ce8da292d1451814951456f133ce",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8b31056_f18668b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2023-06-13T12:46:44Z",
+      "side": 1,
+      "message": "Yes, we don\u0027t use it but provide it, and whatever we provide should be declared properly imo",
+      "parentUuid": "d6c2b920_1b73aabe",
+      "revId": "a1a3527389b2ce8da292d1451814951456f133ce",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
