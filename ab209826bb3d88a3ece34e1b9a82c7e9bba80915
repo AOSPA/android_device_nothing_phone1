@@ -33,6 +33,23 @@
       "message": "didnt do anything?",
       "revId": "ab209826bb3d88a3ece34e1b9a82c7e9bba80915",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40971ae2_4242dc02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-13T07:49:35Z",
+      "side": 1,
+      "message": "well even if settings app doesn\u0027t respect it for now, its best to not declare unsupported configurations",
+      "revId": "ab209826bb3d88a3ece34e1b9a82c7e9bba80915",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
