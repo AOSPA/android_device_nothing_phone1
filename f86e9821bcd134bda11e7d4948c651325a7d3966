@@ -16,6 +16,24 @@
       "message": "should we do this default like the others?",
       "revId": "f86e9821bcd134bda11e7d4948c651325a7d3966",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fff256e3_d1acab11",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-13T09:08:18Z",
+      "side": 1,
+      "message": "we do not know how all carriers will behave with vilte since its a pretty niche feature, better keep it whitelist-ish for now",
+      "parentUuid": "aca05c77_1a7d3e7c",
+      "revId": "f86e9821bcd134bda11e7d4948c651325a7d3966",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
