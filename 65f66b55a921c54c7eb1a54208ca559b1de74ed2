@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "196cc596_d27aac1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-06-13T15:17:59Z",
+      "side": 1,
+      "message": "https://gerrit.aospa.co/c/AOSPA/android_device_nothing_phone1/+/30831",
+      "revId": "65f66b55a921c54c7eb1a54208ca559b1de74ed2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
