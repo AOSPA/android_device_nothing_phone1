@@ -949,26 +949,24 @@ vendor/lib64/vendor.qti.hardware.factory@1.1.so
 vendor/lib/libmmosal.so
 vendor/lib64/libmmosal.so
 
-# NFC - Nothing OS 1.1.7
-vendor/bin/hw/android.hardware.nfc@1.2-service|1e3c68ef040395b796ae86de3690227baea98741
-vendor/etc/init/android.hardware.nfc@1.2-service.rc|0fa6159d3e37b4bbaf82f12eacf7e48e7f2a958e
-vendor/etc/init/init.Spacewar.nfc.rc|5d568e326250eba9d9f8a555287a969aadc1be1d
-vendor/etc/init/init.Spacewar.se.rc|bd57f1159299c918686818e9381655286d8ab5d6
-vendor/etc/libese-nxp.conf|395c57fb7c2f1c70d05df67c25c00a58325664fe
-vendor/etc/libnfc-nci.conf|1a35e2176512a5b7fb7ab582abdae677acf62da4
-vendor/etc/libnfc-nxp.conf|da63885adefc399095217bf42a1d43c00b1d39b5
-vendor/etc/permissions/com.nxp.nfc.xml|f290fc3424551392da8bab0f28048f10c784f3e1
-vendor/libnfc-nxp_RF.conf|9aac2d609b979286fc0924c4e95b2862099e14dd
-vendor/lib64/ese_client.so|b717a741493ed791b54e0f79607ec46dc3b064a1
-vendor/lib64/ese_spi_nxp.so|30e1347e5b53b3af8943cf67d31a854a2f163e32
-vendor/lib64/hal_libnfc.so|d86a5f1628281f86018f3c070d5ec07f61a5a96b
-vendor/lib64/libchrome.so|78401b7bb9318679a8cc61e26c704f3c3054cc25
-vendor/lib64/libpn557_fw.so|357ad14987855b768e552227f5f72161f66c071c
-vendor/lib64/nfc_nci_nxp.so|511e5f47303e047fb57cc26ebd4e9d366ac084f4
-vendor/lib64/vendor.nxp.eventprocessor@1.0.so|f33d4c39da41aee8940cea2670678d39050c81b7
-vendor/lib64/vendor.nxp.nxpese@1.0.so|377794879982c08701ef50f565a9da29b8a6d240
-vendor/lib64/vendor.nxp.nxpnfc@2.0.so|8d13837cdefef875e9c04764ea1af7b876306735
-vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so|1b9f025fd0e0267a2c560dc6828f78a87b60ee10
+# NFC
+system/framework/com.nxp.nfc.jar
+vendor/bin/hw/android.hardware.nfc_snxxx@1.2-service
+vendor/bin/hw/android.hardware.secure_element_snxxx@1.2-service
+vendor/etc/init/android.hardware.nfc_snxxx@1.2-service.rc
+vendor/etc/init/android.hardware.secure_element_snxxx@1.2-service.rc
+vendor/etc/init/init.Spacewar.nfc.rc
+vendor/etc/init/init.Spacewar.se.rc
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp.conf
+vendor/etc/permissions/com.nxp.nfc.xml
+vendor/lib64/ese_spi_nxp_snxxx.so
+vendor/lib64/libchrome.so
+vendor/lib64/libpn557_fw.so
+vendor/lib64/nfc_nci_nxp_snxxx.so
+vendor/lib64/vendor.nxp.nxpese@1.0.so
+vendor/lib64/vendor.nxp.nxpnfc@2.0.so
+vendor/libnfc-nxp_RF.conf
 
 # NTF (not sure what this stands for)
 vendor/bin/ntf-service
