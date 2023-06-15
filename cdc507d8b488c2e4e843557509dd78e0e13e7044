@@ -33,6 +33,24 @@
       "message": "This is enabled for everyone",
       "revId": "cdc507d8b488c2e4e843557509dd78e0e13e7044",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e50cda5_a5abd3bb",
+        "filename": "overlay/ParanoidHubOverlay/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-15T05:54:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d6bfb6fe_25e6a4e7",
+      "revId": "cdc507d8b488c2e4e843557509dd78e0e13e7044",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
