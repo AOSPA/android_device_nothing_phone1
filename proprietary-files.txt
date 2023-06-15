@@ -881,15 +881,6 @@ vendor/etc/media_profiles_yupik_v0.xml
 vendor/etc/media_profiles_yupik_v1.xml
 vendor/etc/media_profiles.xml
 
-# MMI
-vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
-vendor/bin/mmid
-vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
-vendor/etc/permissions/android.hardware.light.xml
-vendor/etc/permissions/vendor.qti.hardware.factory.xml
-vendor/lib64/vendor.qti.hardware.factory@1.0.so
-vendor/lib64/vendor.qti.hardware.factory@1.1.so
-
 # MM OSAL
 vendor/lib/libmmosal.so
 vendor/lib64/libmmosal.so
