@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "976baa4d_292d188d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-15T09:52:08Z",
+      "side": 1,
+      "message": "scans my watch and pairs to my speakers, gpay is usually the fucky one so waiting for confirmation",
+      "revId": "6cb47611e04f10e342b71f6ff5fbe9535f71a9bd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
