@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
     Phone1CarrierConfig \
     Phone1Frameworks \
     Phone1FrameworksAOSPA \
+    Phone1Nfc \
     Phone1Settings \
     Phone1SystemUI \
     Phone1SystemUIAOSPA \
