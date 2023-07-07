@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86ec11ac_295b0cd4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-07-07T12:34:27Z",
+      "side": 1,
+      "message": "https://github.com/gotenksIN/proprietary_vendor_nothing updated vendor here",
+      "revId": "48006dd0ee04a9108287672c3584fd1d0f18e1a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
