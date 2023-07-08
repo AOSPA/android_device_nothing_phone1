@@ -22,4 +22,7 @@
     <!-- Whether to use Richtap vibration -->
     <bool name="config_usesRichtapVibration">true</bool>
 
+    <!-- Display color inversion availability -->
+    <bool name="config_displayInversionAvailable">false</bool>
+
 </resources>
