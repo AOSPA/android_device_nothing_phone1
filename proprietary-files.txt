@@ -786,6 +786,9 @@ vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
+# GPS
+vendor/etc/izat.conf
+
 # Hotword
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
