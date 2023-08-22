@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e5cbcfaf_06d3bee1",
+        "filename": "init/init.target.rc",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-08-22T12:58:17Z",
+      "side": 1,
+      "message": "should probably remove this",
+      "revId": "db431314dbbb8f58330e7f06304134d8e1ea70f6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
