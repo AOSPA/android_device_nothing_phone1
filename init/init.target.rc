@@ -93,6 +93,7 @@ on fs
     chmod 666 /dev/goodix_fp
     chown system system /dev/goodix_fp
     chown system system /sys/class/backlight/panel0-backlight/hbm_mode
+    chmod 666 /sys/class/backlight/panel0-backlight/hbm_mode
     #chmod tfa climax
     chmod 666 /sys/bus/i2c/devices/1-0034/reg
     chmod 666 /sys/bus/i2c/devices/1-0034/rw
@@ -179,7 +180,7 @@ on boot
     chmod 0666 /sys/class/drm/sde-conn-1-DSI-1/hbm_mode
     # add for cit to read panel_id
     chown system system /sys/class/drm/sde-conn-1-DSI-1/panel_id
-    chmod 0600 /sys/class/drm/sde-conn-1-DSI-1/panel_id
+    chmod 0666 /sys/class/drm/sde-conn-1-DSI-1/panel_id
     # add for cit to write leds
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/all_leds_effect
     chmod 0666 /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/all_leds_effect
@@ -224,6 +225,7 @@ on boot
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/bootan_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/rear_cam_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/music_leds_effect
+    chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/frame_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/ringtone_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/flip_leds_effect
     chown system system /sys/devices/platform/soc/984000.i2c/i2c-0/0-0020/leds/aw210xx_led/exclamation_leds_effect
