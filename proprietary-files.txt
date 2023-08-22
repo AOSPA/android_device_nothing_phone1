@@ -29,6 +29,7 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Audio
 system/etc/permissions/se.dirac.acs.xml
+system/etc/sysconfig/preinstalled-packages-dirac.xml
 system/priv-app/DiracAudioControlService/DiracAudioControlService.apk
 system/priv-app/NothingDiracService/NothingDiracService.apk
 system_ext/etc/hdr_config/ans_off/ans_config.txt
@@ -373,20 +374,8 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 system/etc/permissions/advancedSample_camera_extensions.xml
 system/framework/androidx.camera.extensions.impl.advanced.jar
 system/lib/libmpbase.so
-system/lib/libarcsoft_beautyshot.so
-system/lib/libarcsoft_hdr_detection.so
-system/lib/libarcsoft_high_dynamic_range.so
-system/lib/libarcsoft_low_light_hdr.so
-system/lib/libarcsoft_singlecam_bokeh.so
-system/lib64/libarcsoft_beautyshot.so
-system/lib64/libarcsoft_hdr_detection.so
-system/lib64/libarcsoft_high_dynamic_range.so
-system/lib64/libarcsoft_low_light_hdr.so
-system/lib64/libarcsoft_singlecam_bokeh.so
 system/lib64/libmpbase.so
-system_ext/lib/libcamxextension_algo.so
 system_ext/lib/libencoderjpeg_jni.so
-system_ext/lib64/libcamxextension_algo.so
 system_ext/lib64/libencoderjpeg_jni.so
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/vidhance_calibration
@@ -540,14 +529,22 @@ vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
+vendor/lib64/libarcsoft_aiscenedetection.so
+vendor/lib64/libarcsoft_beautyshot.so
+vendor/lib64/libarcsoft_dark_vision_raw.so
 vendor/lib64/libarcsoft_dualcam_refocus_image.so
 vendor/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_hdr_detection.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
+vendor/lib64/libarcsoft_low_light_hdr.so
+vendor/lib64/libarcsoft_mf_superresolution.so
 vendor/lib64/libarcsoft_night_video.so
+vendor/lib64/libarcsoft_portrait_distortion_correction.so
 vendor/lib64/libarcsoft_portrait_super_night_raw.so
 vendor/lib64/libarcsoft_singlecam_bokeh.so
 vendor/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libarcsoft_superportrait.so
+vendor/lib64/libarcsoft_watermark.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libcamera_nn_stub.so
@@ -585,6 +582,7 @@ vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmorpho_MotionSensor.so
+vendor/lib64/libmouth_mask_detection.arcsoft.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libofflinedump.so
@@ -888,15 +886,12 @@ vendor/lib64/libmmosal.so
 # NFC
 system/framework/com.nxp.nfc.jar
 vendor/bin/hw/android.hardware.nfc_snxxx@1.2-service
-vendor/bin/hw/android.hardware.secure_element_snxxx@1.2-service
 vendor/etc/init/android.hardware.nfc_snxxx@1.2-service.rc
-vendor/etc/init/android.hardware.secure_element_snxxx@1.2-service.rc
 vendor/etc/init/init.Spacewar.nfc.rc
 vendor/etc/init/init.Spacewar.se.rc
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/permissions/com.nxp.nfc.xml
-vendor/lib64/ese_spi_nxp_snxxx.so
 vendor/lib64/jcos_client.so
 vendor/lib64/libchrome.so
 vendor/lib64/libpn557_fw.so
@@ -910,6 +905,7 @@ vendor/libnfc-nxp_RF.conf
 # NTF (not sure what this stands for)
 vendor/bin/ntf-service
 vendor/etc/init/init.ntf.rc
+vendor/etc/permissions/com.nothing.features_vnd.xml
 
 # PD
 vendor/bin/pd-mapper
@@ -1404,78 +1400,6 @@ vendor/lib64/libaacvibrator.so
 vendor/lib64/libqtivibratoreffect.so
 vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.vibrator.impl.so
-
-# Vibrator Patterns
-system/etc/richtapresources/1.he
-system/etc/richtapresources/10.he
-system/etc/richtapresources/11.he
-system/etc/richtapresources/12.he
-system/etc/richtapresources/13.he
-system/etc/richtapresources/14.he
-system/etc/richtapresources/15.he
-system/etc/richtapresources/16.he
-system/etc/richtapresources/17.he
-system/etc/richtapresources/18.he
-system/etc/richtapresources/19.he
-system/etc/richtapresources/2.he
-system/etc/richtapresources/20.he
-system/etc/richtapresources/21.he
-system/etc/richtapresources/22.he
-system/etc/richtapresources/3.he
-system/etc/richtapresources/4.he
-system/etc/richtapresources/5.he
-system/etc/richtapresources/6.he
-system/etc/richtapresources/7.he
-system/etc/richtapresources/8.he
-system/etc/richtapresources/9.he
-system/etc/richtapresources/NT_OnOff_button.he
-system/etc/richtapresources/NT_Silence.he
-system/etc/richtapresources/NT_camera_photo.he
-system/etc/richtapresources/NT_camera_zoom.he
-system/etc/richtapresources/NT_charge.he
-system/etc/richtapresources/NT_letters_navi.he
-system/etc/richtapresources/NT_notification1.he
-system/etc/richtapresources/NT_notification2.he
-system/etc/richtapresources/NT_notification3.he
-system/etc/richtapresources/NT_ringtone1.he
-system/etc/richtapresources/NT_ringtone2.he
-system/etc/richtapresources/NT_ringtone3.he
-system/etc/richtapresources/NT_unlock_error.he
-system/etc/richtapresources/NT_unlock_successful.he
-system/etc/richtapresources/beak.he
-system/etc/richtapresources/bedside.he
-system/etc/richtapresources/bulb_one.he
-system/etc/richtapresources/bulb_two.he
-system/etc/richtapresources/coil.he
-system/etc/richtapresources/common_notification1.he
-system/etc/richtapresources/common_notification2.he
-system/etc/richtapresources/common_ringtone1.he
-system/etc/richtapresources/common_ringtone2.he
-system/etc/richtapresources/cough.he
-system/etc/richtapresources/frogs.he
-system/etc/richtapresources/fox.he
-system/etc/richtapresources/gamma.he
-system/etc/richtapresources/gargle.he
-system/etc/richtapresources/guiro.he
-system/etc/richtapresources/incoming.he
-system/etc/richtapresources/isolator.he
-system/etc/richtapresources/kashio.he
-system/etc/richtapresources/munge.he
-system/etc/richtapresources/nope.he
-system/etc/richtapresources/nothing.he
-system/etc/richtapresources/oi!.he
-system/etc/richtapresources/pep.he
-system/etc/richtapresources/prong.he
-system/etc/richtapresources/ramble.he
-system/etc/richtapresources/simmer.he
-system/etc/richtapresources/skim.he
-system/etc/richtapresources/squiggle.he
-system/etc/richtapresources/transmission.he
-system/etc/richtapresources/volley.he
-system/etc/richtapresources/why.he
-system/etc/richtapresources/woo.he
-system/etc/richtapresources/yeh.he
-system/etc/richtapresources/zip.he
 
 # VPP
 vendor/bin/vppservice
