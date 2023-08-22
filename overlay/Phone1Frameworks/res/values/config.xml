@@ -19,7 +19,7 @@
     <!-- Default screen brightness setting set.
          -2 is invalid so setting will resort to int value specified above.
          Must be in the range specified by minimum and maximum. -->
-    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.29019607843</item>
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.4</item>
 
     <!-- Minimum screen brightness setting allowed by power manager.
          -2 is invalid so setting will resort to int value specified above.
@@ -33,8 +33,15 @@
          The user is forbidden from setting the brightness above this level. -->
     <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
 
-    <!-- Screen brightness when dozing. -->
-    <integer name="config_screenBrightnessDoze">255</integer>
+    <!-- Screen brightness used to dim the screen when the user activity
+         timeout expires.  May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.05</item>
+
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.1</item>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
       The N entries of this array define N  1 zones as follows:
@@ -217,7 +224,7 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
 
     <!-- Timeout (in milliseconds) after which we remove the effects any user interactions might've
@@ -227,11 +234,20 @@
          but the display is fully on. -->
     <integer name="config_autoBrightnessShortTermModelTimeout">120000</integer>
 
+    <!-- Boolean indicating whether display white balance is supported. -->
+    <bool name="config_displayWhiteBalanceAvailable">true</bool>
+
+    <!-- Boolean indicating whether display white balance should be enabled by default. -->
+    <bool name="config_displayWhiteBalanceEnabledDefault">true</bool>
+
     <!-- Minimum color temperature, in Kelvin, supported by display white balance. -->
     <integer name="config_displayWhiteBalanceColorTemperatureMin">4400</integer>
 
     <!-- Maximum color temperature, in Kelvin, supported by display white balance. -->
     <integer name="config_displayWhiteBalanceColorTemperatureMax">7794</integer>
+
+    <!-- Default color temperature, in Kelvin, used by display white balance. -->
+    <integer name="config_displayWhiteBalanceColorTemperatureDefault">6500</integer>
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
@@ -416,7 +432,7 @@
     <string-array name="config_udfps_enroll_stage_thresholds">
         <item>0.25</item>
         <item>0.5</item>
-        <item>0.75</item>
+        <item>0.55</item>
     </string-array>
 
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
@@ -506,5 +522,8 @@
     <!-- If an any motion sensor is not available, prefer the wrist tilt detector over the
      SMD. -->
     <bool name="config_autoPowerModePreferWristTilt">true</bool>
+
+    <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
+    <integer name="config_shutdownBatteryTemperature">600</integer>
 
 </resources>

@@ -7,3 +7,6 @@ vendor.nxp.nxpnfclegacy::INxpNfcLegacy                                      u:ob
 
 # Vibrator
 vendor.aac.hardware.richtap.vibrator::IRichtapVibrator                      u:object_r:hal_vibrator_hwservice:s0
+
+# Sensor Extension
+vendor.noth.hardware.sensor.sensor_extension.ISensorExtension/default       u:object_r:hal_sensors_hwservice:s0
