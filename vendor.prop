@@ -2,7 +2,7 @@
 ro.audio.monitorRotation=true
 ro.vendor.dirac.acs.controller=gef
 ro.vendor.dirac.gef.mode=global
-ro.vendor.dirac.config=512
+ro.vendor.dirac.config=528
 ro.vendor.dirac.poolsize=3
 ro.vendor.dirac.acs.storeSettings=1
 ro.vendor.dirac.acs.ignore_error=1
@@ -47,8 +47,8 @@ vendor.goodix.locked=0
 persist.vendor.fastrpc.hwid_version=PVT
 
 # Nothing Features
-ro.vendor.nothing.feature.base=0x1fff
-ro.vendor.nothing.feature.diff.device.Spacewar=0x0
+ro.vendor.nothing.feature.base=0xb0245b9fff
+ro.vendor.nothing.feature.diff.device.Spacewar=0xa022c34000
 ro.vendor.nothing.feature.diff.product.Spacewar=0x0
 ro.vendor.nothing.feature.diff.product.SpacewarEEA=0x0
 
