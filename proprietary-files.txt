@@ -1527,6 +1527,7 @@ vendor/lib64/libwvhidl.so
 vendor/bin/cnss-daemon
 vendor/bin/lowirpcd
 vendor/firmware/wlanmdsp.otaupdate
+vendor/firmware/wlan/qca_cld/wlan_mac.bin
 
 # Wi-Fi Display
 vendor/bin/wfdhdcphalservice
