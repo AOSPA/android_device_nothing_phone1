@@ -626,7 +626,6 @@ vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26
 vendor/app/CneApp/CneApp.apk|345dc6c677e9bd7a7d36033b8955e90d2a1594d5
 vendor/app/IWlanService/IWlanService.apk|9ea57bfbf58799a564fcf498de9f5fe3506f7342
 vendor/bin/cnd|4e6ae2528afcff42fb3d295ad69d5bb671b53fed
-vendor/bin/modemManager|4f905dda55a7aeff01efafe2bad4d225133d77cf
 vendor/bin/mutualex|ff0074916f137999171a01f21650494ca3e09fde
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
