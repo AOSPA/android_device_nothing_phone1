@@ -24,7 +24,6 @@
         <item>Natural</item>
         <item>Boosted</item>
         <item>Saturated</item>
-        <item>Adaptive</item>
     </string-array>
 
     <!-- Display settings screen, Color mode options. Must be the same length and order as
@@ -35,7 +34,6 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
-        <item>3</item>
     </integer-array>
 
     <!-- Whether to show Smooth Display feature in Settings Options -->
