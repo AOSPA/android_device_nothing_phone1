@@ -47,7 +47,7 @@ vendor.goodix.locked=0
 persist.vendor.fastrpc.hwid_version=PVT
 
 # Nothing Features
-ro.vendor.nothing.feature.base=0xb0245b9fff
+ro.vendor.nothing.feature.base=0x104b4245b9fff
 ro.vendor.nothing.feature.diff.device.Spacewar=0xa022c34000
 ro.vendor.nothing.feature.diff.product.Spacewar=0x0
 ro.vendor.nothing.feature.diff.product.SpacewarEEA=0x0
