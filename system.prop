@@ -6,8 +6,8 @@ persist.vendor.btstack.enable.gatt_robust_caching=false
 persist.sys.brightness.low.gamma=true
 
 # Nothing Features
-ro.build.nothing.feature.base=0xb0245b9fff
-ro.build.nothing.feature.diff.device.Spacewar=0xa032c34000
+ro.build.nothing.feature.base=0x104b4245b9fff
+ro.build.nothing.feature.diff.device.Spacewar=0x1a032c34000
 ro.build.nothing.feature.diff.product.Spacewar=0x0
 ro.build.nothing.feature.diff.product.SpacewarEEA=0x0
 
