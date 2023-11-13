@@ -2,9 +2,6 @@
 persist.vendor.bluetooth.modem_nv_support=true
 persist.vendor.btstack.enable.gatt_robust_caching=false
 
-# Display
-persist.sys.brightness.low.gamma=true
-
 # Nothing Features
 ro.build.nothing.feature.base=0x104b4245b9fff
 ro.build.nothing.feature.diff.device.Spacewar=0x1a032c34000
