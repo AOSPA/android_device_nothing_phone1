@@ -3791,6 +3791,7 @@
         <boolean name="nt_hide_phone_number_on_sim_name_bool" value="true" />
         <boolean name="nt_carrier_enhance_nr_icon_bool" value="false" />
         <boolean name="nt_carrier_nsa_cell_cache_bool" value="false" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
     </carrier_config>
     <carrier_config cid="1492" name="O2">
         <boolean name="vvm_cellular_data_required_bool" value="true" />
@@ -3893,6 +3894,7 @@
         <boolean name="call_barring_visibility_bool" value="true" />
         <boolean name="nt_hide_set_call_barring_password_bool" value="true" />
         <boolean name="nt_conf_number_mapping_for_anonymous_bool" value="true" />
+        <boolean name="nt_hide_set_call_barring_password_bool" value="true" />
     </carrier_config>
     <carrier_config cid="1575" name="WINDTRE">
         <int name="enhanced_4g_lte_title_variant_int" value="1" />
@@ -3902,6 +3904,7 @@
         <boolean name="call_barring_visibility_bool" value="true" />
         <boolean name="nt_hide_set_call_barring_password_bool" value="true" />
         <boolean name="nt_conf_number_mapping_for_anonymous_bool" value="true" />
+        <boolean name="nt_hide_set_call_barring_password_bool" value="true" />
     </carrier_config>
     <carrier_config cid="1581" name="au">
         <boolean name="carrier_vt_available_bool" value="false" />
@@ -4028,8 +4031,6 @@
     <carrier_config cid="1735" name="Turkcell">
         <boolean name="hide_enhanced_4g_lte_bool" value="true" />
         <boolean name="nt_show_4_5g_for_lte_data_icon_bool" value="true" />
-        <boolean name="hide_enabled_5g_bool" value="false" />
-        <boolean name="hide_preferred_network_type_bool" value="true" />
     </carrier_config>
     <carrier_config cid="1736" name="Vodafone TR">
         <boolean name="hide_enhanced_4g_lte_bool" value="true" />
@@ -4089,7 +4090,6 @@
     </carrier_config>
     <carrier_config cid="1888" name="台灣大哥大 Taiwan Mobile Telecom">
         <boolean name="support_manage_ims_conference_call_bool" value="true" />
-        <boolean name="carrier_supports_ss_over_ut_bool" value="false" />
         <int name="call_barring_default_service_class_int" value="0" />
     </carrier_config>
     <carrier_config cid="1890" name="KT">
