@@ -1,0 +1,8 @@
+java_library {
+    name: "nothing-fwk",
+    installable: true,
+
+    srcs: [
+        "src/**/*.java",
+    ],
+}

@@ -155,6 +155,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
 
+# Nothing-fwk
+PRODUCT_PACKAGES += \
+    nothing-fwk
+
+PRODUCT_BOOT_JARS += \
+    nothing-fwk
+
 # Overlays
 PRODUCT_PACKAGES += \
     Phone1CarrierConfig \
