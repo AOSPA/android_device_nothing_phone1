@@ -46,6 +46,9 @@ vendor.goodix.locked=0
 # Hardware ID
 persist.vendor.fastrpc.hwid_version=PVT
 
+# Mediaserver
+ro.mediaserver.64b.enable=true
+
 # Nothing Features
 ro.vendor.nothing.feature.base=0x104b4245b9fff
 ro.vendor.nothing.feature.diff.device.Spacewar=0xa022c34000
