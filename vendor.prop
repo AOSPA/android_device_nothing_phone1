@@ -43,12 +43,22 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Fingerprint
 vendor.goodix.locked=0
 
+# Glyph
+ro.vendor.glyph.channels=26
+ro.vendor.glyph.segments=3
+ro.vendor.glyph.white.brightness=2240,145,723
+ro.vendor.glyph.black.brightness=2473,1606,803
+ro.vendor.glyph.white.lux=0,101,1001,2501
+ro.vendor.glyph.white.auto.brightness=803,1230,1650,2570
+ro.vendor.glyph.black.lux=0,101,1001,2501
+ro.vendor.glyph.black.auto.brightness=963,2100,3000,409
+
 # Hardware ID
 persist.vendor.fastrpc.hwid_version=PVT
 
 # Nothing Features
 ro.vendor.nothing.feature.base=0x104b4245b9fff
-ro.vendor.nothing.feature.diff.device.Spacewar=0xa022c34000
+ro.vendor.nothing.feature.diff.device.Spacewar=0x1a032c34000
 ro.vendor.nothing.feature.diff.product.Spacewar=0x0
 ro.vendor.nothing.feature.diff.product.SpacewarEEA=0x0
 
@@ -61,8 +71,14 @@ persist.vendor.sensors.sync_request=true
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.on_change_sample_period=true
 
+# Simulated NTC
+persist.sys.sltntc.enable=1
+
 # SOC manufacturer
 ro.soc.manufacturer=QTI
 
 # SPU
 vendor.gatekeeper.disable_spu=true
+
+# Subsystem Restart
+persist.vendor.ssr.restart_level=ALL_ENABLE
