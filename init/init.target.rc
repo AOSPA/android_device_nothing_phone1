@@ -396,13 +396,13 @@ on property:service.bootanim.exit=1
     # add for slowcharge need to write charger
     chown system system /sys/class/qcom-battery/slowcharge_en
     # add for wls charge online config
-    chown system system /sys/class/qcom-battery/wls_online_param
+    chown system system /sys/class/qcom-battery/wls_chg_param
     # add for slowcharge need to write charger
     chown system system /sys/class/qcom-battery/charge_pump_enable
     # add for ABR-2547
     chown system system /sys/class/qcom-battery/charge_power
     # add for TFT-449
-    chown system system /sys/class/qcom-battery/wls_st38_en
+    chown system system /sys/class/qcom-battery/wls_en
 #@}
 
 # funk.tan for ship_mode @{
