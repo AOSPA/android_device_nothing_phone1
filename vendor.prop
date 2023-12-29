@@ -48,7 +48,7 @@ persist.vendor.fastrpc.hwid_version=PVT
 
 # Nothing Features
 ro.vendor.nothing.feature.base=0x104b4245b9fff
-ro.vendor.nothing.feature.diff.device.Spacewar=0xa022c34000
+ro.vendor.nothing.feature.diff.device.Spacewar=0x1a032c34000
 ro.vendor.nothing.feature.diff.product.Spacewar=0x0
 ro.vendor.nothing.feature.diff.product.SpacewarEEA=0x0
 
@@ -66,3 +66,6 @@ ro.soc.manufacturer=QTI
 
 # SPU
 vendor.gatekeeper.disable_spu=true
+
+# Subsystem Restart
+persist.vendor.ssr.restart_level=ALL_ENABLE
