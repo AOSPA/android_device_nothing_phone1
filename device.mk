@@ -92,6 +92,10 @@ TARGET_USES_FOD_ZPOS := true
 # FM
 BOARD_HAVE_QCOM_FM := false
 
+# FUSE Passthrough
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.sys.fuse.passthrough.enable=true
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0 \
