@@ -24,4 +24,9 @@
     <dimen name="config_rounded_mask_size_top">107px</dimen>
     <dimen name="config_rounded_mask_size_bottom">107px</dimen>
 
+    <!-- The position of the volume dialog on the screen.
+         See com.android.systemui.volume.VolumeDialogImpl.
+         Value 19 corresponds to LEFT|CENTER_VERTICAL. -->
+    <integer name="volume_dialog_gravity">19</integer>
+
 </resources>
