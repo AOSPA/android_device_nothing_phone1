@@ -71,7 +71,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 KERNEL_DEFCONFIG := phone1_defconfig
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := Spacewar,spacewar
+TARGET_OTA_ASSERT_DEVICE := Spacewar|spacewar
 
 # Partitions - A/B
 AB_OTA_PARTITIONS := boot dtbo odm product system system_ext vendor vendor_boot vbmeta vbmeta_system
