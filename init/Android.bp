@@ -32,13 +32,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.phone1.perf.rc",
-    src: "init.phone1.perf.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.qti.media.rc",
     src: "init.qti.media.rc",
     sub_dir: "init",
