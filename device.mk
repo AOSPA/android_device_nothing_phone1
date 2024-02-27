@@ -169,9 +169,7 @@ PRODUCT_PACKAGES += \
     Phone1Nfc \
     Phone1Settings \
     Phone1SystemUI \
-    Phone1SystemUIAOSPA \
-    WifiResTarget \
-    WifiResTargetMainline
+    Phone1SystemUIAOSPA
 
 # Paranoid Glyph
 PRODUCT_PACKAGES += \

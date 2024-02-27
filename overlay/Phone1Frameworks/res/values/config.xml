@@ -319,11 +319,6 @@
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
 
-    <!-- Control whether the always on display mode is available. This should only be enabled on
-         devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
-         states. -->
-    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">true</bool>
@@ -365,18 +360,6 @@
          Refer to autosuspend.h for details.
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
-
-    <!-- Idle current for bluetooth controller. 0 by default-->
-    <integer name="config_bluetooth_idle_cur_ma">6</integer>
-
-    <!-- Operating volatage for bluetooth controller. 0 by default-->
-    <integer name="config_bluetooth_operating_voltage_mv">3700</integer>
-
-    <!-- Rx current for bluetooth controller. 0 by default-->
-    <integer name="config_bluetooth_rx_cur_ma">28</integer>
-
-    <!-- Tx current for bluetooth controller. 0 by default-->
-    <integer name="config_bluetooth_tx_cur_ma">36</integer>
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
          the framework from using higher refresh rates, even if display modes with higher refresh
