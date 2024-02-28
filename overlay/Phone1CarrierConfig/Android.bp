@@ -15,5 +15,5 @@
 runtime_resource_overlay {
     aaptflags: ["--keep-raw-values"],
     name: "Phone1CarrierConfig",
-    product_specific: true,
+    device_specific: true,
 }
