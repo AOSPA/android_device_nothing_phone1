@@ -3,25 +3,26 @@ package com.nothing;
 import android.os.Build;
 import android.os.SystemProperties;
 
+import java.math.BigInteger;
 import java.util.BitSet;
 
 public class NtFeaturesUtils {
 
-    private static final BitSet sFeatures = new BitSet(38);
+    private static final BitSet sFeatures = new BitSet(79);
 
     static {
         final String fullProp = SystemProperties.get("ro.build.nothing.feature.base", "0");
         final String productDiffProp = SystemProperties.get("ro.build.nothing.feature.diff.product." + Build.PRODUCT, "0");
         final String deviceDiffProp = SystemProperties.get("ro.build.nothing.feature.diff.device." + Build.DEVICE, "0");
 
-        base(Long.decode(fullProp).longValue());
-        change(Long.decode(productDiffProp).longValue());
-        change(Long.decode(deviceDiffProp).longValue());
+        base(new BigInteger(replace(fullProp), 16));
+        change(new BigInteger(replace(productDiffProp), 16));
+        change(new BigInteger(replace(deviceDiffProp), 16));
     }
 
     public static boolean isSupport(int... features) {
         for (int feature : features) {
-            if (feature < 0 || feature > 37) {
+            if (feature < 0 || feature > 78) {
                 return false;
             }
             if (!sFeatures.get(feature)) {
@@ -31,25 +32,32 @@ public class NtFeaturesUtils {
         return true;
     }
 
-    private static void base(long full) {
+    private static void base(BigInteger bi) {
         int index = 0;
-        while (full != 0) {
-            if (full % 2 != 0) {
+        while (!bi.equals(BigInteger.ZERO)) {
+            if (bi.testBit(0)) {
                 sFeatures.set(index);
             }
             index++;
-            full >>>= 1;
+            bi = bi.shiftRight(1);
         }
     }
 
-    private static void change(long diff) {
+    private static void change(BigInteger bi) {
         int index = 0;
-        while (diff != 0) {
-            if (diff % 2 != 0) {
+        while (!bi.equals(BigInteger.ZERO)) {
+            if (bi.testBit(0)) {
                 sFeatures.flip(index);
             }
             index++;
-            diff >>>= 1;
+            bi = bi.shiftRight(1);
         }
+    }
+
+    private static String replace(String str) {
+        if (str == null) {
+            return "";
+        }
+        return str.replace("0x", "").replace("L", "");
     }
 }
