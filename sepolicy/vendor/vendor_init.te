@@ -3,6 +3,3 @@ get_prop(vendor_init, bootanim_system_prop)
 
 # Allow build.prop to set vendor.goodix.locked
 set_prop(vendor_init, vendor_fingerprint_prop)
-
-# Allow vendor init to set SSR property
-set_prop(vendor_init, vendor_ssr_prop)

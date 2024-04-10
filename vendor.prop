@@ -66,6 +66,3 @@ ro.soc.manufacturer=QTI
 
 # SPU
 vendor.gatekeeper.disable_spu=true
-
-# Subsystem Restart
-persist.vendor.ssr.restart_level=ALL_ENABLE
