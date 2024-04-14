@@ -115,7 +115,7 @@ TARGET_POWERSHARE_NODE := /sys/class/qcom-battery/wireless_boost_en
 ADD_RADIO_FILES := false
 
 # Recovery
-BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_NO_RECOVERY := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 
