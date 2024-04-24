@@ -29,11 +29,9 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Audio
 system/etc/permissions/com.dirac.acs.xml
-system/etc/permissions/se.dirac.acs.xml
 system/etc/sysconfig/preinstalled-packages-dirac.xml
-system/priv-app/DiracAudioControlService/DiracAudioControlService.apk
 system/priv-app/DiracAudioControlService_DMP/DiracAudioControlService_DMP.apk
-system/priv-app/NothingDiracService/NothingDiracService.apk
+system/priv-app/NothingDiracService_DMP/NothingDiracService_DMP.apk
 system_ext/etc/hdr_config/ans_off/ans_config.txt
 system_ext/etc/hdr_config/ans_on/ans_config.txt
 system_ext/etc/hdr_config/main_inv_ls/RPP_BiquadHPF_config.txt
@@ -176,9 +174,8 @@ vendor/etc/audio/sku_yupik/r_submix_audio_policy_configuration.xml
 vendor/etc/audio/sku_yupik/sound_trigger_mixer_paths_yupikqrd.xml
 vendor/etc/audio/sku_yupik/sound_trigger_platform_info.xml
 vendor/etc/audio/audio_policy_configuration.xml
-vendor/etc/dirac/interfacedb
-vendor/etc/diracmobile.config
-vendor/etc/diracvdd.bin
+vendor/etc/dirac/dirac_resource.dar
+vendor/etc/dirac/interface.json
 vendor/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat
 vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt
 vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt
@@ -227,7 +224,7 @@ vendor/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libdiraceffect.so
+vendor/lib/soundfx/libdiraceffect-afm.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
@@ -265,8 +262,7 @@ vendor/lib/libaudioparsers.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
-vendor/lib/libDiracAPI_SHARED.so
-vendor/lib/libdiracapwrapper.so
+vendor/lib/libdirac.so
 vendor/lib/libdrc.so
 vendor/lib/libdsd2pcm.so
 vendor/lib/libgcs-calwrapper.so
