@@ -49,10 +49,10 @@
         <transitionPoint>0.858364</transitionPoint>
         <minimumLux>6000.0</minimumLux>
         <timing>
-            <!-- allow for 5 minutes out of every 30 minutes -->
-            <timeWindowSecs>1800</timeWindowSecs>
-            <timeMaxSecs>300</timeMaxSecs>
-            <timeMinSecs>60</timeMinSecs>
+            <!-- Time limitation for HBM-->
+            <timeWindowSecs>0</timeWindowSecs>
+            <timeMaxSecs>0</timeMaxSecs>
+            <timeMinSecs>0</timeMinSecs>
         </timing>
         <!-- Thermal limitation for HBM -->
         <thermalStatusLimit>critical</thermalStatusLimit>
