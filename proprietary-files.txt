@@ -750,7 +750,6 @@ vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display Calibration
-vendor/etc/displayconfig/display_id_4630946480328692354.xml
 vendor/etc/qdcm_calib_data_rm692e5_amoled_fhd+_120hz_cmd_mode_dsi_visionox_panel.xml
 
 # DPM
