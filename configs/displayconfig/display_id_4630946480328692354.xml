@@ -47,7 +47,7 @@
     </screenBrightnessMap>
     <highBrightnessMode enabled="true">
         <transitionPoint>0.6</transitionPoint>
-        <minimumLux>7500.0</minimumLux>
+        <minimumLux>6000.0</minimumLux>
         <timing>
             <!-- allow for 5 minutes out of every 30 minutes -->
             <timeWindowSecs>1800</timeWindowSecs>
