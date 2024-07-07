@@ -54,6 +54,8 @@
             <timeMaxSecs>300</timeMaxSecs>
             <timeMinSecs>60</timeMinSecs>
         </timing>
+        <!-- Thermal limitation for HBM -->
+        <thermalStatusLimit>critical</thermalStatusLimit>
         <minimumHdrPercentOfScreen>0.4</minimumHdrPercentOfScreen>
         <!--sdrHdrRatioMap, backed by spline, must have at least two entries -->
         <sdrHdrRatioMap>
