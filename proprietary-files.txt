@@ -944,7 +944,7 @@ vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 vendor/etc/qcril_database/upgrade/config/12.0_config.sql
 vendor/etc/qcril_database/upgrade/config/13.0_config.sql
-vendor/etc/qcril_database/upgrade/config/16.0_config.sql
+vendor/etc/qcril_database/upgrade/config/17.0_config.sql
 vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql
@@ -961,6 +961,7 @@ vendor/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/14_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/15_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/16_version_update_ecc_table.sql
+vendor/etc/qcril_database/upgrade/other/17_version_update_ecc_table.sql
 vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/telephony_packages.xml
@@ -1370,6 +1371,7 @@ vendor/etc/thermal.high.level1.conf
 vendor/etc/thermal.high.level2.conf
 vendor/etc/thermal.high.level3.conf
 vendor/etc/thermal.high.level4.conf
+vendor/etc/thermal.high.perf.conf
 vendor/etc/thermal.low.conf
 vendor/etc/thermal.low.level1.conf
 vendor/etc/thermal.low.level2.conf
