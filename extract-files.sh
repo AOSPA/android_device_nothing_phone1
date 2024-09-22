@@ -60,7 +60,7 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "android.hardware.vibrator-V1-ndk_platform.so" "android.hardware.vibrator-V1-ndk.so" "${2}"
             ;;
         vendor/etc/media_codecs.xml|vendor/etc/media_codecs_yupik_v0.xml|vendor/etc/media_codecs_yupik_v1.xml)
-            sed -Ei "/media_codecs_(google_audio|google_telephony|vendor_audio)/d" "${2}"
+            sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d" "${2}"
             ;;
         vendor/lib64/libgf_hal.so)
             sed -i "s/ro.boot.flash.locked/vendor.goodix.locked/g" "${2}"
