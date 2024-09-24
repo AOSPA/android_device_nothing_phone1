@@ -1420,7 +1420,6 @@ vendor/lib64/libwvhidl.so
 # Wi-Fi
 vendor/bin/cnss-daemon
 vendor/bin/lowirpcd
-vendor/firmware/wlanmdsp.otaupdate
 
 # Wi-Fi Display
 vendor/bin/wfdhdcphalservice
