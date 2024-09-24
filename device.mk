@@ -255,6 +255,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # WLAN
+PRODUCT_PACKAGES += \
+    firmware_wlanmdsp.otaupdate_symlink \
+    firmware_wlan_mac.bin_symlink
+
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
