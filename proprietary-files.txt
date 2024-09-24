@@ -587,7 +587,7 @@ vendor/lib64/libminksocket.so
 
 # CNE
 vendor/app/CACertService/CACertService.apk
-vendor/app/CneApp/CneApp.apk
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
 vendor/bin/mutualex
