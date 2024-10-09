@@ -251,9 +251,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
-
 # WLAN
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
