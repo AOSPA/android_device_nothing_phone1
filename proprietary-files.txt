@@ -937,7 +937,6 @@ vendor/lib64/libqcrilNrFramework.so
 vendor/lib64/libqcrilNrLogger.so
 vendor/lib64/libqcrilNrQtiBus.so
 vendor/lib64/libqcrilNrQtiMutex.so
-vendor/lib64/libqcrilNr.so
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-qc-ltedirectdisc.so
@@ -984,6 +983,9 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so
+
+# QCRIL - from BSP
+vendor/lib64/libqcrilNr.so|ac7e1b2904811512b8fda8a985f3d1d1650245d9
 
 # QMI
 vendor/bin/irsc_util
