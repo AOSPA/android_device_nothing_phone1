@@ -16,6 +16,24 @@
       "message": "it does work, might simplify the patch before merging",
       "revId": "ff5c30e16ae075362d250bba858d9a6dbc72735a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7780529_62d76e14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-24T02:48:39Z",
+      "side": 1,
+      "message": "decided not to",
+      "parentUuid": "6e888cb2_4e04642b",
+      "revId": "ff5c30e16ae075362d250bba858d9a6dbc72735a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
