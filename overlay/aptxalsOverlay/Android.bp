@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "aptxalsOverlay",
+    product_specific: true,
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a2dp_offload_enabled">(N)[ţŕûé one]</string>
+    <string name="qss_enabled">(N)[ţûŕé one]</string>
+    <string name="refresh_audio_profile_count_enabled">(N)[ţŕûé one]</string>
+    <string name="spatializer_monitor_enabled">(N)[ƒåļšé one]</string>
+    <string name="ui_app_package_name">(N)[çöḿ.Qûåļçöḿḿ.Qţîļ.åþţхûî one two three]</string>
+    <string name="ui_app_service_class">(N)[åþţхûîŠéŕVîçé one two]</string>
+</resources>

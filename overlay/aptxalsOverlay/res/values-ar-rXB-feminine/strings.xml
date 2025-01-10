@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a2dp_offload_enabled">(F)‏‮true‬‏</string>
+    <string name="qss_enabled">(F)‏‮ture‬‏</string>
+    <string name="refresh_audio_profile_count_enabled">(F)‏‮true‬‏</string>
+    <string name="spatializer_monitor_enabled">(F)‏‮false‬‏</string>
+    <string name="ui_app_package_name">(F)‏‮com.qualcomm.qtil.aptxui‬‏</string>
+    <string name="ui_app_service_class">(F)‏‮aptxuiService‬‏</string>
+</resources>
