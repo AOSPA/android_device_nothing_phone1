@@ -1,4 +1,6 @@
 soong_namespace {
+        "vendor/nothing/phone1",
+    ],
 }
 
 install_symlink {
