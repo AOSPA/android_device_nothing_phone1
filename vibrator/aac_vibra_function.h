@@ -1,27 +1,18 @@
-#ifndef _AAC_VIBRA_FUNCTION_H_
-#define _AAC_VIBRA_FUNCTION_H_
+#pragma once
 
-#include <android/log.h>
-#include <log/log.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <string.h>
-
-#include <functional>
-using namespace std;
 
 enum PATTERN_PERFORM_STATE {
     PATTERN_PERFORM_START = 1,
-    PATTERN_PERFORM_INTERRUPT,  //
+    PATTERN_PERFORM_INTERRUPT,
     PATTERN_PERFORM_RESUME,
     PATTERN_PERFORM_BUSY,
     PATTERN_PERFORM_END,
     INVALID_PATTERN_STATUS,
 };
-#ifdef __cplusplus
-extern "C" {
-#endif
 
+extern "C" {
 extern int aac_vibra_init(uint32_t* deviceType);
 extern int aac_vibra_on(unsigned int timeout_ms);
 extern int aac_vibra_off();
@@ -35,9 +26,7 @@ extern int aac_vibra_performHe_with_len(void* he, int32_t len);
 extern int aac_vibra_dynamic_scale(uint8_t scale);
 extern int aac_vibra_setting_f0(int f0);
 extern int aac_vibra_stop(int32_t* index);
-#ifdef __cplusplus
 }
-#endif
 
 extern void aac_vibra_looper_start();
 extern int32_t aac_vibra_looper_post(const int32_t* pattern, int32_t patternLen, int32_t intervalMs,
@@ -53,4 +42,3 @@ extern int32_t aac_vibra_looper_prebaked_effect(uint32_t effect_id, int32_t stre
 extern int32_t aac_vibra_looper_envelope(const int32_t* envelope_data, uint32_t data_len,
                                          bool fastFlag);
 extern int32_t aac_vibra_looper_rtp(int32_t fd);
-#endif  // _HARDWARE_VIBRATOR_H
