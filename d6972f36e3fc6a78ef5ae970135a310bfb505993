@@ -33,6 +33,24 @@
       "message": "https://github.com/richtap-haptics/RichTapCoreForAndroidT/tree/main/vendor/qcom/opensource/vibrator",
       "revId": "d6972f36e3fc6a78ef5ae970135a310bfb505993",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aef751ce_279c6409",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000804
+      },
+      "writtenOn": "2025-02-27T07:51:59Z",
+      "side": 1,
+      "message": "Is this usable as is?",
+      "parentUuid": "76a2e833_fe06f6ad",
+      "revId": "d6972f36e3fc6a78ef5ae970135a310bfb505993",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
