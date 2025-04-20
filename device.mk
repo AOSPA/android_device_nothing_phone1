@@ -84,7 +84,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.phone1 \
+    android.hardware.biometrics.fingerprint@2.3-service.nothing \
     android.hardware.biometrics.fingerprint@2.3.vendor
 
 TARGET_USES_FOD_ZPOS := true
@@ -136,7 +136,8 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+    $(DEVICE_PATH) \
+    hardware/nothing
 
 # Neural networks
 PRODUCT_PACKAGES += \

@@ -49,7 +49,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.phone1
+TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/nothing:libudfps_extension.nothing
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
