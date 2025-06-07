@@ -86,6 +86,8 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.phone1 \
     android.hardware.biometrics.fingerprint@2.3.vendor
 
+$(call soong_config_set,surfaceflinger,udfps_lib,//$(DEVICE_PATH):libudfps_extension.phone1)
+
 TARGET_USES_FOD_ZPOS := true
 
 # FM
