@@ -1,5 +1,8 @@
 # Camera
 ro.camerax.extensions.enabled=true
 
+# eBPF
+ro.bpf.kver_override=5.10.239
+
 # Thermal
 persist.vendor.thermal.config=/vendor/etc/thermal-engine.conf
