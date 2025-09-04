@@ -18,7 +18,7 @@ namespace_imports = [
     'vendor/qcom/common/vendor/adreno-r',
     'vendor/qcom/common/vendor/display/5.4',
     'vendor/qcom/common/vendor/gps-legacy',
-    'vendor/qcom/common/vendor/media-5.4',
+    'vendor/qcom/common/vendor/media/5.4',
 ]
 
 
