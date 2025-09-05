@@ -50,3 +50,10 @@ prebuilt_hidl_interfaces {
         "vendor.qti.hardware.sigma_miracast@1.0::Isigma_miracast",
     ],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_noth_sensor_extension_interface",
+    interfaces: [
+        "vendor.noth.hardware.sensor.sensor_extension.ISensorExtension",
+    ],
+}
