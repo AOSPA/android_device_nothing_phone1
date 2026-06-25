@@ -68,6 +68,7 @@ BOARD_KERNEL_CMDLINE := \
     ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_USE_LZ4 := true
+KERNEL_CLANG_VERSION := r563880c
 KERNEL_DEFCONFIG := phone1_defconfig
 KERNEL_FULL_LLVM := true
 
