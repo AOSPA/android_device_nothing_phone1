@@ -569,7 +569,7 @@ vendor/lib64/libvidhance.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Charging
-vendor/bin/hvdcp_opti;MODULE_SUFFIX=_phone1;OVERRIDES=hvdcp_opti
+vendor/bin/hvdcp_opti;MAKE_COPY_RULE_ONLY
 
 # Config Store
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -1409,7 +1409,7 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 
 # Wi-Fi
-vendor/bin/cnss-daemon;MODULE_SUFFIX=_phone1;OVERRIDES=cnss-daemon
+vendor/bin/cnss-daemon;MAKE_COPY_RULE_ONLY
 vendor/bin/lowirpcd
 
 # Wi-Fi Display
