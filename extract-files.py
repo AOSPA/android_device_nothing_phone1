@@ -13,8 +13,6 @@ from extract_utils.fixups_lib import (
 from extract_utils.main import ExtractUtils, ExtractUtilsModule
 
 namespace_imports = [
-    'hardware/qcom/display',
-    'hardware/qcom/display/gralloc',
     'vendor/qcom/common/vendor/adreno/r',
     'vendor/qcom/common/vendor/display/5.4',
     'vendor/qcom/common/vendor/gps-legacy',
