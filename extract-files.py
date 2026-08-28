@@ -134,6 +134,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     ('vendor/lib64/nfc_nci_nxp_snxxx.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    'system/priv-app/NothingDiracService_DMP/NothingDiracService_DMP.apk': blob_fixup()
+        .apktool_patch('blob-patches/NothingDiracService_DMP.patch'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
